@@ -9,3 +9,5 @@ tags:
 - Social Media
 ---
 When it comes to TikTok videos that discuss mental health, eating disorders and self-harm, deciphering what is helpful and what is harmful can be hard for TikTok's algorithm. And even when users share videos of their recovery, their posts can send others into spirals. So how do TikTokers try to help each other in this gray area?
+
+Read the full story [here](https://www.wsj.com/podcasts/tech-news-briefing/the-tiktok-spiral-part-2-stuck-together/a578831c-ee9f-4ff8-9509-1dfc5b111e1f).

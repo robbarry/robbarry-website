@@ -5,3 +5,5 @@ categories: null
 tags: []
 ---
 Russian operators used social media to pitch fake business directories and petitions in return for information.
+
+Read the full story [here](https://t.co/ePYSksMaS2).

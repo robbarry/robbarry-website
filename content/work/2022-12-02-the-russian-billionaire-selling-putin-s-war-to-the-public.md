@@ -12,3 +12,5 @@ tags:
 - Putin
 ---
 Yuri Kovalchuk, with vast holdings in banking and media, is helping his longtime friend Vladimir Putin tighten the Kremlin's grip on the internet.
+
+Read the full story [here](https://www.wsj.com/articles/russian-billionaire-selling-putins-war-ukraine-11669994410).

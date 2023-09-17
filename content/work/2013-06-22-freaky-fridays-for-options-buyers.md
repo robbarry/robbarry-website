@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Stock "pinning" is the tendency of stocks to close precisely at their nearest option strike price and is a regular feature of expiration Fridays. A Wall Street Journal examination of trading behavior from the start of 2007 through April 2013, using a list of all U.S. stocks with options from DeltaNeutral.com, gives a sense of the phenomenon's prevalence.
+
+Read the full story [here](http://wsj.com/article/SB10001424127887323300004578559333319695070.html).

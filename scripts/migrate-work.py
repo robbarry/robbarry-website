@@ -48,12 +48,20 @@ class Article:
         self.slug = "{}-{}".format(self.date, slugify(self.title))
         self.url = row["URL"]
         self.summary = row["Summary"]
+        self._categories = None
+        self._tags = None
 
     def categories(self):
-        if "wsj.com" in self.url:
-            return ["WSJ"]
-        elif "miamiherald.com" in self.url:
-            return ["Miami Herald"]
+        if self._categories is None:
+            if "wsj.com" in self.url:
+                return ["WSJ"]
+            elif "miamiherald.com" in self.url:
+                return ["Miami Herald"]
+        else:
+            return self._categories
+
+    def tags(self):
+        return self._tags
 
     def metadata(self):
         return yaml.dump(
@@ -61,7 +69,7 @@ class Article:
                 "title": self.title,
                 "date": self.date,
                 "categories": self.categories(),
-                "tags": [],
+                "tags": self.tags(),
             },
             sort_keys=False,
             indent=4,
@@ -69,19 +77,43 @@ class Article:
 
     def content(self):
         content = ["---", self.metadata(), "---", self.summary]
+        content += ["", f"Read the full story [here]({self.url})."]
         return "\n".join(content)
 
     @property
     def filename(self):
         return os.path.join(NEW_WORK_PATH, "{}.md".format(self.slug))
 
+    def load(self):
+        if os.path.exists(self.filename):
+            # get the yaml front matter
+            with open(self.filename, "r") as f:
+                lines = f.readlines()
+            yaml_lines = []
+            switch = 0
+            for line in lines:
+                if switch == 1:
+                    if line.strip() != "---":
+                        yaml_lines.append(line.strip())
+                if line == "---\n":
+                    switch += 1
+                if switch == 2:
+                    break
+            y = "\n".join(yaml_lines)
+            try:
+                data = yaml.safe_load(y)
+                self._categories = data.get("categories", [])
+                self._tags = data.get("tags", [])
+                self.title = data.get("title", self.title)
+                self.date = data.get("date", self.date)
+            except:
+                pass
+
 
 with open(OLD_WORK_CSV, "r") as f:
     r = csv.DictReader(f)
     for row in r:
         a = Article(row)
-        if os.path.exists(a.filename):
-            print("skipping {}".format(a.filename))
-            continue
+        a.load()
         with open(a.filename, "w") as f:
             f.write(a.content())

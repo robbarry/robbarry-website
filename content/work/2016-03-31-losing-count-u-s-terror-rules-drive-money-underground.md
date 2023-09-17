@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Banks close the accounts of customers they fear may be up to no good, evicting from the financial system those the government most wants to watch.
+
+Read the full story [here](http://www.wsj.com/articles/losing-count-u-s-terror-rules-drive-money-underground-1459349211).

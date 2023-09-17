@@ -7,3 +7,5 @@ tags:
 - Crypto
 ---
 The assets, which consisted largely of four thinly traded crypto tokens, likely were worth less than the $6.4 billion FTX was claiming.
+
+Read the full story [here](https://www.wsj.com/articles/ftx-effort-to-save-itself-failed-on-questionable-assets-11670245668).

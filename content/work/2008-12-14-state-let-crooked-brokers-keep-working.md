@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 State regulators caught mortgage professionals breaking the law but allowed them to stay in the business with few consequences, The Miami Herald found.
+
+Read the full story [here](http://www.miamiherald.com/news/special-reports/borrowers-betrayed/article1931257.html).

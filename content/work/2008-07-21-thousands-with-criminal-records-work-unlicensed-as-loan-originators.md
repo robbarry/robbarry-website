@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 More than half the mortgage professionals registered in Florida -- 120,563 -- entered the industry this decade without being licensed by the state, The Miami Herald found.
+
+Read the full story [here](http://www.miamiherald.com/news/special-reports/borrowers-betrayed/article1931251.html).

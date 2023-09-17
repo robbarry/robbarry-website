@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Study Shows Brokers' Requests to Strike Complaints Granted in Vast Majority of Cases
+
+Read the full story [here](https://www.wsj.com/articles/stockbrokers-requests-to-scrub-complaints-are-often-granted-1381944984).

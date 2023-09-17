@@ -8,3 +8,5 @@ tags:
 - Social Media
 ---
 The popular app can quickly drive young users into endless spools of adult content, including videos touting drug use and promoting pornography sites, a Wall Street Journal investigation finds.
+
+Read the full story [here](https://www.wsj.com/articles/tiktok-algorithm-sex-drugs-minors-11631052944).

@@ -12,3 +12,5 @@ tags:
 - Mail-in Ballots
 ---
 Of the 29 states that require mail-in ballots to arrive on or before election day, 28 have seen periods in recent weeks of average delivery times of more than six days, a Wall Street Journal analysis found.
+
+Read the full story [here](https://www.wsj.com/articles/how-delayed-is-your-mail-in-ballot-11603706400).

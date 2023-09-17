@@ -5,3 +5,5 @@ categories: null
 tags: []
 ---
 With Allen Stanford accused of a massive fraud, the actions of a Miami law firm are coming under review by a receiver representing victims, raising the question: Did their legal advice aid his empire?
+
+Read the full story [here](http://www.anderson.ucla.edu/Documents/areas/adm/loeb/10-597.pdf).

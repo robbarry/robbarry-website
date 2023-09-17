@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Detailed maps and reports about the 16 stockbroker "hot spots" identified by The Journal.
+
+Read the full story [here](http://graphics.wsj.com/troubled-stockbrokers-hotspots/).

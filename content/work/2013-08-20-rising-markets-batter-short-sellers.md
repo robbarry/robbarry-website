@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Short sellers are facing their worst losses in at least a decade, a Wall Street Journal analysis has found.
+
+Read the full story [here](https://www.wsj.com/articles/rising-markets-batter-short-sellers-1377048278).

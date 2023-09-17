@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 How many people are killed by police each year? One academic and former police officer says he has an answer: Ask them to tell us.
+
+Read the full story [here](http://blogs.wsj.com/law/2014/12/04/a-plan-for-tracking-police-shootings/).

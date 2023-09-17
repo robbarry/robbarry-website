@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 In a stinging critique of the state's oversight of the mortgage industry, top Florida investigators found that state regulators failed to alert police agencies to crooked mortgage brokerages, ignored citizen complaints and allowed hundreds of people with criminal histories to peddle loans.
+
+Read the full story [here](http://www.miamiherald.com/2008/09/17/787369/bad-brokers-ran-wild-state-admits.html).

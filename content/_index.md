@@ -1,5 +1,7 @@
-I'm Rob Barry, an investigative reporter and data editor at The Wall Street Journal. I help lead a team of reporters who specialize in computer programming and data analysis.
+I'm Rob Barry, an investigative reporter and data editor at The Wall Street Journal, where I lead a team specializing in computer programming and data analysis.
 
-My job has given me an opportunity to do all sorts of crazy things, including creating hundreds of TikTok bots using Raspberry Pis, tracking a Chinese government hacker group through some of the world's largest corporations and unraveling a secret Russian global paramilitary empire.
+My career has taken me on many adventures, from designing hundreds of TikTok bots with Raspberry Pis to tracking a Chinese government hacker group across major global corporations and exposing a covert Russian global paramilitary network.
 
-Along the way, some of the work has been by awards including a [Pulitzer Prize](https://www.wsj.com/articles/wsj-new-york-times-win-pulitzers-1429557628) and four Gerald Loeb Awards.
+My work has earned accolades, including a [Pulitzer Prize](https://www.wsj.com/articles/wsj-new-york-times-win-pulitzers-1429557628) and four Gerald Loeb Awards.
+
+Please feel free to contact me at [rob.barry@wsj.com](mailto:rob.barry@wsj.com).

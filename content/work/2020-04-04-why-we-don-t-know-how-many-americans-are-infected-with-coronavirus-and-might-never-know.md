@@ -7,6 +7,9 @@ categories:
 - Data Analysis
 tags:
 - Coronavirus
-- Public Health
+- Data
+- Testing
 ---
 Sparse testing is just one reason the official tally is far too low, but the numbers will get more reliable over time.
+
+Read the full story [here](https://www.wsj.com/articles/why-we-dont-know-how-many-americans-are-infected-with-coronavirusand-might-never-know-11586005200).

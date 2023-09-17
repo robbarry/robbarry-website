@@ -5,3 +5,5 @@ categories: null
 tags: []
 ---
 How we collected and analyzed the data behind our recent coverage of troubled stockbrokers.
+
+Read the full story [here](http://ire.org/blog/uplink/2014/04/25/data-analysis-reveals-brokers-disciplinary-problem/).

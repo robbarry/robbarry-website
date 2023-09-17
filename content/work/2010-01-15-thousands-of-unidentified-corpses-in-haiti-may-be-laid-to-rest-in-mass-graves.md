@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Just before dawn, the bodies began arriving -- wrapped in sheets of plastic -- and pulled off pickups and makeshift stretchers at a morgue that was already overflowing before disaster struck Tuesday evening. Within hours, the corpses were strewn across the gray brick courtyard outside the drab one-story building that houses the city's dead.
+
+Read the full story [here](http://www.miamiherald.com/news/nation-world/world/americas/haiti/article1934644.html).

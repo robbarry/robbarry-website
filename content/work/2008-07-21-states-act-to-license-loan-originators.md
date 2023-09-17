@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 Prompted by a rising number of predatory lending cases, Illinois legislators passed a sweeping law in 2003 requiring that loan originators get licensed. For the first time, the law imposed criminal background checks and exams. The result: The agency had 25,000 applicants, with about 15,000 approved.
+
+Read the full story [here](http://www.miamiherald.com/news/special-reports/borrowers-betrayed/article1931252.html).

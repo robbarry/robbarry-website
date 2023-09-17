@@ -6,3 +6,5 @@ categories:
 tags: []
 ---
 The newly discovered weakness could allow an attacker to read or alter communications that claim to be secure. It was disclosed Tuesday by an international team of computer scientists that has found several problems in technology behind prominent security tools, including the green padlock on secure websites.
+
+Read the full story [here](http://www.wsj.com/articles/new-computer-bug-exposes-broad-security-flaws-1432076565).

@@ -5,3 +5,5 @@ categories: null
 tags: []
 ---
 Project backers drafted memos for President Trump and Flynn allies continued to push the plan after the Trump security adviser was ousted.
+
+Read the full story [here](https://t.co/aGECrQtL0R).

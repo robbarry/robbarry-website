@@ -5,6 +5,7 @@ theme: PaperMod
 post: :slug/
 page: :slug/
 tags: "tag/:slug/"
+paginate: 999999
 
 menu:
   main:
