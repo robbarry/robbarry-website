@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hacking on Rob Barry</title>
+    <link>https://robbarry.org/tags/hacking/</link>
+    <description>Recent content in Hacking on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://robbarry.org/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ghosts in the Clouds: Inside China&#39;s Major Corporate Hack</title>
+      <link>https://robbarry.org/work/2019-12-30-ghosts-in-the-clouds-inside-china-s-major-corporate-hack/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/work/2019-12-30-ghosts-in-the-clouds-inside-china-s-major-corporate-hack/</guid>
+      <description>A Journal investigation finds the Cloud Hopper attack was much bigger than previously known
+Read the full story here.</description>
+    </item>
+    
+    <item>
+      <title>Utilities Targeted in Cyberattacks Identified</title>
+      <link>https://robbarry.org/work/2019-11-24-utilities-targeted-in-cyberattacks-identified/</link>
+      <pubDate>Sun, 24 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/work/2019-11-24-utilities-targeted-in-cyberattacks-identified/</guid>
+      <description>Hackers homed in on smaller electricity providers in proximity to critical infrastructure; FBI investigating
+Read the full story here.</description>
+    </item>
+    
+    <item>
+      <title>America&#39;s Electric Grid Has a Vulnerable Back Door--and Russia Walked Through It</title>
+      <link>https://robbarry.org/work/2019-01-10-america-s-electric-grid-has-a-vulnerable-back-door-and-russia-walked-through-it/</link>
+      <pubDate>Thu, 10 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/work/2019-01-10-america-s-electric-grid-has-a-vulnerable-back-door-and-russia-walked-through-it/</guid>
+      <description>A Wall Street Journal reconstruction of the worst known hack into the nation&amp;rsquo;s power system reveals attacks on hundreds of small contractors.
+Read the full story here.</description>
+    </item>
+    
+  </channel>
+</rss>

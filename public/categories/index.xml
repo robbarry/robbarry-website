@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jul 2023 07:12:01 -0400</lastBuildDate><atom:link href="https://robbarry.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Documentary</title>
-      <link>https://robbarry.org/categories/documentary/</link>
+      <title>News</title>
+      <link>https://robbarry.org/categories/news/</link>
       <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
       
-      <guid>https://robbarry.org/categories/documentary/</guid>
+      <guid>https://robbarry.org/categories/news/</guid>
       <description></description>
     </item>
     
@@ -22,6 +22,42 @@
       <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
       
       <guid>https://robbarry.org/categories/wsj/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Documentary</title>
+      <link>https://robbarry.org/categories/documentary/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/categories/documentary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Podcast</title>
+      <link>https://robbarry.org/categories/podcast/</link>
+      <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/categories/podcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Analysis</title>
+      <link>https://robbarry.org/categories/data-analysis/</link>
+      <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/categories/data-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Miami Herald</title>
+      <link>https://robbarry.org/categories/miami-herald/</link>
+      <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/categories/miami-herald/</guid>
       <description></description>
     </item>
     
