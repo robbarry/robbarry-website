@@ -1,0 +1,1 @@
+I've been working in journalism since 2006. Here's some of my recent work.

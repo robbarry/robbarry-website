@@ -1,0 +1,29 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #00448d;
+}
+
+.dark a {
+    color: #fff;
+}
+
+
+.main a {
+    color: #007bff;
+}
+
+.dark .main a {
+    color: #95c8ff
+}
+
+.pagination a {
+    color: #fff;
+}
