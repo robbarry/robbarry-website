@@ -1,0 +1,1 @@
+I'm Rob Barry, an investigative reporter and data editor at The Wall Street Journal. I help lead a team of reporters who specialize in computer programming and data analysis.

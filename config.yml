@@ -1,0 +1,18 @@
+baseURL: https://robbarry.org/
+languageCode: en-us
+title: Rob Barry
+theme: PaperMod
+post: :slug/
+page: :slug/
+tags: "tag/:slug/"
+
+menu:
+  main:
+  - identifier: "about"
+    name: "About"
+    url: "/"
+    weight: 1
+  - identifier: "work"
+    name: "Work"
+    url: "/work/"
+    weight: 2
