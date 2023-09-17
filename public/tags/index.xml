@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on Rob Barry</title>
+    <link>https://robbarry.org/tags/</link>
+    <description>Recent content in Tags on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 24 Jul 2023 07:12:01 -0400</lastBuildDate><atom:link href="https://robbarry.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kremlin</title>
+      <link>https://robbarry.org/tags/kremlin/</link>
+      <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
+      
+      <guid>https://robbarry.org/tags/kremlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prigozhin</title>
+      <link>https://robbarry.org/tags/prigozhin/</link>
+      <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
+      
+      <guid>https://robbarry.org/tags/prigozhin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Russia</title>
+      <link>https://robbarry.org/tags/russia/</link>
+      <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
+      
+      <guid>https://robbarry.org/tags/russia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wagner</title>
+      <link>https://robbarry.org/tags/wagner/</link>
+      <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
+      
+      <guid>https://robbarry.org/tags/wagner/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Crypto</title>
+      <link>https://robbarry.org/tags/crypto/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

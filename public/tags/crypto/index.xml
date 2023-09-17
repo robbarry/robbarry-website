@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Crypto on Rob Barry</title>
+    <link>https://robbarry.org/tags/crypto/</link>
+    <description>Recent content in Crypto on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 05 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://robbarry.org/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FTX Effort to Save Itself Failed on Questionable Assets</title>
+      <link>https://robbarry.org/work/2022-12-11-ftx/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://robbarry.org/work/2022-12-11-ftx/</guid>
+      <description>I worked with Shane Shifflett and Coulter Jones on a story examining the tumultuous circumstances surrounding the collapse of the crypto exchange FTX.
+We dug into the exchange&amp;rsquo;s questionable assets, and found that much of FTX&amp;rsquo;s holdings were likely overvalued, with assets like certain crypto tokens being worth far less than had been claimed. A big chunk of the crytpo claimed as assets on FTX&amp;rsquo;s balance sheets consisted of four thinly traded crypto tokens closely connected to FTX&amp;rsquo;s founder, Sam Bankman-Fried and other FTX employees.</description>
+    </item>
+    
+  </channel>
+</rss>
