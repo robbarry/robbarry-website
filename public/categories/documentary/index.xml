@@ -2,27 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Documentary on Rob Barry</title>
-    <link>https://robbarry.org/categories/documentary/</link>
+    <link>https://www.robbarry.org/categories/documentary/</link>
     <description>Recent content in Documentary on Rob Barry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://robbarry.org/categories/documentary/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Shadow Men: Inside Wagner, Russia’s Secret War Company</title>
-      <link>https://robbarry.org/work/2023-06-09-wagner/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbarry.org/work/2023-06-09-wagner/</guid>
-      <description>Our documentary reveals how the Russian private military company hides the flow of riches and resources that ultimately connect to the Kremlin.
-Watch the documentary here.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/categories/documentary/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How TikTok&#39;s Algorithm Figures Out Your Deepest Desires</title>
-      <link>https://robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/</link>
+      <link>https://www.robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/</link>
       <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/</guid>
+      <guid>https://www.robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/</guid>
       <description>The Wall Street Journal created dozens of automated accounts that watched hundreds of thousands of videos to reveal how the social network knows you so well.
 Read the full story here.</description>
     </item>

@@ -2,62 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on Rob Barry</title>
-    <link>https://robbarry.org/categories/</link>
+    <link>https://www.robbarry.org/categories/</link>
     <description>Recent content in Categories on Rob Barry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Jul 2023 07:12:01 -0400</lastBuildDate><atom:link href="https://robbarry.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 24 Jul 2023 07:12:01 -0400</lastBuildDate><atom:link href="https://www.robbarry.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>News</title>
-      <link>https://robbarry.org/categories/news/</link>
+      <title>Articles</title>
+      <link>https://www.robbarry.org/categories/articles/</link>
       <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
       
-      <guid>https://robbarry.org/categories/news/</guid>
+      <guid>https://www.robbarry.org/categories/articles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Videos</title>
+      <link>https://www.robbarry.org/categories/videos/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/categories/videos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>WSJ</title>
-      <link>https://robbarry.org/categories/wsj/</link>
-      <pubDate>Mon, 24 Jul 2023 07:12:01 -0400</pubDate>
+      <link>https://www.robbarry.org/categories/wsj/</link>
+      <pubDate>Mon, 05 Dec 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://robbarry.org/categories/wsj/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Documentary</title>
-      <link>https://robbarry.org/categories/documentary/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://robbarry.org/categories/documentary/</guid>
+      <guid>https://www.robbarry.org/categories/wsj/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Podcast</title>
-      <link>https://robbarry.org/categories/podcast/</link>
+      <link>https://www.robbarry.org/categories/podcast/</link>
       <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://robbarry.org/categories/podcast/</guid>
+      <guid>https://www.robbarry.org/categories/podcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Documentary</title>
+      <link>https://www.robbarry.org/categories/documentary/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/categories/documentary/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data Analysis</title>
-      <link>https://robbarry.org/categories/data-analysis/</link>
+      <link>https://www.robbarry.org/categories/data-analysis/</link>
       <pubDate>Sat, 31 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://robbarry.org/categories/data-analysis/</guid>
+      <guid>https://www.robbarry.org/categories/data-analysis/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Miami Herald</title>
-      <link>https://robbarry.org/categories/miami-herald/</link>
+      <link>https://www.robbarry.org/categories/miami-herald/</link>
       <pubDate>Sat, 06 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://robbarry.org/categories/miami-herald/</guid>
+      <guid>https://www.robbarry.org/categories/miami-herald/</guid>
       <description></description>
     </item>
     

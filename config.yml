@@ -1,4 +1,4 @@
-baseURL: https://robbarry.org/
+baseURL: https://www.robbarry.org/
 languageCode: en-us
 title: Rob Barry
 theme: PaperMod
@@ -6,6 +6,7 @@ post: :slug/
 page: :slug/
 tags: "tag/:slug/"
 paginate: 999999
+relativeURLs: true
 
 menu:
   main:
@@ -13,7 +14,12 @@ menu:
     name: "About"
     url: "/"
     weight: 1
-  - identifier: "work"
-    name: "Work"
-    url: "/work/"
-    weight: 2
+  # - identifier: "work"
+  #   name: "Work"
+  #   url: "/work/"
+  #   weight: 2
+  - identifier: "wsj"
+    name: "Articles"
+    url: "/categories/articles/"
+    weight: 3
+  - identifier: "blog"
