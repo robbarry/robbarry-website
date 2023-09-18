@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Libor on Rob Barry</title>
+    <link>https://www.robbarry.org/tags/libor/</link>
+    <description>Recent content in Libor on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 28 Sep 2012 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/tags/libor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Libor Furor: Key Rate Gets New Scrutiny</title>
+      <link>https://www.robbarry.org/work/2012-09-28-libor-furor-key-rate-gets-new-scrutiny/</link>
+      <pubDate>Fri, 28 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/work/2012-09-28-libor-furor-key-rate-gets-new-scrutiny/</guid>
+      <description>An analysis by The Wall Street Journal shows that banks&amp;rsquo; submissions used to calculate the London interbank offered rate often are slow to change and sometimes fail to track the market&amp;rsquo;s view of the credit risk posed by each firm.
+We found that banks&amp;rsquo; submissions used to determine the London interbank offered rate (Libor) frequently remain static and often don&amp;rsquo;t align with the market&amp;rsquo;s perception of each firm&amp;rsquo;s credit risk, leading to questions about Libor&amp;rsquo;s credibility.</description>
+    </item>
+    
+  </channel>
+</rss>

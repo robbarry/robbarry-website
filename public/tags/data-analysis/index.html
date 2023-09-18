@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Data Analysis | Rob Barry</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.robbarry.org/tags/data-analysis/">
+<link crossorigin="anonymous" href="../../assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://www.robbarry.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.robbarry.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.robbarry.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.robbarry.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.robbarry.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="https://www.robbarry.org/tags/data-analysis/index.xml">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://www.robbarry.org/css/custom.css"><meta property="og:title" content="Data Analysis" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.robbarry.org/tags/data-analysis/" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data Analysis"/>
+<meta name="twitter:description" content=""/>
+
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.robbarry.org/" accesskey="h" title="Rob Barry (Alt + H)">Rob Barry</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.robbarry.org/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/articles/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/videos/" title="Videos">
+                    <span>Videos</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/audio/" title="Audio">
+                    <span>Audio</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/other/" title="Other Writing">
+                    <span>Other Writing</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    Data Analysis
+  </h1>
+</header>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>&#39;The Corpse Bride Diet&#39;: How TikTok Inundates Teens With Eating-Disorder Videos
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The app’s algorithm can send users down rabbit holes of narrow interest, resulting in potentially dangerous content such as emaciated images, purging techniques, hazardous diets and body shaming.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-12-17 00:00:00 +0000 UTC'>December 17, 2021</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to &#39;The Corpse Bride Diet&#39;: How TikTok Inundates Teens With Eating-Disorder Videos" href="https://www.robbarry.org/work/2021-12-17-the-corpse-bride-diet-how-tiktok-inundates-teens-with-eating-disorder-videos/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>How TikTok Serves Up Sex and Drug Videos to Minors
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The popular app can quickly drive young users into endless spools of adult content, including videos touting drug use and promoting pornography sites, a Wall Street Journal investigation finds.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-09-08 00:00:00 +0000 UTC'>September 8, 2021</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to How TikTok Serves Up Sex and Drug Videos to Minors" href="https://www.robbarry.org/work/2021-09-08-how-tiktok-serves-up-sex-and-drug-videos-to-minors/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>How TikTok&#39;s Algorithm Figures Out Your Deepest Desires
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Wall Street Journal created dozens of automated accounts that watched hundreds of thousands of videos to reveal how the social network knows you so well.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2021-07-21 00:00:00 +0000 UTC'>July 21, 2021</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to How TikTok&#39;s Algorithm Figures Out Your Deepest Desires" href="https://www.robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Postal Service Is Ordered to Search for Remaining Ballots 
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A federal judge ordered the U.S. Postal Service to conduct rigorous sweeps of facilities serving states with looming election deadlines like Pennsylvania and North Carolina, so any ballots still in the system reach election officials in time.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-11-05 00:00:00 +0000 UTC'>November 5, 2020</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Postal Service Is Ordered to Search for Remaining Ballots " href="https://www.robbarry.org/work/2020-11-05-postal-service-is-ordered-to-search-for-remaining-ballots/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Millions of Mail-in Ballots at Risk in Battleground States
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Millions of mail-in ballots haven’t been received by election offices in critical battleground states, where recent slowdowns in mail deliveries risk some votes not arriving in time to count for the presidential election.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-10-31 00:00:00 +0000 UTC'>October 31, 2020</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Millions of Mail-in Ballots at Risk in Battleground States" href="https://www.robbarry.org/work/2020-10-31-millions-of-mail-in-ballots-at-risk-in-battleground-states/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>How Delayed Is Your Mail-In Ballot?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Of the 29 states that require mail-in ballots to arrive on or before election day, 28 have seen periods in recent weeks of average delivery times of more than six days, a Wall Street Journal analysis found.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-10-26 00:00:00 +0000 UTC'>October 26, 2020</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to How Delayed Is Your Mail-In Ballot?" href="https://www.robbarry.org/work/2020-10-26-how-delayed-is-your-mail-in-ballot/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Why We Don&#39;t Know How Many Americans Are Infected With Coronavirus--and Might Never Know
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Sparse testing is just one reason the official tally is far too low, but the numbers will get more reliable over time.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2020-04-04 00:00:00 +0000 UTC'>April 4, 2020</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Why We Don&#39;t Know How Many Americans Are Infected With Coronavirus--and Might Never Know" href="https://www.robbarry.org/work/2020-04-04-why-we-don-t-know-how-many-americans-are-infected-with-coronavirus-and-might-never-know/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Fidelity Employees Fired After Alleged Misuse of Reimbursement Programs
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Fidelity Investments has fired or allowed more than 200 employees to resign over alleged misuse of workplace-benefits programs, according to people familiar with the matter.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-05-04 00:00:00 +0000 UTC'>May 4, 2018</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Fidelity Employees Fired After Alleged Misuse of Reimbursement Programs" href="https://www.robbarry.org/work/2018-05-04-fidelity-employees-fired-after-alleged-misuse-of-reimbursement-programs/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Russian Trolls Tweeted Disinformation Long Before U.S. Election
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>An analysis of 221,641 tweets shows Russian trolls tried to incite chaos, fear and outrage about fake events before their election activity, as if they were testing to see how much they could get Americans to believe.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2018-02-20 00:00:00 +0000 UTC'>February 20, 2018</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Russian Trolls Tweeted Disinformation Long Before U.S. Election" href="https://www.robbarry.org/work/2018-02-20-russian-trolls-tweeted-disinformation-long-before-u-s-election/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Russian Twitter Support for Trump Began Right After Campaign Start
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Russian Twitter accounts began heaping praise on Donald Trump and ripping his rivals earlier than previously thought–within weeks after he announced his bid for the presidency in June 2015.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2017-11-06 00:00:00 +0000 UTC'>November 6, 2017</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Russian Twitter Support for Trump Began Right After Campaign Start" href="https://www.robbarry.org/work/2017-11-06-russian-twitter-support-for-trump-began-right-after-campaign-start/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Brother&#39;s Donors Embrace Jeb Bush&#39;s Candidacy
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Republican Jeb Bush rounded up donations in the first 15 days of his presidential campaign from at least 136 top-tier donors to his brother, former President George W. Bush.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-07-21 00:00:00 +0000 UTC'>July 21, 2015</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Brother&#39;s Donors Embrace Jeb Bush&#39;s Candidacy" href="https://www.robbarry.org/work/2015-07-21-brother-s-donors-embrace-jeb-bush-s-candidacy/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Small Group of Doctors Are Biggest Medicare Billers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The top 1% of billers of the federal program in 2013 reaped 17.5% of all payments to individual providers that year. That same cluster of doctors and other individual providers received 16.6% of the program’s payments in 2012.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-06-02 00:00:00 +0000 UTC'>June 2, 2015</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Small Group of Doctors Are Biggest Medicare Billers" href="https://www.robbarry.org/work/2015-06-02-small-group-of-doctors-are-biggest-medicare-billers/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Generic Vicodin Tops Medicare List
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Powerful painkiller hydrocodone acetaminophen was the most widely prescribed drug under Medicare Part D in 2013, often by primary-care doctors.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-05-04 00:00:00 +0000 UTC'>May 4, 2015</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Generic Vicodin Tops Medicare List" href="https://www.robbarry.org/work/2015-05-04-generic-vicodin-tops-medicare-list/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Small Number of Drugs Drives Big Medicare Bill
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Drugs for diseases such as cancer and multiple sclerosis account for more than a quarter of spending on prescriptions for America’s elderly and disabled, data show.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-05-01 00:00:00 +0000 UTC'>May 1, 2015</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Small Number of Drugs Drives Big Medicare Bill" href="https://www.robbarry.org/work/2015-05-01-small-number-of-drugs-drives-big-medicare-bill/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Watchdog&#39;s Hunt Is Short on &#39;Wolves&#39;
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Christopher Veale started his career as a stockbroker at the notorious boiler room Stratton Oakmont Inc. depicted in the film “The Wolf of Wall Street.” In the 20 years since then, he has worked for 18 firms and racked up 25 red flags on his disciplinary record.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2015-03-05 00:00:00 +0000 UTC'>March 5, 2015</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Watchdog&#39;s Hunt Is Short on &#39;Wolves&#39;" href="https://www.robbarry.org/work/2015-03-05-watchdog-s-hunt-is-short-on-wolves/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Wall Street&#39;s Watchdog Doesn&#39;t Disclose All Regulatory Red Flags
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Financial Industry Regulatory Authority doesn’t make public all regulatory red flags it has about brokers, prompting calls for more expansive disclosure.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-12-27 00:00:00 +0000 UTC'>December 27, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Wall Street&#39;s Watchdog Doesn&#39;t Disclose All Regulatory Red Flags" href="https://www.robbarry.org/work/2014-12-27-wall-street-s-watchdog-doesn-t-disclose-all-regulatory-red-flags/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Graphic: Justifiable Homicides by U.S. Law Enforcement
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Data from 105 of the nation’s largest police agencies showing the number of justifiable homicides by officers each year.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-12-03 00:00:00 +0000 UTC'>December 3, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Graphic: Justifiable Homicides by U.S. Law Enforcement" href="https://www.robbarry.org/work/2014-12-03-graphic-justifiable-homicides-by-u-s-law-enforcement/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Many Police Killings Uncounted in U.S. Stats
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A Wall Street Journal analysis of data from 105 of the largest police agencies in the country found more than 550 police killings between 2007 and 2012 were missing from the FBI’s records or, in a few dozen cases, not attributed to the agency whose officers were involved. The result: It is nearly impossible to determine how many people are killed by police each year.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-12-03 00:00:00 +0000 UTC'>December 3, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Many Police Killings Uncounted in U.S. Stats" href="https://www.robbarry.org/work/2014-12-03-many-police-killings-uncounted-in-u-s-stats/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Graphic: Where Troubled Stockbrokers Are
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Detailed maps and reports about the 16 stockbroker “hot spots” identified by The Journal.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-11-12 00:00:00 +0000 UTC'>November 12, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Graphic: Where Troubled Stockbrokers Are" href="https://www.robbarry.org/work/2014-11-12-graphic-where-troubled-stockbrokers-are/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>How the Journal Found Troubled-Broker Hot Spots
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Journal reporters pieced together stockbroker records from 27 states detailing the disciplinary and employment histories of about 550,000, or 87%, of the country’s stockbrokers, over their careers. Many brokers were registered in multiple states. New York’s Office of the Attorney General didn’t provide 2014 data on customer complaints against brokers, so the analysis used the state’s complaints data from 2013. The other data in the analysis were compiled in the 2014 first half....</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-11-12 00:00:00 +0000 UTC'>November 12, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to How the Journal Found Troubled-Broker Hot Spots" href="https://www.robbarry.org/work/2014-11-12-how-the-journal-found-troubled-broker-hot-spots/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>How Troubled Brokers Cluster, Often Among Elderly Investors
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Stockbrokers who’ve been in trouble with regulators tend to cluster in certain places in the country where the affluent and elderly are easily accessible and where regulatory punishment is lax, a Wall Street Journal data analysis shows. The Journal found these hotspots in south Florida and Long Island, long known as havens for troubled brokers, but also in places around Detroit, Las Vegas and parts of California. The Journal’s analysis showed a total of 16 such hot spots....</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-11-12 00:00:00 +0000 UTC'>November 12, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to How Troubled Brokers Cluster, Often Among Elderly Investors" href="https://www.robbarry.org/work/2014-11-12-how-troubled-brokers-cluster-often-among-elderly-investors/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Regulatory Breakdowns in Oversight of U.S. Stockbrokers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Over the past two years, The Wall Street Journal has worked to obtain, organize and analyze data about the employment and disciplinary histories of the more than 630,000 stockbrokers in America. This paper details how that process was performed, as well as some of the reporters’ findings.
+Read it here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-10-24 00:00:00 +0000 UTC'>October 24, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Regulatory Breakdowns in Oversight of U.S. Stockbrokers" href="https://www.robbarry.org/work/2014-10-24-regulatory-breakdowns-in-oversight-of-u-s-stockbrokers/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>How We Did It: Investigating Whether There&#39;s a DH Advantage in Baseball
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>How we built the models that showed the designated hitter likely boosts the American League’s fortunes in interleague play.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-19 00:00:00 +0000 UTC'>July 19, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to How We Did It: Investigating Whether There&#39;s a DH Advantage in Baseball" href="https://www.robbarry.org/work/2014-07-19-how-we-did-it-investigating-whether-there-s-a-dh-advantage-in-baseball/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Why the AL Batters the NL at Home: The DH
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Over more than 15 years of interleague baseball, the American League has had a bigger home-field advantage than the National League. A key reason may be the designated hitter.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-07-19 00:00:00 +0000 UTC'>July 19, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Why the AL Batters the NL at Home: The DH" href="https://www.robbarry.org/work/2014-07-19-why-the-al-batters-the-nl-at-home-the-dh/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Taxpayers Face Big Tab for Unusual Doctor Billings
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>More than 2,300 providers earned $500,000 or more from Medicare in 2012 from a single procedure or service, according to a Wall Street Journal analysis.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-06-09 00:00:00 +0000 UTC'>June 9, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Taxpayers Face Big Tab for Unusual Doctor Billings" href="https://www.robbarry.org/work/2014-06-09-taxpayers-face-big-tab-for-unusual-doctor-billings/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Data analysis reveals brokers with disciplinary problems still selling securities
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>How we collected and analyzed the data behind our recent coverage of troubled stockbrokers.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-04-25 00:00:00 +0000 UTC'>April 25, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Data analysis reveals brokers with disciplinary problems still selling securities" href="https://www.robbarry.org/work/2014-04-25-data-analysis-reveals-brokers-with-disciplinary-problems-still-selling-securities/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Flurry of Allergan Trading Preceded Offer
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Investors made outsize bets on Allergan Inc. stock in the 10 days during which activist hedge-fund manager William Ackman was privately accumulating a stake in the Botox maker, according to a Wall Street Journal analysis.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-04-23 00:00:00 +0000 UTC'>April 23, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Flurry of Allergan Trading Preceded Offer" href="https://www.robbarry.org/work/2014-04-23-flurry-of-allergan-trading-preceded-offer/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Stockbrokers Who Fail Test Have Checkered Records
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>More than 51,500 stockbrokers failed a basic exam needed to sell securities at least once and those who repeatedly failed have on average worse disciplinary records.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-04-15 00:00:00 +0000 UTC'>April 15, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Stockbrokers Who Fail Test Have Checkered Records" href="https://www.robbarry.org/work/2014-04-15-stockbrokers-who-fail-test-have-checkered-records/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Medicare Payment Data Throw Spotlight on Potential Abuses
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Some doctors who received large sums from Medicare in 2012 have had run-ins with the law, signaling how the government’s unprecedented move to make such payments public could throw up red flags for potential abuse.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-04-10 00:00:00 +0000 UTC'>April 10, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Medicare Payment Data Throw Spotlight on Potential Abuses" href="https://www.robbarry.org/work/2014-04-10-medicare-payment-data-throw-spotlight-on-potential-abuses/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Activist Investors Often Leak Their Plans to a Favored Few
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>For a new breed of “activist” investors, tipping other investors is part of the playbook.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-03-27 00:00:00 +0000 UTC'>March 27, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Activist Investors Often Leak Their Plans to a Favored Few" href="https://www.robbarry.org/work/2014-03-27-activist-investors-often-leak-their-plans-to-a-favored-few/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Stockbrokers Fail to Disclose Red Flags
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>More than 1,600 stockbrokers have bankruptcies or criminal charges in their past that weren’t reported to regulators, leaving investors in the dark, a Wall Street Journal analysis shows.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2014-03-06 00:00:00 +0000 UTC'>March 6, 2014</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Stockbrokers Fail to Disclose Red Flags" href="https://www.robbarry.org/work/2014-03-06-stockbrokers-fail-to-disclose-red-flags/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Foreign Airline Crews Had Difficulties With San Francisco Landings
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Foreign airline crews saw problematic approaches to San Francisco’s airport more frequently than U.S. crews when part of an automated landing system was out of service.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-12-11 00:00:00 +0000 UTC'>December 11, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Foreign Airline Crews Had Difficulties With San Francisco Landings" href="https://www.robbarry.org/work/2013-12-11-foreign-airline-crews-had-difficulties-with-san-francisco-landings/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Executives Hit Sweet Spot on Stock Sales
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When corporate executives give favorable stock guidance, sell their own shares, then disclose bad news, investors sometimes grow suspicious.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-11-14 00:00:00 +0000 UTC'>November 14, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Executives Hit Sweet Spot on Stock Sales" href="https://www.robbarry.org/work/2013-11-14-executives-hit-sweet-spot-on-stock-sales/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Stockbroker Requests to Scrub Complaints Are Often Granted
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Study Shows Brokers’ Requests to Strike Complaints Granted in Vast Majority of Cases
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-10-16 00:00:00 +0000 UTC'>October 16, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Stockbroker Requests to Scrub Complaints Are Often Granted" href="https://www.robbarry.org/work/2013-10-16-stockbroker-requests-to-scrub-complaints-are-often-granted/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>More Than 5,000 Stockbrokers From Expelled Firms Still Selling Securities
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>More than 5,000 brokers were still licensed to sell securities earlier this year after working for one or more firms that regulators expelled between 2005 and 2012, according to an analysis by The Wall Street Journal.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-10-03 00:00:00 +0000 UTC'>October 3, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to More Than 5,000 Stockbrokers From Expelled Firms Still Selling Securities" href="https://www.robbarry.org/work/2013-10-03-more-than-5-000-stockbrokers-from-expelled-firms-still-selling-securities/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Rising Markets Batter Short Sellers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Short sellers are facing their worst losses in at least a decade, a Wall Street Journal analysis has found.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-08-20 00:00:00 +0000 UTC'>August 20, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Rising Markets Batter Short Sellers" href="https://www.robbarry.org/work/2013-08-20-rising-markets-batter-short-sellers/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Corporate Insiders Shift From &#39;Buy&#39; to &#39;Sell&#39; as Bankruptcy Nears
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A Wall Street Journal review of thousands of trades by insiders in their own company’s stock found the trades veering heavily toward selling rather than buying as bankruptcy filings drew nearer.
+We found that corporate insiders often shift from buying to selling their company’s stock as bankruptcy approaches. Our analysis suggests insiders might be privy to their company’s deteriorating conditions ahead of other investors. In the last three months before bankruptcy filings, insider stock buys dropped over 80%, while sales only slightly decreased....</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-07-10 00:00:00 +0000 UTC'>July 10, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Corporate Insiders Shift From &#39;Buy&#39; to &#39;Sell&#39; as Bankruptcy Nears" href="https://www.robbarry.org/work/2013-07-10-corporate-insiders-shift-from-buy-to-sell-as-bankruptcy-nears/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Freaky Fridays for Options Buyers
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Stock “pinning” is the tendency of stocks to close precisely at their nearest option strike price and is a regular feature of expiration Fridays. A Wall Street Journal examination of trading behavior from the start of 2007 through April 2013, using a list of all U.S. stocks with options from DeltaNeutral.com, gives a sense of the phenomenon’s prevalence.
+We analyzed trading behaviors from 2007 to April 2013 using U.S. stocks with options data....</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-06-22 00:00:00 +0000 UTC'>June 22, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Freaky Fridays for Options Buyers" href="https://www.robbarry.org/work/2013-06-22-freaky-fridays-for-options-buyers/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Data Shine Light on Hospital Bills
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The release of government data showing wide variation in hospital pricing removes a layer of secrecy but probably won’t make medical charges more uniform, experts said Wednesday.
+The Centers for Medicare and Medicaid Services released data revealing significant variations in hospital pricing for common treatments from 3,337 hospitals. The disclosed prices often don’t reflect the actual amounts paid, with numerous entities like Medicare, Medicaid, and private insurers negotiating different rates. Despite the data’s transparency, experts believe it might not standardize medical charges, and its usefulness for consumers determining out-of-pocket costs is limited....</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-05-08 00:00:00 +0000 UTC'>May 8, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Data Shine Light on Hospital Bills" href="https://www.robbarry.org/work/2013-05-08-data-shine-light-on-hospital-bills/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Directors Take Shelter in Trading Plans
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Corporate board members are increasingly using a type of opaque trading plan that was originally intended primarily for executives.
+The use of government-sanctioned 10b5-1 trading plans, designed to avoid insider trading suspicion by scheduling trades in advance, has surged by 55% among nonexecutive directors since 2008. Some directors use these plans for rapid large-scale stock sales. Critics argue that these trading plans may sometimes be abused, especially by board members who also run investment funds, potentially leading to the appearance of impropriety....</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-04-24 00:00:00 +0000 UTC'>April 24, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Directors Take Shelter in Trading Plans" href="https://www.robbarry.org/work/2013-04-24-directors-take-shelter-in-trading-plans/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>As Asbestos Claims Rise, So Do Worries About Fraud
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A WSJ investigation into asbestos trust claims and court cases of roughly 850,000 people filed since the late 1980s found many apparent anomalies.
+Asbestos claims continue rising by 85 per day even as asbestos usage has declined. Our analysis of claims data found anomalies like over 2,000 claimants saying they were exposed under age 12, and discrepancies between disease types reported to trusts versus courts. Trusts have reduced payout rates as assets deplete rapidly from mounting claims....</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-03-10 00:00:00 +0000 UTC'>March 10, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to As Asbestos Claims Rise, So Do Worries About Fraud" href="https://www.robbarry.org/work/2013-03-10-as-asbestos-claims-rise-so-do-worries-about-fraud/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>A Degree Drawn in Red Ink
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Most people assume a degree in the arts is no guarantee of riches. Now there is evidence that such graduates also rack up the most student-loan debt.
+Graduates from arts-focused schools accrue the highest student-loan debt, with a median debt load of $21,576, and often have starting salaries around $40,000. Our analysis of Department of Education data found that research university graduates typically have less student loan debt than those from liberal-arts colleges: $18,100 versus $19,445, respectively....</p>
+  </div>
+  <footer class="entry-footer"><span title='2013-02-18 00:00:00 +0000 UTC'>February 18, 2013</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to A Degree Drawn in Red Ink" href="https://www.robbarry.org/work/2013-02-18-a-degree-drawn-in-red-ink/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Executive Sales Beat News That Hit Stock
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>A medical-supplies company made a $43 million repurchase of its own shares last year, buoying the stock before bad news hit, even as four top managers were selling company shares.
+A medical-supplies firm repurchased a significant amount of its own shares, boosting the stock’s value, while four top executives sold their company shares. A month later, the stock experienced a 9% drop following the announcement of poor earnings. Some employees within the firm expressed concerns about the trading activities....</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-12-20 00:00:00 +0000 UTC'>December 20, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Executive Sales Beat News That Hit Stock" href="https://www.robbarry.org/work/2012-12-20-executive-sales-beat-news-that-hit-stock/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Executives&#39; Good Luck in Trading Own Stock
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>An investigation of insider trading by corporate executives found many make profitable trades prior to news announcements.
+Our analysis found that many executives made trades yielding considerable profits just before significant company news announcements. Of 20,237 executives we looked at, 1,418 experienced an average gain of 10% in their trades one week before significant news releases. This rate of profit was notably higher than that of executives who faced negative stock movements....</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-11-27 00:00:00 +0000 UTC'>November 27, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Executives&#39; Good Luck in Trading Own Stock" href="https://www.robbarry.org/work/2012-11-27-executives-good-luck-in-trading-own-stock/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Many Affected by Sandy Lacked Flood Coverage
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Only a fraction of homeowners in some parts of the Northeast who incurred property damage from Sandy have insurance that covers losses from floods, a Wall Street Journal analysis finds.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-11-01 00:00:00 +0000 UTC'>November 1, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Many Affected by Sandy Lacked Flood Coverage" href="https://www.robbarry.org/work/2012-11-01-many-affected-by-sandy-lacked-flood-coverage/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Libor Furor: Key Rate Gets New Scrutiny
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>An analysis by The Wall Street Journal shows that banks’ submissions used to calculate the London interbank offered rate often are slow to change and sometimes fail to track the market’s view of the credit risk posed by each firm.
+We found that banks’ submissions used to determine the London interbank offered rate (Libor) frequently remain static and often don’t align with the market’s perception of each firm’s credit risk, leading to questions about Libor’s credibility....</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-09-28 00:00:00 +0000 UTC'>September 28, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Libor Furor: Key Rate Gets New Scrutiny" href="https://www.robbarry.org/work/2012-09-28-libor-furor-key-rate-gets-new-scrutiny/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>For Government&#39;s Latest Figure, Check Back Next Week
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The Labor Department has revised upward its first estimate of seasonally adjusted claims the following week in 57 of the past 58 reports, a Dow Jones analysis found
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-04-12 00:00:00 +0000 UTC'>April 12, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to For Government&#39;s Latest Figure, Check Back Next Week" href="https://www.robbarry.org/work/2012-04-12-for-government-s-latest-figure-check-back-next-week/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>More Killings Called Self-Defense
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>At a time when the overall U.S. homicide rate is declining, more civilians are killing each other and claiming self-defense–a trend that is most pronounced in states with new “stand your ground” laws.
+The U.S. has seen a notable increase in justifiable homicides, particularly in states with “stand your ground” laws, even as the overall homicide rate declines. “Stand your ground” laws allow individuals greater latitude in using force for self-defense outside the home....</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-04-02 00:00:00 +0000 UTC'>April 2, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to More Killings Called Self-Defense" href="https://www.robbarry.org/work/2012-04-02-more-killings-called-self-defense/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Why Recent Job Gains May Stick This Time
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>The U.S. job market’s recent improvement has some economists wondering if 2012 will break from last year’s pattern of strong job growth in the winter followed by a slowing in the spring and summer.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2012-03-05 00:00:00 +0000 UTC'>March 5, 2012</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Why Recent Job Gains May Stick This Time" href="https://www.robbarry.org/work/2012-03-05-why-recent-job-gains-may-stick-this-time/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Russia&#39;s Dubious Vote
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Results from Russia’s parliamentary vote earlier this month are studded with red flags that suggest broad electoral fraud, according to a Wall Street Journal analysis.
+Our analysis of nearly 100,000 voting precincts reveals potential vote-rigging, with up to 14 million votes in question. Higher turnout areas showed suspiciously strong support for Putin’s United Russia party. Large-scale protests have erupted in response to allegations of fraud, challenging Putin’s political legitimacy. In response, Putin promises transparent measures for upcoming elections....</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-12-28 00:00:00 +0000 UTC'>December 28, 2011</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Russia&#39;s Dubious Vote" href="https://www.robbarry.org/work/2011-12-28-russia-s-dubious-vote/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Ax Falls at Smaller Banks
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Smaller U.S. banks and savings institutions are cutting jobs in a sign of a deepening financial-industry retrenchment that is shaking firms from Main Street to Wall Street.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-11-30 00:00:00 +0000 UTC'>November 30, 2011</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Ax Falls at Smaller Banks" href="https://www.robbarry.org/work/2011-11-30-ax-falls-at-smaller-banks/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Long Jail Terms on Rise
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>When disgraced hedge-fund titan Raj Rajaratnam is sentenced in federal court Thursday, he will come up against a hard and unavoidable truth: Inside traders are facing considerably harsher sentences than they did in the past.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-10-13 00:00:00 +0000 UTC'>October 13, 2011</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Long Jail Terms on Rise" href="https://www.robbarry.org/work/2011-10-13-long-jail-terms-on-rise/"></a>
+</article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>Select Cities See Brain Gain
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Despite a decade of technological advances that make it possible to work almost anywhere, many of the nation’s most educated people continue to cluster in a handful of dominant metropolitan areas such as Boston, New York and California’s Silicon Valley, according to census data released Thursday.
+Read the full story here.</p>
+  </div>
+  <footer class="entry-footer"><span title='2011-09-22 00:00:00 +0000 UTC'>September 22, 2011</span>
+  </footer>
+  <a class="entry-link" aria-label="post link to Select Cities See Brain Gain" href="https://www.robbarry.org/work/2011-09-22-select-cities-see-brain-gain/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://www.robbarry.org/">Rob Barry</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

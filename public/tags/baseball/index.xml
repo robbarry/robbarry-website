@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Baseball on Rob Barry</title>
+    <link>https://www.robbarry.org/tags/baseball/</link>
+    <description>Recent content in Baseball on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Jul 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/tags/baseball/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How We Did It: Investigating Whether There&#39;s a DH Advantage in Baseball</title>
+      <link>https://www.robbarry.org/work/2014-07-19-how-we-did-it-investigating-whether-there-s-a-dh-advantage-in-baseball/</link>
+      <pubDate>Sat, 19 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/work/2014-07-19-how-we-did-it-investigating-whether-there-s-a-dh-advantage-in-baseball/</guid>
+      <description>How we built the models that showed the designated hitter likely boosts the American League&amp;rsquo;s fortunes in interleague play.
+Read the full story here.</description>
+    </item>
+    
+    <item>
+      <title>Why the AL Batters the NL at Home: The DH</title>
+      <link>https://www.robbarry.org/work/2014-07-19-why-the-al-batters-the-nl-at-home-the-dh/</link>
+      <pubDate>Sat, 19 Jul 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/work/2014-07-19-why-the-al-batters-the-nl-at-home-the-dh/</guid>
+      <description>Over more than 15 years of interleague baseball, the American League has had a bigger home-field advantage than the National League. A key reason may be the designated hitter.
+Read the full story here.</description>
+    </item>
+    
+  </channel>
+</rss>

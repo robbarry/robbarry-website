@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Public Health on Rob Barry</title>
+    <link>https://www.robbarry.org/tags/public-health/</link>
+    <description>Recent content in Public Health on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/tags/public-health/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Coronavirus Hit the U.S. Long Before We Knew</title>
+      <link>https://www.robbarry.org/work/2020-10-08-coronavirus-hit-the-us-long-before-we-knew/</link>
+      <pubDate>Thu, 08 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/work/2020-10-08-coronavirus-hit-the-us-long-before-we-knew/</guid>
+      <description>Months before travel bans and lockdowns, Americans were transmitting the virus across the country
+The Wall Street Journal interviewed disease detectives and reviewed hundreds of pages of new research to piece together how the coronavirus infiltrated the wealthiest nation on earth. The latest genetic, epidemiological and computational research suggests it was spreading inside the country before anyone started looking.
+How did it happen? Find out here.</description>
+    </item>
+    
+  </channel>
+</rss>

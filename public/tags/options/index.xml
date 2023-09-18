@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Options on Rob Barry</title>
+    <link>https://www.robbarry.org/tags/options/</link>
+    <description>Recent content in Options on Rob Barry</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 22 Jun 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/tags/options/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Freaky Fridays for Options Buyers</title>
+      <link>https://www.robbarry.org/work/2013-06-22-freaky-fridays-for-options-buyers/</link>
+      <pubDate>Sat, 22 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/work/2013-06-22-freaky-fridays-for-options-buyers/</guid>
+      <description>Stock &amp;ldquo;pinning&amp;rdquo; is the tendency of stocks to close precisely at their nearest option strike price and is a regular feature of expiration Fridays. A Wall Street Journal examination of trading behavior from the start of 2007 through April 2013, using a list of all U.S. stocks with options from DeltaNeutral.com, gives a sense of the phenomenon&amp;rsquo;s prevalence.
+We analyzed trading behaviors from 2007 to April 2013 using U.S. stocks with options data.</description>
+    </item>
+    
+  </channel>
+</rss>
