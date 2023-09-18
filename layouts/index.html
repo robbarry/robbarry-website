@@ -1,3 +1,9 @@
 {{ define "main" }}
+{{ if eq .Kind "home" }}
+    <div class="about-page">
+{{ end }}
 {{ .Content }}
+{{ if eq .Kind "home" }}
+    </div>
+{{ end }}
 {{ end }}
