@@ -2,12 +2,13 @@
 title: 'Ghosts in the Clouds: Inside China''s Major Corporate Hack'
 date: '2019-12-30'
 categories:
-- WSJ
+- Articles
 tags:
 - China
 - Cybersecurity
 - Cloud Hopper
 - Hacking
+- WSJ
 ---
 A Journal investigation finds the Cloud Hopper attack was much bigger than previously known
 

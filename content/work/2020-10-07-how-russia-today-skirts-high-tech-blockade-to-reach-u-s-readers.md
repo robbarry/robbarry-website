@@ -2,11 +2,12 @@
 title: How Russia Today Skirts High-Tech Blockade to Reach U.S. Readers
 date: '2020-10-07'
 categories:
-- WSJ
+- Articles
 tags:
 - Russia
 - RT
 - Social Media
+- WSJ
 ---
 After 2016, social-media companies tried to limit the reach of RT, as it is now known. Instead, the outlet has been boosted by a news aggregator dominated by conservative publishers, including National Review, The Daily Caller and Newsmax.
 

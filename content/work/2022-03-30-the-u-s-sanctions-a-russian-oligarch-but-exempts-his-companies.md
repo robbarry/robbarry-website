@@ -2,13 +2,14 @@
 title: The U.S. Sanctions a Russian Oligarch--but Exempts His Companies
 date: '2022-03-30'
 categories:
-- WSJ
+- Articles
 tags:
 - Russia
 - Sanctions
 - Usmanov
 - Ukraine Conflict
 - Kremlin
+- WSJ
 ---
 Treasury Secretary Janet Yellen said sanctions would "impose massive costs on Putin's closest confidants." In reality, the impact is far milder.
 

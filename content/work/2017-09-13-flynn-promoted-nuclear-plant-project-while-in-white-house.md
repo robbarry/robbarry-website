@@ -1,8 +1,14 @@
 ---
 title: Flynn Promoted Nuclear-Plant Project While in White House
 date: '2017-09-13'
-categories: null
-tags: []
+categories:
+- Articles
+tags:
+- Russia
+- Michael Flynn
+- Trump
+- WSJ
+- National Security
 ---
 As President Trump's national security adviser, retired Lt. Gen. Mike Flynn promoted a controversial private-sector nuclear-power project in the Middle East that had once involved Russian companies, according to former security-council staffers and others familiar with the effort.
 
