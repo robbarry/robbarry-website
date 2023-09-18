@@ -8,7 +8,11 @@ tags:
 - Social Media
 - Disinformation
 - WSJ
+- Elections
+- Politics
 ---
-Newly identified Twitter accounts were until recently still tweeting out politically divisive messages as midterm elections approach.
+
+Newly identified Twitter accounts were until recently still tweeting out
+politically divisive messages as midterm elections approach.
 
 Read the full story [here](https://t.co/W2IxwkYDVC).

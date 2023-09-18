@@ -8,7 +8,7 @@ tags:
 - Campaign Finance
 - Politics
 - Super PACs
-- Election
+- Elections
 ---
 
 Presidential candidates and super PACs have paid more than $50 million for
