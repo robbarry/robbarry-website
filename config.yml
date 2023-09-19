@@ -30,7 +30,3 @@ menu:
     name: "Audio"
     url: "/categories/audio/"
     weight: 4
-  - identifier: "other"
-    name: "Other Writing"
-    url: "/categories/other/"
-    weight: 5
