@@ -30,7 +30,7 @@ menu:
     name: "Audio"
     url: "/categories/audio/"
     weight: 4
-  # - identifier: "thoughts"
-  #   name: "Thoughts"
-  #   url: "/posts/"
-  #   weight: 5
+  - identifier: "thoughts"
+    name: "Thoughts"
+    url: "/posts/"
+    weight: 5

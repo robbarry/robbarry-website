@@ -2,8 +2,6 @@
 title: Figuring Nonprofit Salaries
 summary: Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?
 math: true
-categories:
-- Thoughts
 ---
 Like public companies, nonprofits have to report lots of information about themselves. We want to see if we can use this information to compute the distribution of salaries among all the firm's employees.
 

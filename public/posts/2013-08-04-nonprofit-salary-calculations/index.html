@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Figuring Nonprofit Salaries | Rob Barry</title>
+<meta name="keywords" content="">
+<meta name="description" content="Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/">
+<link crossorigin="anonymous" href="../../assets/css/stylesheet.5cfc680b1eeaeef9efbced92d46c2a9e876b72ee14fba85846afc4cff9e6e6f8.css" integrity="sha256-XPxoCx7q7vnvvO2S1Gwqnodrcu4U&#43;6hYRq/Ez/nm5vg=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="../../assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.robbarry.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.robbarry.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.robbarry.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.robbarry.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.robbarry.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://www.robbarry.org/css/custom.css"><meta property="og:title" content="Figuring Nonprofit Salaries" />
+<meta property="og:description" content="Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/" /><meta property="article:section" content="posts" />
+
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Figuring Nonprofit Salaries"/>
+<meta name="twitter:description" content="Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "",
+      "item": "https://www.robbarry.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Figuring Nonprofit Salaries",
+      "item": "https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Figuring Nonprofit Salaries",
+  "name": "Figuring Nonprofit Salaries",
+  "description": "Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?",
+  "keywords": [
+    
+  ],
+  "articleBody": "Like public companies, nonprofits have to report lots of information about themselves. We want to see if we can use this information to compute the distribution of salaries among all the firm’s employees.\nIf you just want code and you’re not here to read, skip to the TL;DR section at the bottom of the post.\nGathering the Data The IRS requires all nonprofits over a certain size to report their financial information on public documents. These are called form 990s, and they’re full of all sorts of stuff, ranging from basic concepts like total revenues and expenses, down to the nitty-gritty, like how much the highest paid employees make.\nWhile publicly traded companies report the income for top officers, nonprofits report income for top officers and other highly paid employees. This critical distinction allows us to build a more accurate income distribution.\nFor our analysis, we need three pieces of information:\nThe total number of employees The total salary paid to employees The salaries of the highest paid employees In the end, we’re going to be able to guess how much each employee at the nonprofit earns. Of course, we won’t actually know who earns what; we’ll just know that the employee with, say, the 20th highest salary probably earns about $x.\nFor demonstration purposes, I’ve picked a completely random form 990 filed by a medium-sized nonprofit in 2012.\nWe can get the first two items off the front page of the form. In our example, the data we’re after looks like this:\nYou can see the “total number of individuals employed in the calendar year 2011” is 97, and the “salaries, other compensation, employee benefits” is $8,475,502.\nWhat does our $8.475 million figure include? The form points us to another section of the 990: “Part IX, column (A), lines 5-10.” Let’s have a look.\nHere, we can see the numbers that constitute our total salary figure: they include two sets of compensation figures: about $1.05 million for officers, directors, key employees and about $4.9 million for other salaries and wages. Also included in our figure are pensions, benefits and payroll taxes.\nBecause we know next to nothing about this nonprofit – Do all employees get healthcare benefits? Pensions? – let’s revise our total salary figure downward to include only our two base compensation figures.\n$$ \\begin{aligned} \\text{Total base salary} \u0026= \\\\ $1,049,907 + $4,905,904 \u0026= $5,955,811 \\\\ \\end{aligned} $$\nWe can then compute the average base salary per employee:\n$$ \\begin{aligned} \\text{Average base salary} \u0026= \\\\ $5,955,811 \\div 97 \u0026= $61,400 \\\\ \\end{aligned} $$\nNow let’s get the salaries of the highest paid employees. This is generally available deeper in the form. In our case, it’s spread across two different pages. For simplicity, I’ve stitched them together:\nI’ve highlighted two columns: (D), which is the “reportable compensation from the organization (W-2/1099-MISC)” and (F), “estimated amount of other compensation from the organization and related organizations.”\nFor our purposes, we’re only going to look at base salary, which is column (D). If you were doing an analysis that included benefits, you’d also want to consider including column (F).\nDetermining the Distribution Now that we’ve got the information we need, we’re ready to do our analysis. Our goal is to determine the distribution of employee salaries at this nonprofit. Once we’ve established a distribution, we can then go on to say things like: 75% of this nonprofit’s employees make less than $x. Or whatever.\nYou might say, hey, I’ve got the average salary! So I already know that 50% of employees make less than about $61,000, right?\nThat’s wrong. Just look at the guy with the highest salary: the CEO. He makes nearly $650,000 – more than 10 times the average! So his salary alone must be heavily skewing the numbers.\nA Lack of Symmetry When I think of skewed distributions, I think of the chubby kid on the seesaw. To balance him out, several skinny kids have to pile on the other end. That’s what salary distributions are like: they’re not symmetric about the mean.\nThis comes up all the time when we talk about the top one percent. A disproportionate amount of wealth (and income) is held by a relatively small group of people.\nIt’s the same at most companies. In order to balance the CEO’s salary, we know there must be a bunch of employees wedged in beneath $61,000.\nWhat distribution might fit this pattern?\nThe Log-Normal Distribution We’ve already disqualified our favorite – the normal distribution – because our data isn’t symmetric. So, what about the log-normal distribution? For a log-normal distribution, the logarithm of the variable is symmetric about the mean.\nWhen you think about the way salaries are structured, this actually makes a lot of sense. If it doesn’t, don’t take my word for it. Here’s a paper arguing that most income distributions are log-normal.\nWe’ll move forward under the assumption that our salaries are distributed log-normally. They may not be, but this isn’t science. This is a blog post.\nSolving Parameters Another reason we like log-normality is the parameters describing the distribution are pretty and easy to solve. In our case, we only need to know a few basic equations and we can plug in the figures above and presto, we’ll have a nice distribution to show our friends.\nThe key parameters we’re after here are μ (mu) and σ (sigma). These parameters describe the location and scale of the distribution. Generally – and this is very basic and not rigorous at all – the hump, or bulk of the distribution is described by μ and how far the tail stretches is described by σ.\nIf you take a look at the Wikipedia article about the log-normal distribution, you can see some basic equations that incorporate μ and σ.\nFirst, we know the mean (which we’ve calculated above to be about $61,000) is related to μ and σ like this:\n$$ \\text{mean} = e^{\\mu + \\frac{\\sigma^{2}}{2}} $$\nSecond, since we know the logarithm of our distribution is normally distributed, we know it can be defined like this:\n$$ X = e^{\\mu + \\sigma Z} $$\nWhere Z is a standard normal variable.\nNow, let’s look back at our list of top salaries. We pick out the lowest of the eight, which is $119,565. This is the 8th of 97 elements, so it’s percentile rank is:\n$$ 1 - \\frac{8}{98} = 0.918367347 $$\nIt’s trivial to find the z-score that corresponds to that percentile. You can either use a lookup table like this one, or a function like qnorm in R.\n$$ qnorm(0.918367347) = 1.394173 $$\nSo, these calculations leave us with two equations and two unknowns:\n$$ \\begin{aligned} 61,400 \u0026= e^{\\mu + \\frac{\\sigma^{2}}{2}} \\\\ 119,565 \u0026= e^{\\mu + 1.394173 \\sigma} \\\\ \\end{aligned} $$\nTaking the log of both equations, we get:\n$$ \\begin{aligned} log(61,400) \u0026= \\mu + \\frac{\\sigma^{2}}{2} \\\\ log(119,565) \u0026= \\mu + 1.394173 \\sigma \\\\ \\end{aligned} $$\nSubtracting gives us:\n$$ \\begin{aligned} (\\mu + \\frac{\\sigma^{2}}{2}) - (\\mu + 1.394173 \\sigma) \u0026= -0.66645 \\end{aligned} $$\nUsing the quadratic formula, we solve and get:\n$$ \\sigma = (0.612625, 2.17572) $$\nNow, plug these values in above to solve for μ and we get:\n$$ \\begin{aligned} \\mu \u0026= log(119,565) - 1.394173 \\sigma \\\\ \u0026= (10.83751, 8.65829) \\\\ \\end{aligned} $$\nSo we’ve now derived the parameters for our log-normal distribution:\n$$ \\begin{aligned} (\\mu = 10.83751\u0026, \\sigma = 0.612625) \\\\ (\\mu = 8.65829\u0026, \\sigma = 2.17572) \\\\ \\end{aligned} $$\nVisualizing Results We’ve got two solutions. Let’s see what they look like.\nTo my eye, the first set of parameters (the red line) looks much better. It’s a more realistic salary distribution for our nonprofit.\nWe can use a simple function like R’s qlnorm to see what this looks like. Here are the percentile values for income:\n10%\t$23,212 20%\t$30,391 30%\t$36,911 40%\t$43,578 50%\t$50,895 60%\t$59,440 70%\t$70,177 80%\t$85,230 90%\t$111,594 95%\t$139,412 99%\t$211,649 Of course, we’re including some pretty serious outliers. The CEO’s salary skews the data. Additionally, the large gap between the 7th and 8th largest salaries is strange. If we toss the top salary and use the second lowest value ($144,657) for our quantile calculation, we get:\n10%\t$12,372 20%\t$18,154 30%\t$23,937 40%\t$30,316 50%\t$37,808 60%\t$47,151 70%\t$59,718 80%\t$78,739 90%\t$115,541 95%\t$158,587 99%\t$287,248 Plotted, it looks something like this:\nPretty cool, right?\nDoes It Fit? How does it fit our known values? If we keep the CEO, we get:\nRemoving our outlier CEO, we get:\nThis distribution actually appears to fit the other high-earning employees fairly well.\nTL;DR - The Code Okay, okay: here’s an R script I hacked together that performs these calculations for you.\n# Function returns estimated salaries given total salary, number of employees # and top salaries. GetSalaries \u003c- function(TotalSalary, Employees, TopSalaries) { Z \u003c- qnorm(1 - length(TopSalaries) / (employees + 1)) AvgSalary \u003c- TotalSalary / Employees # Warning: massive assumptions here! # We're simply assuming all solutions are real and, worse, # that the smallest sigma is correct. If you get crazy results, # this is probably why. sigmas \u003c- Re(polyroot(c(-(log(min(TopSalaries)) - log(AvgSalary)), Z, -1/2))) sigma \u003c- min(sigmas) meanlog \u003c- log(min(TopSalaries)) - Z * sigma data.frame( Employee = 1:Employees, Salary = qlnorm(1 - (1:Employees) / (Employees + 1), meanlog, sigma) ) } # And, our first example: TotalSalary \u003c- 5955811 Employees \u003c- 97 TopSalaries \u003c- c(648820, 188541, 197393, 167428, 232167, 147222, 119565, 144657) GetSalaries(TotalSalary, Employees, TopSalaries) # Stripping outliers: TotalSalary \u003c- 5955811 - 648820 # Subtracting the CEO's large salary Employees \u003c- 96 # Reducing our employee count by one # Remove both the CEO's high salary and the lowest high salary. TopSalaries \u003c- c(188541, 197393, 167428, 232167, 147222, 144657) GetSalaries(TotalSalary, Employees, TopSalaries) Tip of the Hat Thanks to Serge for helping me with this.\nEdits 8/5/2013: Removed errant parenthesis; added trendline to first fit-plot.\nDisclaimer Standard disclaimer: This is just my personal ramblings. If you see a mistake – or if you know a better way – please get in touch and let me know.\n",
+  "wordCount" : "1675",
+  "inLanguage": "en",
+  "datePublished": "0001-01-01T00:00:00Z",
+  "dateModified": "0001-01-01T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rob Barry",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.robbarry.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.robbarry.org/" accesskey="h" title="Rob Barry (Alt + H)">Rob Barry</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.robbarry.org/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/articles/" title="Articles">
+                    <span>Articles</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/videos/" title="Videos">
+                    <span>Videos</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/audio/" title="Audio">
+                    <span>Audio</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/posts/" title="Thoughts">
+                    <span>Thoughts</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Figuring Nonprofit Salaries
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><p>Like public companies, nonprofits have to report lots of information about themselves. We want to see if we can use this information to compute the distribution of salaries among all the firm&rsquo;s employees.</p>
+<p>If you just want code and you&rsquo;re not here to read, skip to the <a href="#tldr---the-code">TL;DR section</a> at the bottom of the post.</p>
+<h3 id="gathering-the-data">Gathering the Data<a hidden class="anchor" aria-hidden="true" href="#gathering-the-data">#</a></h3>
+<p>The IRS requires all nonprofits over a certain size to report their financial information on public documents. These are called <a href="https://en.wikipedia.org/wiki/IRS_tax_forms#990">form 990s</a>, and they&rsquo;re full of all sorts of stuff, ranging from basic concepts like total revenues and expenses, down to the nitty-gritty, like how much the highest paid employees make.</p>
+<p>While publicly traded companies report the income for top officers, nonprofits report income for top officers <em>and</em> other highly paid employees. This critical distinction allows us to build a more accurate income distribution.</p>
+<p>For our analysis, we need three pieces of information:</p>
+<ul>
+<li>The total number of employees</li>
+<li>The total salary paid to employees</li>
+<li>The salaries of the highest paid employees</li>
+</ul>
+<p>In the end, we&rsquo;re going to be able to guess how much each employee at the nonprofit earns. Of course, we won&rsquo;t actually know who earns what; we&rsquo;ll just know that the employee with, say, the 20th highest salary probably earns about $<em>x</em>.</p>
+<p>For demonstration purposes, I&rsquo;ve picked a completely random form 990 filed by a medium-sized nonprofit in 2012.</p>
+<p>We can get the first two items off the front page of the form. In our example, the data we&rsquo;re after looks like this:</p>
+<p><img loading="lazy" src="../../assets/img/990-summary.jpg" alt="Key information on the first page of our sample 990"  />
+</p>
+<p>You can see the &ldquo;total number of individuals employed in the calendar year 2011&rdquo; is 97, and the &ldquo;salaries, other compensation, employee benefits&rdquo; is $8,475,502.</p>
+<p>What does our $8.475 million figure include? The form points us to another section of the 990: &ldquo;Part IX, column (A), lines 5-10.&rdquo; Let&rsquo;s have a look.</p>
+<p><img loading="lazy" src="../../assets/img/990-expenses.jpg" alt="Statement of functional expenses"  />
+</p>
+<p>Here, we can see the numbers that constitute our total salary figure: they include two sets of compensation figures: about $1.05 million for officers, directors, key employees and about $4.9 million for other salaries and wages. Also included in our figure are pensions, benefits and payroll taxes.</p>
+<p>Because we know next to nothing about this nonprofit &ndash; Do all employees get healthcare benefits? Pensions? &ndash; let&rsquo;s revise our total salary figure downward to include only our two base compensation figures.</p>
+<p>$$
+\begin{aligned}
+\text{Total base salary} &amp;= \\
+$1,049,907 + $4,905,904 &amp;= $5,955,811 \\
+\end{aligned}
+$$</p>
+<p>We can then compute the average base salary per employee:</p>
+<p>$$
+\begin{aligned}
+\text{Average base salary} &amp;= \\
+$5,955,811 \div 97 &amp;= $61,400 \\
+\end{aligned}
+$$</p>
+<p>Now let&rsquo;s get the salaries of the highest paid employees. This is generally available deeper in the form. In our case, it&rsquo;s spread across two different pages. For simplicity, I&rsquo;ve stitched them together:</p>
+<p><img loading="lazy" src="../../assets/img/990-salaries.jpg" alt="Top salaries of nonprofit employees"  />
+</p>
+<p>I&rsquo;ve highlighted two columns: (D), which is the &ldquo;reportable compensation from the organization (W-2/1099-MISC)&rdquo; and (F), &ldquo;estimated amount of other compensation from the organization and related organizations.&rdquo;</p>
+<p>For our purposes, we&rsquo;re only going to look at base salary, which is column (D). If you were doing an analysis that included benefits, you&rsquo;d also want to consider including column (F).</p>
+<h3 id="determining-the-distribution">Determining the Distribution<a hidden class="anchor" aria-hidden="true" href="#determining-the-distribution">#</a></h3>
+<p>Now that we&rsquo;ve got the information we need, we&rsquo;re ready to do our analysis. Our goal is to determine the distribution of employee salaries at this nonprofit. Once we&rsquo;ve established a distribution, we can then go on to say things like: 75% of this nonprofit&rsquo;s employees make less than $<em>x</em>. Or whatever.</p>
+<p>You might say, hey, I&rsquo;ve got the average salary! So I already know that 50% of employees make less than about $61,000, right?</p>
+<p>That&rsquo;s wrong. Just look at the guy with the highest salary: the CEO. He makes nearly $650,000 &ndash; more than <em>10 times</em> the average! So his salary alone must be heavily skewing the numbers.</p>
+<h4 id="a-lack-of-symmetry">A Lack of Symmetry<a hidden class="anchor" aria-hidden="true" href="#a-lack-of-symmetry">#</a></h4>
+<p>When I think of skewed distributions, I think of the chubby kid on the seesaw. To balance him out, several skinny kids have to pile on the other end. That&rsquo;s what salary distributions are like: they&rsquo;re not symmetric about the mean.</p>
+<p>This comes up all the time when we talk about the top one percent. A disproportionate amount of wealth (and income) is held by a relatively small group of people.</p>
+<p>It&rsquo;s the same at most companies. In order to balance the CEO&rsquo;s salary, we know there must be a bunch of employees wedged in beneath $61,000.</p>
+<p>What distribution might fit this pattern?</p>
+<h4 id="the-log-normal-distribution">The Log-Normal Distribution<a hidden class="anchor" aria-hidden="true" href="#the-log-normal-distribution">#</a></h4>
+<p>We&rsquo;ve already disqualified our favorite &ndash; the <a href="https://en.wikipedia.org/wiki/Normal_distribution">normal distribution</a> &ndash; because our data isn&rsquo;t symmetric. So, what about the <a href="http://en.wikipedia.org/wiki/Log-normal_distribution">log-normal distribution</a>? For a log-normal distribution, the <em>logarithm</em> of the variable is symmetric about the mean.</p>
+<p>When you think about the way salaries are structured, this actually makes a lot of sense. If it doesn&rsquo;t, don&rsquo;t take my word for it. Here&rsquo;s <a href="http://arxiv.org/abs/physics/0504217">a paper</a> arguing that most income distributions are log-normal.</p>
+<p>We&rsquo;ll move forward under the assumption that our salaries are distributed log-normally. <em>They may not be</em>, but this isn&rsquo;t science. This is a blog post.</p>
+<h4 id="solving-parameters">Solving Parameters<a hidden class="anchor" aria-hidden="true" href="#solving-parameters">#</a></h4>
+<p>Another reason we like log-normality is the parameters describing the distribution are pretty and easy to solve. In our case, we only need to know a few basic equations and we can plug in the figures above and presto, we&rsquo;ll have a nice distribution to show our friends.</p>
+<p>The key parameters we&rsquo;re after here are <strong>μ</strong> (mu) and <strong>σ</strong> (sigma). These parameters describe the location and scale of the distribution. Generally &ndash; and this is very basic and not rigorous at all &ndash; the hump, or bulk of the distribution is described by <strong>μ</strong> and how far the tail stretches is described by <strong>σ</strong>.</p>
+<p>If you take a look at the <a href="http://en.wikipedia.org/wiki/Log-normal_distribution">Wikipedia article</a> about the log-normal distribution, you can see some basic equations that incorporate <strong>μ</strong> and <strong>σ</strong>.</p>
+<p>First, we know the mean (which we&rsquo;ve calculated above to be about $61,000) is related to <strong>μ</strong> and <strong>σ</strong> like this:</p>
+<p>$$
+\text{mean} = e^{\mu + \frac{\sigma^{2}}{2}}
+$$</p>
+<p>Second, since we know the logarithm of our distribution is normally distributed, we know it can be defined like this:</p>
+<p>$$
+X = e^{\mu + \sigma Z}
+$$</p>
+<p>Where <em>Z</em> is a <a href="http://en.wikipedia.org/wiki/Standard_normal_variable">standard normal variable</a>.</p>
+<p>Now, let&rsquo;s look back at our list of top salaries. We pick out the lowest of the eight, which is $119,565. This is the 8th of 97 elements, so it&rsquo;s percentile rank is:</p>
+<p>$$
+1 - \frac{8}{98} = 0.918367347
+$$</p>
+<p>It&rsquo;s trivial to find the z-score that corresponds to that percentile. You can either use a lookup table <a href="http://www.regentsprep.org/Regents/math/algtrig/ATS7/ZChart.htm">like this one</a>, or a function like <code>qnorm</code> in R.</p>
+<p>$$
+qnorm(0.918367347) = 1.394173
+$$</p>
+<p>So, these calculations leave us with two equations and two unknowns:</p>
+<p>$$
+\begin{aligned}
+61,400 &amp;= e^{\mu + \frac{\sigma^{2}}{2}} \\
+119,565 &amp;= e^{\mu + 1.394173 \sigma} \\
+\end{aligned}
+$$</p>
+<p>Taking the log of both equations, we get:</p>
+<p>$$
+\begin{aligned}
+log(61,400) &amp;= \mu + \frac{\sigma^{2}}{2} \\
+log(119,565) &amp;= \mu + 1.394173 \sigma \\
+\end{aligned}
+$$</p>
+<p>Subtracting gives us:</p>
+<p>$$
+\begin{aligned}
+(\mu + \frac{\sigma^{2}}{2}) - (\mu + 1.394173 \sigma) &amp;= -0.66645
+\end{aligned}
+$$</p>
+<p>Using the quadratic formula, we solve and get:</p>
+<p>$$
+\sigma = (0.612625, 2.17572)
+$$</p>
+<p>Now, plug these values in above to solve for <strong>μ</strong> and we get:</p>
+<p>$$
+\begin{aligned}
+\mu &amp;= log(119,565) - 1.394173 \sigma \\
+&amp;= (10.83751, 8.65829) \\
+\end{aligned}
+$$</p>
+<p>So we&rsquo;ve now derived the parameters for our log-normal distribution:</p>
+<p>$$
+\begin{aligned}
+(\mu = 10.83751&amp;, \sigma = 0.612625) \\
+(\mu = 8.65829&amp;, \sigma = 2.17572) \\
+\end{aligned}
+$$</p>
+<h3 id="visualizing-results">Visualizing Results<a hidden class="anchor" aria-hidden="true" href="#visualizing-results">#</a></h3>
+<p>We&rsquo;ve got two solutions. Let&rsquo;s see what they look like.</p>
+<p><img loading="lazy" src="../../assets/img/990-distribution1.jpeg" alt="Comparison of solutions"  />
+</p>
+<p>To my eye, the first set of parameters (the red line) looks much better. It&rsquo;s a more realistic salary distribution for our nonprofit.</p>
+<p><img loading="lazy" src="../../assets/img/990-distribution2.jpeg" alt="The more probable solution"  />
+</p>
+<p>We can use a simple function like R&rsquo;s <code>qlnorm</code> to see what this looks like. Here are the percentile values for income:</p>
+<pre><code>10%	$23,212
+20%	$30,391
+30%	$36,911
+40%	$43,578
+50%	$50,895
+60%	$59,440
+70%	$70,177
+80%	$85,230
+90%	$111,594
+95%	$139,412
+99%	$211,649
+</code></pre>
+<p>Of course, we&rsquo;re including some pretty serious outliers. The CEO&rsquo;s salary skews the data. Additionally, the large gap between the 7th and 8th largest salaries is strange. If we toss the top salary and use the second lowest value ($144,657) for our quantile calculation, we get:</p>
+<pre><code>10%	$12,372
+20%	$18,154
+30%	$23,937
+40%	$30,316
+50%	$37,808
+60%	$47,151
+70%	$59,718
+80%	$78,739
+90%	$115,541
+95%	$158,587
+99%	$287,248
+</code></pre>
+<p>Plotted, it looks something like this:</p>
+<p><img loading="lazy" src="../../assets/img/990-distribution3.jpeg" alt="Our estimate for the salary distribution for this nonprofit"  />
+</p>
+<p>Pretty cool, right?</p>
+<h3 id="does-it-fit">Does It Fit?<a hidden class="anchor" aria-hidden="true" href="#does-it-fit">#</a></h3>
+<p>How does it fit our known values? If we keep the CEO, we get:</p>
+<p><img loading="lazy" src="../../assets/img/990-predicted1.jpeg" alt="The estimate doesn&amp;rsquo;t fit the CEO, who is an outlier"  />
+</p>
+<p>Removing our outlier CEO, we get:</p>
+<p><img loading="lazy" src="../../assets/img/990-predicted2.jpeg" alt="The estimate doesn&amp;rsquo;t fit the CEO, who is an outlier"  />
+</p>
+<p>This distribution actually appears to fit the other high-earning employees fairly well.</p>
+<h3 id="tldr---the-code">TL;DR - The Code<a hidden class="anchor" aria-hidden="true" href="#tldr---the-code">#</a></h3>
+<p>Okay, okay: here&rsquo;s an R script I hacked together that performs these calculations for you.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-R" data-lang="R"><span style="display:flex;"><span><span style="color:#75715e"># Function returns estimated salaries given total salary, number of employees</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># and top salaries.</span>
+</span></span><span style="display:flex;"><span>GetSalaries <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">function</span>(TotalSalary, Employees, TopSalaries) {  
+</span></span><span style="display:flex;"><span>  Z <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">qnorm</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">length</span>(TopSalaries) <span style="color:#f92672">/</span> (employees <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>))
+</span></span><span style="display:flex;"><span>  AvgSalary <span style="color:#f92672">&lt;-</span> TotalSalary <span style="color:#f92672">/</span> Employees
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Warning: massive assumptions here!</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># We&#39;re simply assuming all solutions are real and, worse,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># that the smallest sigma is correct. If you get crazy results,</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># this is probably why.</span>
+</span></span><span style="display:flex;"><span>  sigmas <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">Re</span>(<span style="color:#a6e22e">polyroot</span>(<span style="color:#a6e22e">c</span>(<span style="color:#f92672">-</span>(<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">min</span>(TopSalaries)) <span style="color:#f92672">-</span> <span style="color:#a6e22e">log</span>(AvgSalary)), Z, <span style="color:#ae81ff">-1</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>)))
+</span></span><span style="display:flex;"><span>  sigma <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">min</span>(sigmas)
+</span></span><span style="display:flex;"><span>  meanlog <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">min</span>(TopSalaries)) <span style="color:#f92672">-</span> Z <span style="color:#f92672">*</span> sigma
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">data.frame</span>(
+</span></span><span style="display:flex;"><span>    Employee <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>Employees,
+</span></span><span style="display:flex;"><span>    Salary <span style="color:#f92672">=</span> <span style="color:#a6e22e">qlnorm</span>(<span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> (<span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>Employees) <span style="color:#f92672">/</span> (Employees <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>), meanlog, sigma)
+</span></span><span style="display:flex;"><span>  )
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># And, our first example:</span>
+</span></span><span style="display:flex;"><span>TotalSalary <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">5955811</span>
+</span></span><span style="display:flex;"><span>Employees <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">97</span>
+</span></span><span style="display:flex;"><span>TopSalaries <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">648820</span>, <span style="color:#ae81ff">188541</span>, <span style="color:#ae81ff">197393</span>, <span style="color:#ae81ff">167428</span>, <span style="color:#ae81ff">232167</span>, <span style="color:#ae81ff">147222</span>, <span style="color:#ae81ff">119565</span>, <span style="color:#ae81ff">144657</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">GetSalaries</span>(TotalSalary, Employees, TopSalaries)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Stripping outliers:</span>
+</span></span><span style="display:flex;"><span>TotalSalary <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">5955811</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">648820</span> <span style="color:#75715e"># Subtracting the CEO&#39;s large salary</span>
+</span></span><span style="display:flex;"><span>Employees <span style="color:#f92672">&lt;-</span> <span style="color:#ae81ff">96</span> <span style="color:#75715e"># Reducing our employee count by one</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Remove both the CEO&#39;s high salary and the lowest high salary.</span>
+</span></span><span style="display:flex;"><span>TopSalaries <span style="color:#f92672">&lt;-</span> <span style="color:#a6e22e">c</span>(<span style="color:#ae81ff">188541</span>, <span style="color:#ae81ff">197393</span>, <span style="color:#ae81ff">167428</span>, <span style="color:#ae81ff">232167</span>, <span style="color:#ae81ff">147222</span>, <span style="color:#ae81ff">144657</span>)
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">GetSalaries</span>(TotalSalary, Employees, TopSalaries)
+</span></span></code></pre></div><h3 id="tip-of-the-hat">Tip of the Hat<a hidden class="anchor" aria-hidden="true" href="#tip-of-the-hat">#</a></h3>
+<p>Thanks to <a href="http://www.linkedin.com/pub/serge-sverdlov/7/1b7/902">Serge</a> for helping me with this.</p>
+<h3 id="edits">Edits<a hidden class="anchor" aria-hidden="true" href="#edits">#</a></h3>
+<p><strong>8/5/2013</strong>: Removed errant parenthesis; added trendline to first fit-plot.</p>
+<h3 id="disclaimer">Disclaimer<a hidden class="anchor" aria-hidden="true" href="#disclaimer">#</a></h3>
+<p>Standard disclaimer: This is just my personal ramblings. If you see a mistake &ndash; or if you know a better way &ndash; please get in touch and let me know.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+    
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="https://www.robbarry.org/">Rob Barry</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
