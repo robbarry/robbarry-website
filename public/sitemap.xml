@@ -554,12 +554,6 @@
     <loc>https://www.robbarry.org/tags/short-sellers/</loc>
     <lastmod>2013-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.robbarry.org/posts/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.robbarry.org/categories/ai-disclosure/</loc>
     <lastmod>2013-07-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -841,5 +835,7 @@
   </url><url>
     <loc>https://www.robbarry.org/work/2008-07-20-for-license-renewals-in-florida-no-criminal-background-checks/</loc>
     <lastmod>2008-07-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/posts/</loc>
   </url>
 </urlset>

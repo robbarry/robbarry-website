@@ -5,16 +5,6 @@
     <link>https://www.robbarry.org/posts/</link>
     <description>Recent content on Rob Barry</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 04 Aug 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Figuring Nonprofit Salaries</title>
-      <link>https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/</link>
-      <pubDate>Sun, 04 Aug 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/</guid>
-      <description>Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://www.robbarry.org/posts/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
