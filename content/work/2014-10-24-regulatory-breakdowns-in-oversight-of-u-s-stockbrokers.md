@@ -2,7 +2,7 @@
 title: Regulatory Breakdowns in Oversight of U.S. Stockbrokers
 date: '2014-10-24'
 categories: 
-- Other
+- Articles
 tags:
 - FINRA
 - Stockbrokers

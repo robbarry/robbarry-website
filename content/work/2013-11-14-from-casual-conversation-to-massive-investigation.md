@@ -2,7 +2,7 @@
 title: From Casual Conversation to Massive Investigation
 date: '2013-11-14'
 categories:
-- Other
+- Articles
 tags:
 - Methodology
 - Insider Trading
