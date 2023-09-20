@@ -4,6 +4,7 @@ date: '2011-12-28'
 categories:
 - Articles
 - AI Disclosure
+- Top
 tags: 
 - WSJ
 - Russia

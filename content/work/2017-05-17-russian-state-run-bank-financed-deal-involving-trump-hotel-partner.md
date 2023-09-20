@@ -3,6 +3,7 @@ title: Russian State-Run Bank Financed Deal Involving Trump Hotel Partner
 date: '2017-05-17'
 categories:
 - Articles
+- Top
 tags:
 - Russia
 - Trump

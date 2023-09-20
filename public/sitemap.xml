@@ -5,9 +5,6 @@
     <loc>https://www.robbarry.org/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
-    <loc>https://www.robbarry.org/work/</loc>
-    <lastmod>2023-07-24T07:12:01-04:00</lastmod>
-  </url><url>
     <loc>https://www.robbarry.org/categories/articles/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
@@ -15,6 +12,9 @@
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/tags/kremlin/</loc>
+    <lastmod>2023-07-24T07:12:01-04:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/work/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/tags/prigozhin/</loc>
@@ -39,6 +39,9 @@
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/work/2023-06-09-wagner/</loc>
+    <lastmod>2023-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/categories/top/</loc>
     <lastmod>2023-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/categories/videos/</loc>
@@ -554,6 +557,12 @@
     <loc>https://www.robbarry.org/tags/short-sellers/</loc>
     <lastmod>2013-08-20T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.robbarry.org/posts/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/</loc>
+    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.robbarry.org/categories/ai-disclosure/</loc>
     <lastmod>2013-07-29T00:00:00+00:00</lastmod>
   </url><url>
@@ -836,6 +845,6 @@
     <loc>https://www.robbarry.org/work/2008-07-20-for-license-renewals-in-florida-no-criminal-background-checks/</loc>
     <lastmod>2008-07-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.robbarry.org/posts/</loc>
+    <loc>https://www.robbarry.org/categories/stories/</loc>
   </url>
 </urlset>

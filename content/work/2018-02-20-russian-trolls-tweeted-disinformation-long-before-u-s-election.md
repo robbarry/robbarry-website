@@ -3,6 +3,7 @@ title: Russian Trolls Tweeted Disinformation Long Before U.S. Election
 date: '2018-02-20'
 categories:
 - Articles
+- Top
 tags:
 - Russia
 - Social Media

@@ -4,6 +4,7 @@ date: '2012-11-27'
 categories:
 - Articles
 - AI Disclosure
+- Top
 tags:
 - WSJ
 - Insider Trading

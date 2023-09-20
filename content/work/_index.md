@@ -1,1 +1,4 @@
-I've been working in journalism since 2006. Here's some of my recent work.
+---
+title: My Work
+---
+I've been working in journalism since 2006. Here's a catalog of my work.

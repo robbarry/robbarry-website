@@ -4,6 +4,7 @@ date: '2012-04-02'
 categories:
 - Articles
 - AI Disclosure
+- Top
 tags:
 - WSJ
 - Crime

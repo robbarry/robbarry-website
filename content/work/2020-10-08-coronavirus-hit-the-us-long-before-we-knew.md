@@ -3,6 +3,7 @@ title: Coronavirus Hit the U.S. Long Before We Knew
 date: 2020-10-08
 categories:
 - Articles
+- Top
 tags:
 - Health Care
 - Public Health

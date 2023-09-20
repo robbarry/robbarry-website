@@ -14,20 +14,16 @@ menu:
     name: "About"
     url: "/"
     weight: 1
-  # - identifier: "work"
-  #   name: "Work"
-  #   url: "/work/"
-  #   weight: 2
-  - identifier: "articles"
-    name: "Articles"
-    url: "/categories/articles/"
+  - identifier: "stories"
+    name: "Stories"
+    url: "/categories/top/"
     weight: 2
   - identifier: "videos"
-    name: "Videos"
+    name: "News Docs"
     url: "/categories/videos/"
     weight: 3
   - identifier: "audio"
-    name: "Audio"
+    name: "Podcasts"
     url: "/categories/audio/"
     weight: 4
   # - identifier: "thoughts"

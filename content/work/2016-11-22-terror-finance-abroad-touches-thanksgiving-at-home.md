@@ -3,6 +3,7 @@ title: Terror Finance Abroad Touches Thanksgiving at Home
 date: '2016-11-22'
 categories:
 - Articles
+- Top
 tags:
 - Hezbollah
 - WSJ

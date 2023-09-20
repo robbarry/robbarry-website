@@ -3,6 +3,7 @@ title: Taxpayers Face Big Tab for Unusual Doctor Billings
 date: '2014-06-09'
 categories:
 - Articles
+- Top
 tags:
 - Data Analysis
 - WSJ
