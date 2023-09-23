@@ -19,13 +19,21 @@ menu:
     url: "/categories/top/"
     weight: 2
   - identifier: "videos"
-    name: "News Docs"
+    name: "Docs"
     url: "/categories/videos/"
     weight: 3
   - identifier: "audio"
     name: "Podcasts"
     url: "/categories/audio/"
     weight: 4
+  - identifier: "cv"
+    name: "CV"
+    url: "/assets/html/resume.html"
+    weight: 5
+  # - identifier: "ai"
+  #   name: "AI"
+  #   url: "/posts/ai/"
+  #   weight: 5
   # - identifier: "thoughts"
   #   name: "Thoughts"
   #   url: "/posts/"
