@@ -49,8 +49,9 @@
             align-items: center;
         }
 
-        .contact-info>div {
+        .contact-info>address {
             margin-right: 20px;
+            font-style: normal;
         }
 
         .contact-info img {
@@ -174,26 +175,31 @@
         .role-summary {
             margin-top: 10px;
         }
+
+        .obfuscated {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
     </style>
 </head>
 
 <body>
     <div class="cv-container">
-        <div class="header-container">
+        <header class="header-container">
             <div class="header">
-                <div class="contact-info">
+                <nav class="contact-info">
                     <img src="/assets/img/robbarry-profile.jpeg" alt="Rob Barry">
-                    <div>
+                    <address>
                         <strong>Rob Barry</strong><br>
-                        rob.barry@wsj.com<br>
-                        +1-929-263-4290
-                    </div>
-                </div>
-                <div>
+                        <span class="obfuscated">moc.jsw@yrrab.bor</span><br>
+                        <span class="obfuscated">0924-362-929-1+</span>
+                    </address>
+                </nav>
+                <nav>
                     <a href="#">Download Resume</a>
-                </div>
+                </nav>
             </div>
-        </div>
+        </header>
         <div class="content-container">
             <div class="left-section">
                 <div class="section skills">
@@ -245,7 +251,7 @@
                 </div>
             </div>
             <div class="right-section">
-                <div class="section bio">
+                <section class="section bio">
                     <h2>BIO</h2>
                     <div class="text">
                         <p>I’m an investigative reporter and editor at The Wall Street Journal. I help lead the
@@ -256,14 +262,14 @@
                             to
                             exposing a covert Russian global paramilitary network.</p>
                     </div>
-                </div>
-                <div class="section experience">
+                </section>
+                <section class="section experience">
                     <h2>EXPERIENCE</h2>
-                    <div class="role">
+                    <article class="role">
                         <div class="role-header">
                             <div class="role-title">Investigations Data Editor</div>
                             <div class="role-company">The Wall Street Journal</div>
-                            <div class="role-dates">2014&nbsp;-&nbsp;Present</div>
+                            <time class="role-dates">2014&nbsp;-&nbsp;Present</time>
                         </div>
                         <div class="role-summary">
                             <p>I lead the newspaper’s data team, which is a group of reporters who specialize in
@@ -272,12 +278,12 @@
                                 editing.
                                 I also work on my own signature projects.</p>
                         </div>
-                    </div>
-                    <div class="role">
+                    </article>
+                    <article class="role">
                         <div class="role-header">
                             <div class="role-title">Investigative Reporter</div>
                             <div class="role-company">The Wall Street Journal</div>
-                            <div class="role-dates">2011 - 2014</div>
+                            <time class="role-dates">2011 - 2014</time>
                         </div>
                         <div class="role-summary">
                             <p>I wrote about police shootings, stockbrokers, Russian elections, airplane crashes and
@@ -285,12 +291,12 @@
                                 lucky stock trades by corporate executives, each of which required innovative analytical
                                 techniques.</p>
                         </div>
-                    </div>
-                    <div class="role">
+                    </article>
+                    <article class="role">
                         <div class="role-header">
                             <div class="role-title">Reporter & Data Editor</div>
                             <div class="role-company">The Miami Herald</div>
-                            <div class="role-dates">2006 - 2011</div>
+                            <time class="role-dates">2006 - 2011</time>
                         </div>
                         <div class="role-summary">
                             I held various roles, including as a Neighbors Reporter covering life and local government
@@ -299,21 +305,21 @@
                             worked on large investigative projects, daily news stories, and created a host of web
                             applications for the public and the newsroom intranet.
                         </div>
-                    </div>
-                </div>
-                <div class="section education">
+                    </article>
+                </section>
+                <section class="section education">
                     <h2>EDUCATION</h2>
-                    <div class="role">
+                    <article class="role">
                         <div class="role-header">
                             <div class="role-title">B.S. Mathematics & English</div>
                             <div class="role-company">The University of Miami</div>
-                            <div class="role-dates">2005</div>
+                            <time class="role-dates">2005</time>
                         </div>
-                    </div>
-                </div>
-                <div class="section awards">
+                    </article>
+                </section>
+                <section class="section awards">
                     <h2>AWARDS</h2>
-                    <div class="text">
+                    <article class="text">
                         <p>I’ve won the top business reporting award, the Gerald Loeb, four times. I also contributed to
                             a
                             series of stories detailing Medicare overbilling and fraud which was awarded the Pulitzer
@@ -325,8 +331,8 @@
                         <p>My other work has won many other awards, including the 2021 Philip Meyer Journalism Award for
                             computational journalism.</p>
 
-                    </div>
-                </div>
+                    </article>
+                </section>
             </div>
         </div>
     </div>
