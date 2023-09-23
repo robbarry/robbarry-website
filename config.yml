@@ -28,7 +28,7 @@ menu:
     weight: 4
   - identifier: "cv"
     name: "CV"
-    url: "/assets/html/resume.html"
+    url: "/assets/pdfs/rob-barry-resume.pdf"
     weight: 5
   # - identifier: "ai"
   #   name: "AI"

@@ -4,9 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap"
-        rel="stylesheet">
     <title>Rob Barry's CV</title>
 
     <style>
@@ -20,15 +17,17 @@
             --name-color: #263238;
             --link-color: #0069D9;
             --link-hover-color: #004C91;
-            --complementary-color: #FFA000;
+            --complementary-color: #ff7300;
             --secondary-text-color: #757575;
             --tertiary-text-color: #9E9E9E;
             --link-bg-color: #0069D9;
+            --primary-font-family: 'Roboto', sans-serif;
+            --secondary-font-family: 'Titillium Web', sans-serif;
         }
 
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: var(--primary-font-family);
             padding: 20px;
             margin: 0;
             background-color: var(--background-color);
@@ -102,7 +101,7 @@
         h3 {
             color: var(--primary-text-color);
             margin-top: 0;
-            font-family: 'Roboto Slab', serif;
+            font-family: var(--secondary-font-family);
         }
 
         h1 {
@@ -126,14 +125,12 @@
             margin-bottom: 10px;
         }
 
-        .samples a,
-        .bio a {
+        .samples a {
             color: var(--link-color);
             text-decoration: none;
         }
 
-        .samples a:hover,
-        .bio a:hover {
+        .samples a:hover {
             color: var(--link-hover-color);
             text-decoration: underline;
         }
@@ -334,18 +331,6 @@
                 </section>
             </section>
             <section class="right-section">
-                <section class="section bio">
-                    <h2>BIO</h2>
-                    <div class="text">
-                        <p>I’m an investigative reporter and editor at The Wall Street Journal. I help lead the
-                            newspaper's data team, a group of reporters who specialize in computer programming and data
-                            analysis. </p>
-                        <p>My career has taken me on many adventures, from building hundreds of TikTok bots with
-                            Raspberry Pis to tracking a Chinese government hacker group inside major global corporations
-                            to
-                            exposing a covert Russian global paramilitary network.</p>
-                    </div>
-                </section>
                 <section class="section experience">
                     <h2>EXPERIENCE</h2>
                     <article class="role">
@@ -355,11 +340,14 @@
                             <time class="role-dates">2014&nbsp;-&nbsp;Present</time>
                         </div>
                         <div class="role-summary">
-                            <p>I lead the newspaper’s investigative data team. In my role, I manage the team, including
+                            <p>I lead the newspaper’s investigative data team, which is a group of reporters who
+                                specialize in computer programming and data. In my role, I manage the team, including
                                 story
                                 assignments and
-                                editing.
-                                I also work on my own signature projects.</p>
+                                editing.</p>
+                            <p>I also work on my own projects, from building hundreds of TikTok bots with
+                                Raspberry Pis to tracking a Chinese government hacker group inside major global
+                                corporations to exposing a covert Russian global paramilitary network.</p>
                         </div>
                     </article>
                     <article class="role">
@@ -370,9 +358,8 @@
                         </div>
                         <div class="role-summary">
                             <p>I wrote about police shootings, stockbrokers, Russian elections, airplane crashes and
-                                unusually
-                                lucky stock trades by corporate executives, each of which required innovative analytical
-                                techniques.</p>
+                                unusually lucky stock trades by corporate executives, each of which required innovative
+                                analytical techniques.</p>
                         </div>
                     </article>
                     <article class="role avoid-break">
