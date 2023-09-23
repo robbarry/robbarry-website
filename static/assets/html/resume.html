@@ -4,24 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
     <title>Rob Barry's CV</title>
+
     <style>
+        :root {
+            --background-color: #fafafa;
+            /* Lightened the background for a softer look */
+            --container-bg-color: #ffffff;
+            --text-shadow-color: rgba(0, 0, 0, 0.03);
+            --box-shadow-color: rgba(0, 0, 0, 0.15);
+            /* Increased shadow intensity for more depth */
+            --divider-color: #e0e0e0;
+            /* Softened the divider color */
+            --primary-text-color: #212121;
+            /* Darkened primary text for better contrast */
+            --name-color: #263238;
+            /* Slightly adjusted the name color to pop more */
+            --link-color: #0069D9;
+            /* Made the link color a tad darker for better readability */
+            --link-hover-color: #004C91;
+            /* A deeper shade for hover to provide a noticeable difference */
+            --complementary-color: #FFA000;
+            /* Brightened the gold for more vibrancy */
+            --secondary-text-color: #757575;
+            /* Balanced the secondary text color */
+            --tertiary-text-color: #9E9E9E;
+            /* Adjusted tertiary text for readability */
+            --link-bg-color: #0069D9;
+            /* Matches link color for consistency */
+        }
+
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
             padding: 20px;
             margin: 0;
+            background-color: var(--background-color);
+            text-shadow: 0 1px 1px var(--text-shadow-color);
         }
 
         .cv-container {
             max-width: 1000px;
-            background-color: white;
             padding: 20px;
             margin: 0 auto;
             border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
+            background-color: var(--container-bg-color);
+            box-shadow: 0 4px 10px var(--box-shadow-color);
         }
 
         .header-container,
@@ -34,13 +67,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #ddd;
             margin-bottom: 20px;
             padding-bottom: 10px;
             max-width: 1000px;
             /* same max-width as .cv-container */
             margin-left: auto;
             margin-right: auto;
+            border-bottom: 1px solid var(--divider-color);
         }
 
 
@@ -78,8 +111,17 @@
         h1,
         h2,
         h3 {
-            color: #333;
+            color: var(--primary-text-color);
             margin-top: 0;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
         }
 
         .section {
@@ -97,12 +139,13 @@
 
         .samples a,
         .bio a {
-            color: #007BFF;
+            color: var(--link-color);
             text-decoration: none;
         }
 
         .samples a:hover,
         .bio a:hover {
+            color: var(--link-hover-color);
             text-decoration: underline;
         }
 
@@ -131,7 +174,7 @@
 
         .skills ul li::before {
             content: "\2022";
-            color: #007BFF;
+            color: var(--link-color);
             font-weight: bold;
             display: inline-block;
             position: absolute;
@@ -161,7 +204,7 @@
         }
 
         .role-company {
-            color: #666;
+            color: var(--secondary-text-color);
             margin-right: 20px;
             /* Give some space between company and dates */
             font-size: 0.9em;
@@ -169,7 +212,7 @@
         }
 
         .role-dates {
-            color: #888;
+            color: var(--tertiary-text-color);
             text-align: right;
             /* Right-align to help with spacing if your content grows */
             flex: 0 0 100px;
@@ -193,6 +236,40 @@
         .avoid-break {
             page-break-inside: avoid;
         }
+
+        .name a {
+            text-decoration: none;
+            color: var(--name-color);
+        }
+
+        .name a:hover {
+            color: var(--link-hover-color);
+            /* Blue on hover */
+        }
+
+        .complementary-color {
+            color: var(--complementary-color);
+            /* Goldenrod */
+        }
+
+        h2 {
+            color: var(--complementary-color);
+            /* Goldenrod */
+        }
+
+        .download-link a {
+            padding: 5px 10px;
+            background-color: var(--link-bg-color);
+            /* Blue to match links */
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-link a:hover {
+            background-color: var(--link-hover-color);
+            /* Darker blue on hover */
+        }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
@@ -207,7 +284,7 @@
                 <nav class="contact-info">
                     <img src="/assets/img/robbarry-profile.jpeg" alt="Rob Barry">
                     <address>
-                        <strong><span class="name">Rob Barry</span></strong><br>
+                        <strong><span class="name"><a href="/">Rob Barry</a></span></strong><br>
                         <span class="obfuscated">moc.jsw@yrrab.bor</span><br>
                         <span class="obfuscated">0924-362-929-1+</span>
                     </address>
@@ -365,6 +442,19 @@
 
         var name = document.querySelector('.name');
         name.innerHTML = "<a href='https://www.robbarry.org/assets/html/resume.html'>Rob Barry</a>";
+
+        // reduce the size of everything on the page
+        var elements = document.querySelectorAll('body *');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.fontSize = '13.3px';
+        }
+
+        // reduce the padding on all the sections
+        var sections = document.querySelectorAll('.role');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.padding = '0px';
+        }
+
     }
 
     function restoreFromPrint() {
@@ -378,7 +468,13 @@
         }
 
         var name = document.querySelector('.name');
-        name.innerHTML = 'Rob Barry';
+        name.innerHTML = '<a href="/">Rob Barry</a>';
+
+        // restore the font size
+        var elements = document.querySelectorAll('body *');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.fontSize = '';
+        }
     }
 
     function downloadPDF() {
@@ -387,7 +483,7 @@
 
         var element = document.querySelector('.cv-container'); // or use document.body for the whole page
         var opt = {
-            margin: 10,
+            margin: 5,
             filename: 'robbarry-resume.pdf',
             image: { type: 'jpeg', quality: 1 },
             html2canvas: { scale: 2 },
