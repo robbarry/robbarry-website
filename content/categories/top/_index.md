@@ -1,6 +1,9 @@
 ---
-title: Top Stories
+title: My Stories
+aliases:
+    - /pages/work/
 ---
+
 I've been working in newspapers since 2006. Here's some of my most ambitious
 work.
 
