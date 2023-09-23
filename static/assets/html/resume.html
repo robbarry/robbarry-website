@@ -107,7 +107,7 @@
         }
 
         .section ul li {
-            line-height: 0.75;
+            line-height: 1;
         }
 
         .samples ul li {
@@ -124,6 +124,9 @@
         .skills ul li {
             margin-bottom: 10px;
             position: relative;
+            padding: 0px;
+            margin-bottom: 5px;
+            margin-top: 5px;
         }
 
         .skills ul li::before {
@@ -139,7 +142,7 @@
 
         .role {
             padding: 10px 0;
-            margin-bottom: 20px;
+            margin-bottom: 13px;
             border-bottom: 1px solid #ddd;
             /* Optional line separator */
             position: relative;
@@ -172,7 +175,7 @@
             flex: 0 0 100px;
         }
 
-        .role-summary {
+        .role-summary p {
             margin-top: 10px;
         }
 
@@ -180,7 +183,21 @@
             unicode-bidi: bidi-override;
             direction: rtl;
         }
+
+        /* Add a page break before the element */
+        .page-break-before {
+            page-break-before: always;
+        }
+
+        /* Avoid breaking inside the element */
+        .avoid-break {
+            page-break-inside: avoid;
+        }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -190,19 +207,19 @@
                 <nav class="contact-info">
                     <img src="/assets/img/robbarry-profile.jpeg" alt="Rob Barry">
                     <address>
-                        <strong>Rob Barry</strong><br>
+                        <strong><span class="name">Rob Barry</span></strong><br>
                         <span class="obfuscated">moc.jsw@yrrab.bor</span><br>
                         <span class="obfuscated">0924-362-929-1+</span>
                     </address>
                 </nav>
-                <nav>
-                    <a href="#">Download Resume</a>
+                <nav class="download-link">
+                    <a href="javascript:void(0);" onclick="downloadPDF();">Download Resume</a>
                 </nav>
             </div>
         </header>
-        <div class="content-container">
-            <div class="left-section">
-                <div class="section skills">
+        <section class="content-container">
+            <section class="left-section">
+                <section class="section skills">
                     <h2>TECHNICAL SKILLS</h2>
                     <ul>
                         <li>Computer programming</li>
@@ -213,8 +230,8 @@
                         <li>Network analysis</li>
                         <li>Internet forensics</li>
                     </ul>
-                </div>
-                <div class="section skills">
+                </section>
+                <section class="section skills">
                     <h2>INVESTIGATIVE SKILLS</h2>
                     <ul>
                         <li>Confidential source management</li>
@@ -223,8 +240,8 @@
                         <li>Public records</li>
                         <li>Demographics analysis</li>
                     </ul>
-                </div>
-                <div class="section samples">
+                </section>
+                <section class="section samples">
                     <h2>WORK SAMPLES</h2>
                     <ul>
                         <li><a
@@ -248,9 +265,9 @@
                                 Travels of Mrs. Murray's Toyota Unveil Terror-Finance Network</a></li>
                         <li><a href="https://robbarry.org/categories/top/">More...</a></li>
                     </ul>
-                </div>
-            </div>
-            <div class="right-section">
+                </section>
+            </section>
+            <section class="right-section">
                 <section class="section bio">
                     <h2>BIO</h2>
                     <div class="text">
@@ -272,9 +289,8 @@
                             <time class="role-dates">2014&nbsp;-&nbsp;Present</time>
                         </div>
                         <div class="role-summary">
-                            <p>I lead the newspaper’s data team, which is a group of reporters who specialize in
-                                analyzing
-                                large sets of data. In my role, I manage the team, including story assignments and
+                            <p>I lead the newspaper’s data team. In my role, I manage the team, including story
+                                assignments and
                                 editing.
                                 I also work on my own signature projects.</p>
                         </div>
@@ -292,18 +308,17 @@
                                 techniques.</p>
                         </div>
                     </article>
-                    <article class="role">
+                    <article class="role avoid-break">
                         <div class="role-header">
                             <div class="role-title">Reporter & Data Editor</div>
                             <div class="role-company">The Miami Herald</div>
                             <time class="role-dates">2006 - 2011</time>
                         </div>
                         <div class="role-summary">
-                            I held various roles, including as a Neighbors Reporter covering life and local government
-                            in North Miami Beach a Metro Clerk/Reporter focusing on breaking news,
-                            obituaries and special interest articles, and a Reporter and Database Editor where I
-                            worked on large investigative projects, daily news stories, and created a host of web
-                            applications for the public and the newsroom intranet.
+                            <p>I covered life and local government in North Miami Beach, worked as a metro
+                                reporter focusing on breaking news, obituaries and special interest articles, and an
+                                investigative data reporter working on large projects. I also created a host of web
+                                applications for the public and the newsroom intranet.</p>
                         </div>
                     </article>
                 </section>
@@ -333,9 +348,57 @@
 
                     </article>
                 </section>
-            </div>
-        </div>
+            </section>
+        </section>
     </div>
 </body>
+<script type="text/javascript">
+    function prepareForPrint() {
+        // first, hide the "download" button
+        document.querySelector('.download-link').style.display = 'none';
+
+        // reverse the obfuscation
+        var obfuscated = document.querySelectorAll('.obfuscated');
+        for (var i = 0; i < obfuscated.length; i++) {
+            obfuscated[i].innerHTML = obfuscated[i].innerHTML.split('').reverse().join('');
+        }
+
+        var name = document.querySelector('.name');
+        name.innerHTML = "<a href='https://www.robbarry.org/assets/html/resume.html'>Rob Barry</a>";
+    }
+
+    function restoreFromPrint() {
+        // restore the download button
+        document.querySelector('.download-link').style.display = 'block';
+
+        // obfuscate the email and phone number
+        var obfuscated = document.querySelectorAll('.obfuscated');
+        for (var i = 0; i < obfuscated.length; i++) {
+            obfuscated[i].innerHTML = obfuscated[i].innerHTML.split('').reverse().join('');
+        }
+
+        var name = document.querySelector('.name');
+        name.innerHTML = 'Rob Barry';
+    }
+
+    function downloadPDF() {
+        // set a timeout to redisplay the button after 5 seconds
+        prepareForPrint();
+
+        var element = document.querySelector('.cv-container'); // or use document.body for the whole page
+        var opt = {
+            margin: 10,
+            filename: 'robbarry-resume.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().from(element).set(opt).save().then(restoreFromPrint);
+        // show the "download" button again
+    }
+
+
+</script>
 
 </html>
