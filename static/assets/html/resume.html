@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob Barry's CV</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            background-color: white;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-container,
+        .content-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            max-width: 1000px;
+            /* same max-width as .cv-container */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info>div {
+            margin-right: 20px;
+        }
+
+        .contact-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .left-section,
+        .right-section {
+            padding: 20px;
+        }
+
+        .left-section {
+            flex: 0 0 35%;
+            border-right: 1px solid #ddd;
+        }
+
+        .right-section {
+            flex: 1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .samples a,
+        .bio a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .samples a:hover,
+        .bio a:hover {
+            text-decoration: underline;
+        }
+
+        .section ul li {
+            line-height: 0.75;
+        }
+
+        .samples ul li {
+            line-height: 1.25;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding-left: 20px;
+            /* Add left padding to simulate default bullet behavior */
+            margin-left: 0;
+        }
+
+        .skills ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .skills ul li::before {
+            content: "\2022";
+            color: #007BFF;
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: -20px;
+            /* Position the bullet to the left of the text */
+            top: 0;
+        }
+
+        .role {
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            /* Optional line separator */
+            position: relative;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .role-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .role-company {
+            color: #666;
+            margin-right: 20px;
+            /* Give some space between company and dates */
+            font-size: 0.9em;
+        }
+
+        .role-dates {
+            color: #888;
+            text-align: right;
+            /* Right-align to help with spacing if your content grows */
+            flex: 0 0 100px;
+            /* Set a consistent width for date display */
+        }
+
+        .role-summary {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cv-container">
+        <div class="header-container">
+            <div class="header">
+                <div class="contact-info">
+                    <img src="/assets/img/robbarry-profile.jpeg" alt="Rob Barry">
+                    <div>
+                        <strong>Rob Barry</strong><br>
+                        rob.barry@wsj.com<br>
+                        +1-929-263-4290
+                    </div>
+                </div>
+                <div>
+                    <a href="path_to_your_resume.pdf">Download Resume</a>
+                </div>
+            </div>
+        </div>
+        <div class="content-container">
+            <div class="left-section">
+                <div class="section skills">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <ul>
+                        <li>Computer programming</li>
+                        <li>Machine learning</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Statistical analysis</li>
+                        <li>Database management</li>
+                        <li>Network analysis</li>
+                        <li>Internet forensics</li>
+                    </ul>
+                </div>
+                <div class="section skills">
+                    <h2>INVESTIGATIVE SKILLS</h2>
+                    <ul>
+                        <li>Confidential source management</li>
+                        <li>Open-source investigations</li>
+                        <li>Corporate backgrounding and analysis</li>
+                        <li>Public records</li>
+                        <li>Demographics analysis</li>
+                    </ul>
+                </div>
+                <div class="section samples">
+                    <h2>WORK SAMPLES</h2>
+                    <ul>
+                        <li><a href="#">Shadow Men: Inside Wagner, Russia’s Secret War Company</a></li>
+                        <li><a
+                                href="https://www.wsj.com/articles/how-tiktok-inundates-teens-with-eating-disorder-videos-11639754848">‘The
+                                Corpse Bride Diet’: How TikTok Inundates Teens With Eating-Disorder Videos</a></li>
+                        <li><a href="#">Investigation: How TikTok’s Algorithm Figures Out Your Deepest Desires</a></li>
+                        <li><a href="#">Ghosts in the Clouds: Inside China's Major Corporate Hack</a></li>
+                        <li><a href="#">America's Electric Grid Has a Vulnerable Back Door--and Russia Walked Through
+                                It</a></li>
+                        <li><a href="#">The Travels of Mrs. Murray's Toyota Unveil Terror-Finance Network</a></li>
+                        <li><a href="http://localhost:1313/categories/top/">More...</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="section bio">
+                    <h2>BIO</h2>
+                    <div class="text">
+                        <p>I’m an investigative reporter and editor at The Wall Street Journal. I help lead the
+                            newspaper's data team, a group of reporters who specialize in computer programming and data
+                            analysis. </p>
+                        <p>My career has taken me on many adventures, from building hundreds of TikTok bots with
+                            Raspberry Pis to tracking a Chinese government hacker group inside major global corporations
+                            to
+                            exposing a covert Russian global paramilitary network.</p>
+                    </div>
+                </div>
+                <div class="section experience">
+                    <h2>EXPERIENCE</h2>
+                    <div class="role">
+                        <div class="role-header">
+                            <div class="role-title">Investigations Data Editor</div>
+                            <div class="role-company">The Wall Street Journal</div>
+                            <div class="role-dates">2014 - Present</div>
+                        </div>
+                        <div class="role-summary">
+                            <p>I lead the newspaper’s data team, which is a group of reporters who specialize in
+                                analyzing
+                                large sets of data. In my role, I manage the team, including story assignments and
+                                editing.
+                                I also work on my own signature projects.</p>
+                        </div>
+                    </div>
+                    <div class="role">
+                        <div class="role-header">
+                            <div class="role-title">Investigative Reporter</div>
+                            <div class="role-company">The Wall Street Journal</div>
+                            <div class="role-dates">2011 - 2014</div>
+                        </div>
+                        <div class="role-summary">
+                            <p>I wrote stories about stockbrokers, Russian elections, airplane crashes and unusually
+                                lucky stock trades by corporate executives, each of which required innovative analytical
+                                techniques.</p>
+                        </div>
+                    </div>
+                    <div class="role">
+                        <div class="role-header">
+                            <div class="role-title">Reporter & Data Editor</div>
+                            <div class="role-company">The Miami Herald</div>
+                            <div class="role-dates">2006 - 2011</div>
+                        </div>
+                        <div class="role-summary">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section education">
+                    <h2>EDUCATION</h2>
+                    <div class="role">
+                        <div class="role-header">
+                            <div class="role-title">B.S. Mathematics & English</div>
+                            <div class="role-company">The University of Miami</div>
+                            <div class="role-dates">2005</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section awards">
+                    <h2>AWARDS</h2>
+                    <div class="text">
+                        <p>I’ve won the top business reporting award, the Gerald Loeb, four times. I also contributed to
+                            a
+                            series of stories detailing Medicare overbilling and fraud which was awarded the Pulitzer
+                            Prize
+                            for Investigative Reporting in 2015.</p>
+                        <p>My work has won numerous other awards, including the 2021 Philip Meyer Journalism Award for
+                            computational journalism.</p>
+                        <p>My work at the Miami Herald on assisted living facilities was also a finalist for the
+                            Pulitzer
+                            Prize in Public Service.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

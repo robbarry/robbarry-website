@@ -26,6 +26,10 @@ menu:
     name: "Podcasts"
     url: "/categories/audio/"
     weight: 4
+  - identifier: "ai"
+    name: "AI"
+    url: "/posts/ai/"
+    weight: 5
   # - identifier: "thoughts"
   #   name: "Thoughts"
   #   url: "/posts/"
