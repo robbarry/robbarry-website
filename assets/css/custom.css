@@ -12,8 +12,9 @@
 }
 
 body {
-    font-family: 'PT Serif', serif;
-    color: var(--eerie-black)
+    font-family: "pt-serif-pro", sans-serif;
+    color: var(--eerie-black);
+
 }
 
 
@@ -108,4 +109,8 @@ a {
     font-style: normal;
     text-transform: uppercase;
     font-size: 1.75em;
+}
+
+.post-description {
+    font-style: italic;
 }

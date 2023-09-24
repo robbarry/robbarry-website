@@ -1,6 +1,7 @@
 ---
 title: Figuring Nonprofit Salaries
 summary: Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?
+description: Given publicly available data, can we calculate the most likely distribution of salaries at a nonprofit?
 date: '2013-08-04'
 math: true
 ---
