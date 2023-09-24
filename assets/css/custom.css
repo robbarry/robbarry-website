@@ -1,35 +1,71 @@
+@import url("https://use.typekit.net/ijm2ixe.css");
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif&display=swap');
+
+
+:root {
+    --eerie-black: #1D1E20;
+    --blood-red: #690500;
+    --honolulu-blue: #197BBD;
+    --columbia-blue: #C7D9E8;
+    --light-grey: #aaa;
+    --white: #FFFFFF;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-family: 'PT Serif', serif;
+    color: var(--eerie-black)
 }
 
-a {
-    color: #00448d;
+
+.header {
+    background-color: var(--eerie-black);
+    color: var(--columbia-blue);
+    padding: 10px 0px 10px 0px;
+    font-family: "pt-mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
 }
 
-.dark a {
-    color: #fff;
+.header a {
+    color: var(--columbia-blue);
+}
+
+.page-header h1 {
+    color: var(--blood-red);
+}
+
+.logo a {
+    font-family: "pt-mono", monospace;
+    font-style: normal;
+}
+
+.header a:hover {
+    color: var(--white);
+}
+
+#moon {
+    color: var(--columbia-blue);
+    display: none;
+
+}
+
+#moon:hover {
+    color: var(--white);
 }
 
 
 .main a {
-    color: #007bff;
+    color: var(--honolulu-blue);
+    text-decoration: none;
 }
 
-.dark .main a {
-    color: #95c8ff
+.main a:hover {
+    color: var(--blood-red);
 }
 
 .pagination a {
-    color: #fff;
-}
-
-@media (min-width: 768px) {
-    .about-page {
-        border-top: 1px solid #00448d;
-        border-bottom: 1px solid #00448d;
-        margin: 20px 0px 20px 0px;
-        padding: 50px 50px 50px 50px;
-    }
+    color: var(--honolulu-blue);
 }
 
 
@@ -41,20 +77,27 @@ a {
     margin-bottom: 1em;
 }
 
+.post-content a {
+    box-shadow: none;
+}
 
 .ai-disclosure {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid var(--columbia-blue);
     padding-top: 5px;
     margin-top: 50px;
     font-style: italic;
-    color: #777;
+    color: var(--light-grey);
     font-size: 0.8em;
 }
 
 .post-content blockquote {
     margin: 20px 0;
     padding: 0 14px;
-    border-inline-start: 3px solid rgb(190, 190, 190);
-    background-color: #f5f5f5;
+    border-inline-start: 3px solid var(--honolulu-blue);
+    background-color: var(--columbia-blue);
     padding: 20px;
+}
+
+a {
+    text-decoration: none;
 }

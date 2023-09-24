@@ -1,3 +1,6 @@
+---
+title: About Me
+---
 I'm Rob Barry, an investigative reporter and data editor at The Wall Street
 Journal, where I lead a team specializing in computer programming and data
 analysis.
