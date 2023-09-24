@@ -4,7 +4,7 @@
 
 :root {
     --eerie-black: #1D1E20;
-    --blood-red: #690500;
+    --accent-color: #14110F;
     --honolulu-blue: #197BBD;
     --columbia-blue: #C7D9E8;
     --light-grey: #aaa;
@@ -32,7 +32,7 @@ body {
 }
 
 .page-header h1 {
-    color: var(--blood-red);
+    color: var(--accent-color);
 }
 
 .logo a {
@@ -61,7 +61,7 @@ body {
 }
 
 .main a:hover {
-    color: var(--blood-red);
+    color: var(--accent-color);
 }
 
 .pagination a {
