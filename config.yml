@@ -19,7 +19,7 @@ menu:
     url: "/categories/top/"
     weight: 2
   - identifier: "videos"
-    name: "Docs"
+    name: "Documentaries"
     url: "/categories/videos/"
     weight: 3
   - identifier: "audio"
