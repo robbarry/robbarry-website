@@ -11,8 +11,8 @@ Miami Herald's _Neighbors_ section, and turned into something more.
 
 In the ensuing years, I got drafted onto the Herald's investigative team, where
 I worked on three major projects: _Borrower's Betrayed_, about the subprime
-mortgage crisis; _Key's to the Kingdom_, about Alan Stanford's Ponzi scheme; and
-_Neglected to Death_, about Florida's failure to protect its elderly and
+mortgage crisis; _Key's to the Kingdom_, about Allen Stanford's Ponzi scheme;
+and _Neglected to Death_, about Florida's failure to protect its elderly and
 disabled.
 
 I joined The Wall Street Journal in 2011, where I've worked on a range of
