@@ -12,7 +12,7 @@ reporting, programming and getting to the bottom of mysteries.
 
 Outside of helping lead a brilliant team of reporters who specialize in computer
 programming and data analysis, you might catch me reverse-engineering algorithms
-or diving deep into offshore money networks. I've been honored with awards that
+or deep-diving into offshore money networks. I've been honored with awards that
 recognize the impact of my work, but what drives me is a good team and an
 important mission.
 
