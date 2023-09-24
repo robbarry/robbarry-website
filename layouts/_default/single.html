@@ -56,6 +56,8 @@
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
   {{- end }}
+
+  {{ if .Params.math }}{{ partial "mathjax.html" . }}{{ end }}
 </article>
 
 {{- end }}{{/* end main */}}

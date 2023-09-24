@@ -2,6 +2,7 @@
 title: Headline and Framing Experiment
 date: 2023-09-23
 summary: Using generative AI, I explore the possibility of reshaping news content to enhance accessibility and understand diverse reporting perspectives. The results? Mixed.
+draft: true
 ---
 
 As a data guy and a journalist, I'm fascinated by the potential of generative AI
