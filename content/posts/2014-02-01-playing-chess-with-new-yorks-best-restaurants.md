@@ -120,15 +120,31 @@ player with the low score who won sees a marked increase in his or her rating.
 The math looks like this. For Player One and Player Two having ratings R1 and
 R2:
 
-$$ \begin{aligned} Expected_1 &= \frac{1}{1 + 10^{(R_2 - R_1)/400}} \\\\
-Expected_2 &= \frac{1}{1 + 10^{(R_1 - R_2)/400}} \end{aligned} $$
+<!-- deno-fmt-ignore-start -->
+
+$$ 
+\begin{aligned} 
+Expected_1 &= \frac{1}{1 + 10^{(R_2 - R_1)/400}} \\\\
+Expected_2 &= \frac{1}{1 + 10^{(R_1 - R_2)/400}}
+\end{aligned}
+$$
+
+<!-- deno-fmt-ignore-end -->
 
 This expected outcome ranges from 0 (a loss) to 1 (a win). In our example,
 because all our players have the same starting score, we wind up with equal
 probabilities for the expected outcome:
 
-$$ \begin{aligned} Expected_1 &= \frac{1}{1 + 10^{(1200 - 1200)/400}} &= 0.5
-\\\\ Expected_2 &= \frac{1}{1 + 10^{(1200 - 1200)/400}} &= 0.5 \end{aligned} $$
+<!-- deno-fmt-ignore-start -->
+
+$$ 
+\begin{aligned}
+Expected_1 &= \frac{1}{1 + 10^{(1200 - 1200)/400}} &= 0.5
+\\\\ Expected_2 &= \frac{1}{1 + 10^{(1200 - 1200)/400}} &= 0.5 
+\end{aligned}
+$$
+
+<!-- deno-fmt-ignore-end -->
 
 Once we've calculated the expected outcome, we change the ratings according to
 what actually happened. For Player One, the actual outcome (we'll call it S1) is
@@ -136,9 +152,16 @@ a win, which we denote as a 1; for Player Two, the actual outcome (S2) is a
 loss, we'll denote it with a 0. K is simply a scaling factor which we'll set to
 32 for the sake of our example:
 
-$$ \begin{aligned} R_1' &= R_1 + K(S_1 - Expected_1) &= 1200 + 32(1 - 0.5) &=
-1216 \\\\ R_2' &= R_2 + K(S_2 - Expected_2) &= 1200 + 32(0 - 0.5) &= 1184
-\end{aligned} $$
+<!-- deno-fmt-ignore-start -->
+
+$$ 
+\begin{aligned} 
+R_1' &= R_1 + K(S_1 - Expected_1) &= 1200 + 32(1 - 0.5) &= 1216 \\\\
+R_2' &= R_2 + K(S_2 - Expected_2) &= 1200 + 32(0 - 0.5) &= 1184
+\end{aligned} 
+$$
+
+<!-- deno-fmt-ignore-end -->
 
 And, viola, Player One's score goes up by 16 and Player Two's score decreases
 by 16. And so we now have:
