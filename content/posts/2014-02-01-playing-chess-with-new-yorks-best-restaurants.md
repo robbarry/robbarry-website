@@ -147,8 +147,8 @@ $$
 <!-- deno-fmt-ignore-end -->
 
 Once we've calculated the expected outcome, we change the ratings according to
-what actually happened. For Player One, the actual outcome (we'll call it S1) is
-a win, which we denote as a 1; for Player Two, the actual outcome (S2) is a
+what happened. For Player One, the actual outcome (we'll call it S1) is a win,
+which we denote as a 1; for Player Two, the actual outcome (S2) is a
 loss, we'll denote it with a 0. K is simply a scaling factor which we'll set to
 32 for the sake of our example:
 
@@ -163,8 +163,8 @@ $$
 
 <!-- deno-fmt-ignore-end -->
 
-And, viola, Player One's score goes up by 16 and Player Two's score decreases
-by 16. And so we now have:
+And, voila, Player One's score goes up by 16 and Player Two's score decreases
+by 16. And so, we now have:
 
 | Player       | Provisional Score | Score After Round 1 |
 | ------------ | ----------------- | ------------------- |
@@ -183,7 +183,7 @@ likely to win.
 
 ### Restaurant Ratings
 
-And so I began a death match with my restaurants. I created a script that
+And so, I began a death match with my restaurants. I created a script that
 plucked two restaurants from my list at random and smashed them head-to-head,
 asking me which was best. If I couldn't decide, they tied (can you see how a tie
 would work in the formulas above?)
@@ -193,7 +193,7 @@ began to emerge.
 
 What's so fun about this -- and by fun, I mean incredibly nerdy and arduous --
 is that these rankings develop with my tastes. As I begin favoring one
-restaurant over another, that starts a shift that can moves scores of
+restaurant over another, that starts a shift that can move scores of
 restaurants up or down the list.
 
 Here's my top 30 (bearing in mind, of course, that I haven't been to most
