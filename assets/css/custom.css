@@ -1,26 +1,31 @@
 @import url("https://use.typekit.net/ijm2ixe.css");
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Serif&display=swap');
-
 
 :root {
-    --eerie-black: #1D1E20;
-    --accent-color: #14110F;
-    --honolulu-blue: #197BBD;
-    --columbia-blue: #C7D9E8;
-    --light-grey: #aaa;
+    --header-bg-color: #1D1E20;
+    --text-color: #14110F;
+
+    --link-color: #197BBD;
+    --border-color: #197BBD;
+
+    --header-link-color: #C7D9E8;
+    --block-quote-bg-color: #C7D9E8;
+
+    --muted-color: #9CAFB7;
+
+    --code-bg: #F5F5F5;
+
     --white: #FFFFFF;
 }
 
-body {
-    font-family: "pt-serif-pro", sans-serif;
-    color: var(--eerie-black);
 
+body {
+    font-family: 'pt-serif', serif;
+    color: var(--text-color);
 }
 
-
 .header {
-    background-color: var(--eerie-black);
-    color: var(--columbia-blue);
+    background-color: var(--header-bg-color);
+    color: var(--header-link-color);
     padding: 10px 0px 10px 0px;
     font-family: "pt-mono", monospace;
     font-weight: 400;
@@ -28,13 +33,11 @@ body {
     text-transform: uppercase;
 }
 
+
 .header a {
-    color: var(--columbia-blue);
+    color: var(--header-link-color);
 }
 
-.page-header h1 {
-    color: var(--accent-color);
-}
 
 .logo a {
     font-family: "pt-mono", monospace;
@@ -46,7 +49,7 @@ body {
 }
 
 #moon {
-    color: var(--columbia-blue);
+    color: var(--header-link-color);
     display: none;
 
 }
@@ -57,16 +60,16 @@ body {
 
 
 .main a {
-    color: var(--honolulu-blue);
+    color: var(--link-color);
     text-decoration: none;
 }
 
 .main a:hover {
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .pagination a {
-    color: var(--honolulu-blue);
+    color: var(--link-color);
 }
 
 
@@ -83,19 +86,19 @@ body {
 }
 
 .ai-disclosure {
-    border-top: 1px solid var(--columbia-blue);
+    border-top: 1px solid var(--border-color);
     padding-top: 5px;
     margin-top: 50px;
     font-style: italic;
-    color: var(--light-grey);
+    color: var(--muted-color);
     font-size: 0.8em;
 }
 
 .post-content blockquote {
     margin: 20px 0;
     padding: 0 14px;
-    border-inline-start: 3px solid var(--honolulu-blue);
-    background-color: var(--columbia-blue);
+    border-inline-start: 3px solid var(--border-color);
+    background-color: var(--block-quote-bg-color);
     padding: 20px;
 }
 
@@ -105,10 +108,11 @@ a {
 
 .page-header h1 {
     font-family: "pt-mono", monospace;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: bold;
     text-transform: uppercase;
     font-size: 1.75em;
+    color: var(--text-color);
+
 }
 
 .post-description {

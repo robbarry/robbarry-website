@@ -14,9 +14,10 @@ To fend off homesickness and take advantage of my new environs, I decided to
 become a connoisseur of New York's most famous attraction: restaurants. I began
 keeping track of everywhere I ate.
 
-When I talked about my restaurant tracking--particularly to out-of-towners--I'd
-always get the same questions: Where should I eat when I visit New York? What's
-your favorite sushi spot? Can you recommend dumplings in the Lower East Side?
+When I talked about my restaurant tracking&mdash;particularly to
+out-of-towners&mdash;I'd always get the same questions: Where should I eat when
+I visit New York? What's your favorite sushi spot? Can you recommend dumplings
+in the Lower East Side?
 
 I found myself fumbling to answer these questions. I like to be precise. If you
 ask me to tell you the best restaurant I've been to, I want my response to be
