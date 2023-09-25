@@ -64,10 +64,12 @@ to include only our two base compensation figures.
 
 <!-- deno-fmt-ignore-start -->
 
-$$\begin{aligned}
+$$
+\begin{aligned}
 \text{Total base salary} &= \\\\
 $1,049,907 + $4,905,904 &= $5,955,811 \\\\
-\end{aligned}$$
+\end{aligned}
+$$
 
 <!-- deno-fmt-ignore-end -->
 

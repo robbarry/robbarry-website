@@ -14,10 +14,9 @@ To fend off homesickness and take advantage of my new environs, I decided to
 become a connoisseur of New York's most famous attraction: restaurants. I began
 keeping track of everywhere I ate.
 
-When I talked about my restaurant tracking -- particularly to out-of-towners --
-I'd always get the same questions: Where should I eat when I visit New York?
-What's your favorite sushi spot? Can you recommend dumplings in the Lower East
-Side?
+When I talked about my restaurant tracking--particularly to out-of-towners--I'd
+always get the same questions: Where should I eat when I visit New York? What's
+your favorite sushi spot? Can you recommend dumplings in the Lower East Side?
 
 I found myself fumbling to answer these questions. I like to be precise. If you
 ask me to tell you the best restaurant I've been to, I want my response to be
@@ -28,8 +27,8 @@ So I decided to try to rank my favorite restaurants. I created a spreadsheet,
 filled it with dozens of spots around the city and started trying to assign
 scores.
 
-Initially, I decided I'd rank them on a scale ranging from 1 -- the absolute
-worst place you can imagine -- to 100 -- exquisite deliciousness. To
+Initially, I decided I'd rank them on a scale ranging from 1--the absolute worst
+place you can imagine--to 100--exquisite deliciousness. To
 [Daniel](http://danielnyc.com/), an elegant French bistro on the Upper East
 Side, I assigned a 95. To
 [St. Anselm](http://www.yelp.com/biz/st-anselm-brooklyn), a casual chophouse in
@@ -66,8 +65,8 @@ three.
 
 Rather than trying to assign arbitrary scores to each restaurant, I could simply
 track which ones I liked better than others. Then I could look back on each
-restaurant's record -- its wins and losses -- and tally up who consistently came
-out on top.
+restaurant's record--its wins and losses--and tally up who consistently came out
+on top.
 
 Turns out, people have developed
 [a number of techniques](http://en.wikipedia.org/wiki/Comparison_of_top_chess_players_throughout_history)
@@ -148,9 +147,9 @@ $$
 
 Once we've calculated the expected outcome, we change the ratings according to
 what happened. For Player One, the actual outcome (we'll call it S1) is a win,
-which we denote as a 1; for Player Two, the actual outcome (S2) is a
-loss, we'll denote it with a 0. K is simply a scaling factor which we'll set to
-32 for the sake of our example:
+which we denote as a 1; for Player Two, the actual outcome (S2) is a loss, we'll
+denote it with a 0. K is simply a scaling factor which we'll set to 32 for the
+sake of our example:
 
 <!-- deno-fmt-ignore-start -->
 
@@ -191,10 +190,10 @@ would work in the formulas above?)
 Over time, I answered this question hundreds of times. Eventually, my favorites
 began to emerge.
 
-What's so fun about this -- and by fun, I mean incredibly nerdy and arduous --
-is that these rankings develop with my tastes. As I begin favoring one
-restaurant over another, that starts a shift that can move scores of
-restaurants up or down the list.
+What's so fun about this--and by fun, I mean incredibly nerdy and arduous--is
+that these rankings develop with my tastes. As I begin favoring one restaurant
+over another, that starts a shift that can move scores of restaurants up or down
+the list.
 
 Here's my top 30 (bearing in mind, of course, that I haven't been to most
 restaurants in New York!). I should warn you: I'm partial to pizza.
