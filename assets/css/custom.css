@@ -107,12 +107,13 @@ a {
     text-decoration: none;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 .page-header h1 {
-    font-family: "pt-mono", monospace;
+    font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 1.75em;
     color: var(--text-color);
-
 }
 
 .post-description {
