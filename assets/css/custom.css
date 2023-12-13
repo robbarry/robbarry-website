@@ -1,4 +1,6 @@
 @import url("https://use.typekit.net/ijm2ixe.css");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
 
 :root {
     --header-bg-color: #1D1E20;
@@ -107,10 +109,11 @@ a {
     text-decoration: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 
 .page-header h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Merriweather', serif;
+
     font-weight: bold;
     font-size: 1.75em;
     color: var(--text-color);
