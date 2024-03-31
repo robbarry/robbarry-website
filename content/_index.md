@@ -11,8 +11,8 @@ over complex data sets and turning them into groundbreaking stories.
 
 I love investigative reporting, programming and getting to the bottom of
 mysteries. I have expertise reverse-engineering algorithms, deep-diving into
-offshore money networks, sleuthing through public records and creating big
-data-driven stories.
+offshore money networks, sleuthing through public records and helping create
+big, data-driven projects.
 
 Before joining the WSJ in 2011, I worked at the Miami Herald, where I did
 a bunch of jobs, ranging from covering life in North Miami Beach to hand-crafting
