@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Launching | Rob Barry</title>
+<meta name="keywords" content="">
+<meta name="description" content="How I published this Jekyll-based site from my local Windows 7 PC to a Linux-based server using Git.">
+<meta name="author" content="">
+<link rel="canonical" href="https://www.robbarry.org/posts/2013-04-21-launching/">
+<link crossorigin="anonymous" href="../../assets/css/stylesheet.9329d037bc79464b26647fb72e079cd738f5d2418b1df4da3b515db9e22cb4d9.css" integrity="sha256-kynQN7x5RksmZH&#43;3Lgec1zj10kGLHfTaO1FdueIstNk=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="../../assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://www.robbarry.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.robbarry.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.robbarry.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://www.robbarry.org/apple-touch-icon.png">
+<link rel="mask-icon" href="https://www.robbarry.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://www.robbarry.org/css/custom.css"><meta property="og:title" content="Launching" />
+<meta property="og:description" content="How I published this Jekyll-based site from my local Windows 7 PC to a Linux-based server using Git." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.robbarry.org/posts/2013-04-21-launching/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2013-04-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2013-04-21T00:00:00+00:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Launching"/>
+<meta name="twitter:description" content="How I published this Jekyll-based site from my local Windows 7 PC to a Linux-based server using Git."/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts \u0026 Thoughts",
+      "item": "https://www.robbarry.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Launching",
+      "item": "https://www.robbarry.org/posts/2013-04-21-launching/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Launching",
+  "name": "Launching",
+  "description": "How I published this Jekyll-based site from my local Windows 7 PC to a Linux-based server using Git.",
+  "keywords": [
+    
+  ],
+  "articleBody": "Getting Started Installing Ruby on Windows Let’s cover the easy bits first. Installing Ruby 1.9.3 on Windows 7 is, as of this writing, tremendously simple. All one needs to do is navigate to the Windows Ruby Installer, download the executable and run it. The rest is pretty straightforward. If you don’t get it, go away.\nI like a decent terminal window. Sadly, Windows doesn’t offer such a thing. You could explore Cygwin, which bills itself as “a collection of tools which provide a Linux look and feel environment for Windows,” but I think that’s stupid. Instead, I’m going to talk about the terminal program that actually comes with Windows. It’s called PowerShell. It’s powerful, but filled with weird, hyphenated commands that look completely alien to a Linux user.\nWindows PowerShell The fact is, PowerShell actually has a lot of cool features. I think the first thing you need to know about PowerShell (after locating it on the start menu) is where your “profile” script resides.\nPowerShell Profile Location The profile script gets called every time you load up PowerShell. If you’re familiar with Unix, you can think of this as the equivalent to $HOME/.bashrc. (If you’re not familiar, read this.)\nIts location is exposed through the $profile variable in PowerShell.\nYou type:\nPS C:\\ $profile Out comes:\nC:\\Users\\YourName\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1 Pretty cool. But wait!\nPS C:\\ type $profile Get-Content : Cannot find path 'C:\\Users\\YourName\\Documents\\WindowsPowerShell\\Microsoft.PowerShell_profile.ps1' because it does not exist. Oh. So go create it (which may involve creating the subdirectory WindowsPowerShell). I’m sure there’s a way to change all this, but for my purposes, not necessary.\nPowerShell Profile Variables So, what do you put in the PowerShell profile? Here’s what I’ve got in mine:\nAn extension of my current path, like so:\n$env:Path += \";C:\\Paths\\To\\Add;C:\\Separated By\\Semicolons;F:\\Etc\\Etc\\You Get\\it\" A quick command to drop me where I want to be:\nSet-Location \"C:\\General\\Working\\Directory\" You can create aliases to save keystrokes or define entire functions. For instance, I like to run IPython Notebook. Adding this to your $profile script\nfunction ipy { Invoke-Expression -Command \"ipython.bat notebook --pylab inline\" } Makes this launch IPython Notebook:\nPS C:\\ ipy PowerShell Script Errors If you get an error message from PowerShell informing you that “execution of scripts is disabled on this system,” you may want to examine the answers on this page. I chose the set-executionpolicy unrestricted solution, but that’s probably insecure for some reason or another.\nInstalling Ruby Gems Once you’ve got the hang of the command line, you’ll want to install Ruby Gems. To do that, you should download the ZIP file on this page, decompress the file and then run:\nPS C:\\Path\\to\\files\\ ruby setup.rb From the decompressed folder.\nInstalling a Text Editor Next, you’ll need a decent editor. If you’ve got one, feel free to skip this section.\nFor a long time, my go-to editor in Windows was Notepad++. It’s extensible, powerful and free. And just about the ugliest thing I’ve ever seen.\nRecently, I’ve become a big fan of Sublime Text. It’s clean, powerful and pretty. Though I’ve got no design ability, it’s important to me that my tools be pretty.\nIf you get Sublime Text, you’ll want to launch it from the command line. To make this as painless as possible, I recommend adding something like this to your $profile script (the one we detailed above, for those of you who are skimming). Obviously, you’ll need to change the path as needed:\nfunction st { Invoke-Expression -Command \"START 'C:\\Program Files\\Sublime Text 2\\sublime_text.exe' '$args'\" } That works for me. There are a few kinks in the process (you may have some trouble using the Build command in Sublime Text), but for the most part, this will allow you – from PowerShell – to edit files thusly:\nPS C:\\ st myfile.txt Git You can get Git here.\nJekyll Jekyll “is a simple, blog aware, static site generator,” says its README. I’m not going to sit here and trumpet its strengths, since this is literally the first thing I’ve used it to make. I’m certainly no expert, though I did get it up and running.\nFirst, you’ll want to take a stab at installing Jekyll as painlessly as possible. Try this:\ngem install jekyll Errors Installing Jekyll: Developer Kit If that throws some crazy errors about not having a developer kit in the path, go back to the Ruby Installer page, scroll down a bit and download the proper development kit. You can figure out which one is right for you by reading the section labeled “Which Development Kit” on the upper-right.\nDownload and execute the file. It’ll decompress to the folder it’s in (most of the important stuff will go in the bin subdirectory). You’ll want to run devkitvars.ps1 (or devkitvars.bat), both of which should be readily available.\nPS C:\\Path\\to\\devkit\\ devkitvars.ps1 Deploying Jekyll As I said, I’m no Jekyll expert. The “basic structure” of a Jekyll folder is described here.\nI’m not going to get into too many specifics about how it works. There are a lot of resources and tutorials available via a simple Google search.\nInstead of covering that ground again, I’m going to conclude this post with a few details about how I deployed Jekyll from my home computer to a webserver using Git.\nThe process is quite straightforward. I’ve only been using Git for a few weeks, which is proof that any idiot can figure this out.\nBasically, here are the steps you need to follow to deploy using Git. This assumes you’ve got access to a webhost with SSH and Git already installed.\nCreating a Git Repository First, on your local machine, navigate to the root of your Jekyll project and initialize a Git repository.\nPS C:\\Your\\jekyll\\project\\ git init Next, add the _site folder to the repository.\nPS C:\\Your\\jekyll\\project\\ git add _site Now, commit the repository:\nPS C:\\Your\\jekyll\\project\\ git commit -m \"Init commit.\" Next, we’re going to want to create a bare repository on the server where you’ll be hosting the site. SSH to your server and navigate to the place you want to have the repository. Note that this does not (and maybe should not?) be a publicly exposed location. In my case, I put it beneath the HTML root folder.\nMy server is a Linux box. Here’s what I did:\nbash ~/domains/rob-barry.com$ mkdir repo.git bash ~/domains/rob-barry.com$ cd repo.git bash ~/domains/rob-barry.com/repo.git$ git --bare init That should return with a message saying you’ve initialized a bare repository in repo.git.\nNow, because I actually followed these directions, I typed this:\nbash ~/domains/rob-barry.com/repo.git$ git config core.sharedrepository 1 bash ~/domains/rob-barry.com/repo.git$ git config receive.denyNonFastforwards true Now, hop back to your local machine. The easiest thing to do is to add this new repository as a remote:\nPS C:\\Your\\jekyll\\project\\ git remote add origin ssh://username@yoursite.com/path/to/your/git/repo.git And then push the repository to the new site:\ngit push -u origin master Now, we flip back to the server, navigate to our root HTML directory, and clone the repo:\nbash ~/domains/rob-barry.com/html$ git clone ~/domains/rob-barry.com/repo.git Redirecting Using .htaccess If you follow these steps, you’ll wind up with a copy of your Jekyll website in the /repo/_site subdirectory. That won’t do, so you’ll need to make a quick tweak to .htaccess:\nRewriteEngine on RewriteCond %{HTTP_HOST} ^(www.)?rob-barry.com$ RewriteCond %{REQUEST_URI} !^/repo/_site/ RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.*)$ /repo/_site/$1 RewriteCond %{HTTP_HOST} ^(www.)?rob-barry.com$ RewriteRule ^(/)?$ repo/_site/index.html [L] Obviously, you’ll want to replace rob-barry.com with your information (and /repo/_site/ if necessary). This may come as a shock, but it’s totally possible there’s a better way to do this. I don’t know.\nAdding Post-Receive Hook Lastly, we want to set this up so every time we run a push from the local machine to the server, it updates the live website. We do this by navigating to our repo.git directory on the server and then doing this:\nbash ~/domains/rob-barry.com/repo.git/ cd hooks bash ~/domains/rob-barry.com/repo.git/hooks/ mv post-receive.sample post-receive Now, edit post-receive to contain a line like this:\nunset GIT_DIR \u0026\u0026 cd ~/rob-barry.com/html/repo \u0026\u0026 git pull And finally, do this:\nbash ~/domains/rob-barry.com/repo.git/hooks/ chmod a+x post-receive Conclusion From here, you can add a bunch of folders to your .gitignore file. For this site, my .gitignore file looks like this:\n_includes/* _layouts/* _plugins/* _posts/* assets/* pages/* _config.yml index.html Good luck. Please let me know how it goes.\nEDIT 4/24: Added summary field.\n",
+  "wordCount" : "1371",
+  "inLanguage": "en",
+  "datePublished": "2013-04-21T00:00:00Z",
+  "dateModified": "2013-04-21T00:00:00Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.robbarry.org/posts/2013-04-21-launching/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rob Barry",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.robbarry.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://www.robbarry.org/" accesskey="h" title="Rob Barry (Alt + H)">Rob Barry</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://www.robbarry.org/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/top/" title="Stories">
+                    <span>Stories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/categories/docsandpods/" title="Docs &amp; Pods">
+                    <span>Docs &amp; Pods</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.robbarry.org/assets/pdfs/rob-barry-resume.pdf" title="CV">
+                    <span>CV</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      Launching
+    </h1>
+    <div class="post-description">
+      How I published this Jekyll-based site from my local Windows 7 PC to a Linux-based server using Git.
+    </div>
+    <div class="post-meta"><span title='2013-04-21 00:00:00 +0000 UTC'>April 21, 2013</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="getting-started">Getting Started<a hidden class="anchor" aria-hidden="true" href="#getting-started">#</a></h2>
+<h3 id="installing-ruby-on-windows">Installing Ruby on Windows<a hidden class="anchor" aria-hidden="true" href="#installing-ruby-on-windows">#</a></h3>
+<p>Let&rsquo;s cover the easy bits first. Installing Ruby 1.9.3 on Windows 7 is, as of
+this writing, tremendously simple. All one needs to do is navigate to the
+<a href="http://rubyinstaller.org/">Windows Ruby Installer</a>, download the executable and
+run it. The rest is pretty straightforward. If you don&rsquo;t get it, go away.</p>
+<p>I like a decent terminal window. Sadly, Windows doesn&rsquo;t offer such a thing. You
+could explore <a href="http://www.cygwin.com/">Cygwin</a>, which bills itself as &ldquo;a
+collection of tools which provide a Linux look and feel environment for
+Windows,&rdquo; but I think that&rsquo;s stupid. Instead, I&rsquo;m going to talk about the
+terminal program that actually comes with Windows. It&rsquo;s called PowerShell. It&rsquo;s
+powerful, but filled with weird, hyphenated commands that look completely alien
+to a Linux user.</p>
+<h3 id="windows-powershell">Windows PowerShell<a hidden class="anchor" aria-hidden="true" href="#windows-powershell">#</a></h3>
+<p>The fact is, PowerShell actually has a lot of cool features. I think the first
+thing you need to know about PowerShell (after locating it on the start menu) is
+where your &ldquo;profile&rdquo; script resides.</p>
+<h4 id="powershell-profile-location">PowerShell Profile Location<a hidden class="anchor" aria-hidden="true" href="#powershell-profile-location">#</a></h4>
+<p>The profile script gets called every time you load up PowerShell. If you&rsquo;re
+familiar with Unix, you can think of this as the equivalent to
+<strong>$HOME/.bashrc</strong>. (If you&rsquo;re not familiar,
+<a href="http://www.faqs.org/docs/abs/HTML/files.html">read this</a>.)</p>
+<p>Its location is exposed through the $profile variable in PowerShell.</p>
+<p>You type:</p>
+<pre><code>PS C:\ $profile
+</code></pre>
+<p>Out comes:</p>
+<pre><code>C:\Users\YourName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+</code></pre>
+<p>Pretty cool. But wait!</p>
+<pre><code>PS C:\ type $profile
+Get-Content : Cannot find path 'C:\Users\YourName\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1' because it does not exist.
+</code></pre>
+<p>Oh. So go create it (which may involve creating the subdirectory
+WindowsPowerShell). I&rsquo;m sure there&rsquo;s a way to change all this, but for my
+purposes, not necessary.</p>
+<h4 id="powershell-profile-variables">PowerShell Profile Variables<a hidden class="anchor" aria-hidden="true" href="#powershell-profile-variables">#</a></h4>
+<p>So, what do you put in the PowerShell profile? Here&rsquo;s what I&rsquo;ve got in mine:</p>
+<p>An extension of my current path, like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ps1" data-lang="ps1"><span style="display:flex;"><span>$env:Path += <span style="color:#e6db74">&#34;;C:\Paths\To\Add;C:\Separated By\Semicolons;F:\Etc\Etc\You Get\it&#34;</span>
+</span></span></code></pre></div><p>A quick command to drop me where I want to be:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ps1" data-lang="ps1"><span style="display:flex;"><span>Set-Location <span style="color:#e6db74">&#34;C:\General\Working\Directory&#34;</span>
+</span></span></code></pre></div><p>You can create aliases to save keystrokes or define entire functions. For
+instance, I like to run IPython Notebook. Adding this to your $profile script</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ps1" data-lang="ps1"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> ipy { Invoke-Expression -Command <span style="color:#e6db74">&#34;ipython.bat notebook --pylab inline&#34;</span> }
+</span></span></code></pre></div><p>Makes this launch IPython Notebook:</p>
+<pre><code>PS C:\ ipy
+</code></pre>
+<h4 id="powershell-script-errors">PowerShell Script Errors<a hidden class="anchor" aria-hidden="true" href="#powershell-script-errors">#</a></h4>
+<p>If you get an error message from PowerShell informing you that &ldquo;execution of
+scripts is disabled on this system,&rdquo; you may want to examine the answers on
+<a href="http://stackoverflow.com/questions/4037939/powershell-execution-of-scripts-is-disabled-on-this-system">this page</a>.
+I chose the set-executionpolicy unrestricted solution, but that&rsquo;s probably
+insecure for some reason or another.</p>
+<h3 id="installing-ruby-gems">Installing Ruby Gems<a hidden class="anchor" aria-hidden="true" href="#installing-ruby-gems">#</a></h3>
+<p>Once you&rsquo;ve got the hang of the command line, you&rsquo;ll want to install Ruby Gems.
+To do that, you should download the ZIP file on
+<a href="http://rubygems.org/pages/download">this page</a>, decompress the file and then
+run:</p>
+<pre><code>PS C:\Path\to\files\ ruby setup.rb
+</code></pre>
+<p>From the decompressed folder.</p>
+<h3 id="installing-a-text-editor">Installing a Text Editor<a hidden class="anchor" aria-hidden="true" href="#installing-a-text-editor">#</a></h3>
+<p>Next, you&rsquo;ll need a decent editor. If you&rsquo;ve got one, feel free to skip this
+section.</p>
+<p>For a long time, my go-to editor in Windows was Notepad++. It&rsquo;s extensible,
+powerful and free. And just about the ugliest thing I&rsquo;ve ever seen.</p>
+<p>Recently, I&rsquo;ve become a big fan of <a href="http://www.sublimetext.com/">Sublime Text</a>.
+It&rsquo;s clean, powerful and pretty. Though I&rsquo;ve got no design ability, it&rsquo;s
+important to me that my tools be pretty.</p>
+<p>If you get Sublime Text, you&rsquo;ll want to launch it from the command line. To make
+this as painless as possible, I recommend adding something like this to your
+$profile script (the one we detailed above, for those of you who are skimming).
+Obviously, you&rsquo;ll need to change the path as needed:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ps1" data-lang="ps1"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> st { Invoke-Expression -Command <span style="color:#e6db74">&#34;START &#39;C:\Program Files\Sublime Text 2\sublime_text.exe&#39; &#39;</span>$args<span style="color:#e6db74">&#39;&#34;</span> }
+</span></span></code></pre></div><p>That works for me. There are a few kinks in the process (you may have some
+trouble using the Build command in Sublime Text), but for the most part, this
+will allow you &ndash; from PowerShell &ndash; to edit files thusly:</p>
+<pre><code>PS C:\ st myfile.txt
+</code></pre>
+<h3 id="git">Git<a hidden class="anchor" aria-hidden="true" href="#git">#</a></h3>
+<p>You can get Git <a href="http://git-scm.com/">here</a>.</p>
+<h3 id="jekyll">Jekyll<a hidden class="anchor" aria-hidden="true" href="#jekyll">#</a></h3>
+<p>Jekyll &ldquo;is a simple, blog aware, static site generator,&rdquo; says its
+<a href="https://github.com/mojombo/jekyll">README</a>. I&rsquo;m not going to sit here and
+trumpet its strengths, since this is literally the first thing I&rsquo;ve used it to
+make. I&rsquo;m certainly no expert, though I did get it up and running.</p>
+<p>First, you&rsquo;ll want to take a stab at installing Jekyll as painlessly as
+possible. Try this:</p>
+<pre><code>gem install jekyll
+</code></pre>
+<h4 id="errors-installing-jekyll-developer-kit">Errors Installing Jekyll: Developer Kit<a hidden class="anchor" aria-hidden="true" href="#errors-installing-jekyll-developer-kit">#</a></h4>
+<p>If that throws some crazy errors about not having a developer kit in the path,
+go back to the <a href="http://rubyinstaller.org/downloads/">Ruby Installer</a> page,
+scroll down a bit and download the proper development kit. You can figure out
+which one is right for you by reading the section labeled &ldquo;Which Development
+Kit&rdquo; on the upper-right.</p>
+<p>Download and execute the file. It&rsquo;ll decompress to the folder it&rsquo;s in (most of
+the important stuff will go in the <em>bin</em> subdirectory). You&rsquo;ll want to run
+<strong>devkitvars.ps1</strong> (or <strong>devkitvars.bat</strong>), both of which should be readily
+available.</p>
+<pre><code>PS C:\Path\to\devkit\ devkitvars.ps1
+</code></pre>
+<h2 id="deploying-jekyll">Deploying Jekyll<a hidden class="anchor" aria-hidden="true" href="#deploying-jekyll">#</a></h2>
+<p>As I said, I&rsquo;m no Jekyll expert. The &ldquo;basic structure&rdquo; of a Jekyll folder is
+described <a href="https://github.com/mojombo/jekyll/wiki/usage">here</a>.</p>
+<p>I&rsquo;m not going to get into too many specifics about how it works. There are a
+<a href="https://learn.andrewmunsell.com/learn/jekyll-by-example/">lot</a>
+<a href="http://jekyllbootstrap.com/">of</a>
+<a href="http://net.tutsplus.com/tutorials/other/building-static-sites-with-jekyll/">resources</a>
+and
+<a href="http://danielmcgraw.com/2011/04/14/The-Ultimate-Guide-To-Getting-Started-With-Jekyll-Part-1/">tutorials</a>
+available via a simple
+<a href="https://www.google.com/search?q=jekyll+tutorial">Google search</a>.</p>
+<p>Instead of covering that ground again, I&rsquo;m going to conclude this post with a
+few details about how I deployed Jekyll from my home computer to a webserver
+using Git.</p>
+<p>The process is quite straightforward. I&rsquo;ve only been using Git for a few weeks,
+which is proof that any idiot can figure this out.</p>
+<p>Basically, here are the steps you need to follow to deploy using Git. This
+assumes you&rsquo;ve got access to a webhost with SSH and Git already installed.</p>
+<h3 id="creating-a-git-repository">Creating a Git Repository<a hidden class="anchor" aria-hidden="true" href="#creating-a-git-repository">#</a></h3>
+<p>First, on your <strong>local machine</strong>, navigate to the root of your Jekyll project
+and initialize a Git repository.</p>
+<pre><code>PS C:\Your\jekyll\project\ git init
+</code></pre>
+<p>Next, add the _site folder to the repository.</p>
+<pre><code>PS C:\Your\jekyll\project\ git add _site
+</code></pre>
+<p>Now, commit the repository:</p>
+<pre><code>PS C:\Your\jekyll\project\ git commit -m &quot;Init commit.&quot;
+</code></pre>
+<p>Next, we&rsquo;re going to want to create a bare repository on the <strong>server</strong> where
+you&rsquo;ll be hosting the site. SSH to your server and navigate to the place you
+want to have the repository. Note that this does not (and maybe should not?) be
+a publicly exposed location. In my case, I put it beneath the HTML root folder.</p>
+<p>My server is a Linux box. Here&rsquo;s what I did:</p>
+<pre><code>bash ~/domains/rob-barry.com$ mkdir repo.git
+bash ~/domains/rob-barry.com$ cd repo.git
+bash ~/domains/rob-barry.com/repo.git$ git --bare init
+</code></pre>
+<p>That should return with a message saying you&rsquo;ve initialized a bare repository in
+repo.git.</p>
+<p>Now, because I actually followed
+<a href="http://qugstart.com/blog/ruby-and-rails/create-a-new-git-remote-repository-from-some-local-files-or-local-git-repository/">these directions</a>,
+I typed this:</p>
+<pre><code>bash ~/domains/rob-barry.com/repo.git$ git config core.sharedrepository 1
+bash ~/domains/rob-barry.com/repo.git$ git config receive.denyNonFastforwards true
+</code></pre>
+<p>Now, hop back to your <strong>local machine</strong>. The easiest thing to do is to add this
+new repository as a remote:</p>
+<pre><code>PS C:\Your\jekyll\project\ git remote add origin ssh://username@yoursite.com/path/to/your/git/repo.git
+</code></pre>
+<p>And then push the repository to the new site:</p>
+<pre><code>git push -u origin master
+</code></pre>
+<p>Now, we flip back to the <strong>server</strong>, navigate to our root HTML directory, and
+clone the repo:</p>
+<pre><code>bash ~/domains/rob-barry.com/html$ git clone ~/domains/rob-barry.com/repo.git
+</code></pre>
+<h3 id="redirecting-using-htaccess">Redirecting Using .htaccess<a hidden class="anchor" aria-hidden="true" href="#redirecting-using-htaccess">#</a></h3>
+<p>If you follow these steps, you&rsquo;ll wind up with a copy of your Jekyll website in
+the /repo/_site subdirectory. That won&rsquo;t do, so you&rsquo;ll need to make a quick
+tweak to .htaccess:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>RewriteEngine <span style="color:#66d9ef">on</span>
+</span></span><span style="display:flex;"><span>RewriteCond %{HTTP_HOST} ^(www.)?rob-barry.com$
+</span></span><span style="display:flex;"><span>RewriteCond %{REQUEST_URI} !^/repo/_site/
+</span></span><span style="display:flex;"><span>RewriteCond %{REQUEST_FILENAME} !-f
+</span></span><span style="display:flex;"><span>RewriteCond %{REQUEST_FILENAME} !-d
+</span></span><span style="display:flex;"><span>RewriteRule ^(.*)$ <span style="color:#e6db74">/repo/_site/</span>$1
+</span></span><span style="display:flex;"><span>RewriteCond %{HTTP_HOST} ^(www.)?rob-barry.com$
+</span></span><span style="display:flex;"><span>RewriteRule ^(/)?$ repo/_site/index.html [L]
+</span></span></code></pre></div><p>Obviously, you&rsquo;ll want to replace rob-barry.com with your information (and
+/repo/_site/ if necessary). This may come as a shock, but it&rsquo;s totally possible
+there&rsquo;s a better way to do this. I don&rsquo;t know.</p>
+<h3 id="adding-post-receive-hook">Adding Post-Receive Hook<a hidden class="anchor" aria-hidden="true" href="#adding-post-receive-hook">#</a></h3>
+<p>Lastly, we want to set this up so every time we run a push from the local
+machine to the server, it updates the live website. We do this by navigating to
+our repo.git directory on the <strong>server</strong> and then doing this:</p>
+<pre><code>bash ~/domains/rob-barry.com/repo.git/ cd hooks
+bash ~/domains/rob-barry.com/repo.git/hooks/ mv post-receive.sample post-receive
+</code></pre>
+<p>Now, edit post-receive to contain a line like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unset GIT_DIR <span style="color:#f92672">&amp;&amp;</span> cd ~/rob-barry.com/html/repo <span style="color:#f92672">&amp;&amp;</span> git pull
+</span></span></code></pre></div><p>And finally, do this:</p>
+<pre><code>bash ~/domains/rob-barry.com/repo.git/hooks/ chmod a+x post-receive
+</code></pre>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>From here, you can add a bunch of folders to your .gitignore file. For this
+site, my .gitignore file looks like this:</p>
+<pre><code>_includes/*
+_layouts/*
+_plugins/*
+_posts/*
+assets/*
+pages/*
+_config.yml
+index.html
+</code></pre>
+<p>Good luck. Please let me know how it goes.</p>
+<p><strong>EDIT 4/24:</strong> Added summary field.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+    
+  </footer>
+
+  
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2024 <a href="https://www.robbarry.org/">Rob Barry</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script></body>
+
+</html>

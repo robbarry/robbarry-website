@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.robbarry.org/</loc>
-    <lastmod>2023-07-24T07:12:01-04:00</lastmod>
-  </url><url>
     <loc>https://www.robbarry.org/categories/articles/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
@@ -32,19 +29,25 @@
     <loc>https://www.robbarry.org/tags/wagner/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
+    <loc>https://www.robbarry.org/</loc>
+    <lastmod>2023-07-24T07:12:01-04:00</lastmod>
+  </url><url>
     <loc>https://www.robbarry.org/work/2023-07-24-wagner/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/tags/wsj/</loc>
     <lastmod>2023-07-24T07:12:01-04:00</lastmod>
   </url><url>
-    <loc>https://www.robbarry.org/work/2023-06-09-wagner/</loc>
+    <loc>https://www.robbarry.org/categories/videos/</loc>
+    <lastmod>2023-06-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/categories/docsandpods/</loc>
     <lastmod>2023-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/categories/top/</loc>
     <lastmod>2023-06-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.robbarry.org/categories/videos/</loc>
+    <loc>https://www.robbarry.org/work/2023-06-09-wagner/</loc>
     <lastmod>2023-06-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/tags/crypto/</loc>
@@ -512,6 +515,12 @@
     <loc>https://www.robbarry.org/work/2014-03-06-stockbrokers-fail-to-disclose-red-flags/</loc>
     <lastmod>2014-03-06T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.robbarry.org/posts/2014-02-01-playing-chess-with-new-yorks-best-restaurants/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/posts/</loc>
+    <lastmod>2014-02-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.robbarry.org/tags/asiana-airlines/</loc>
     <lastmod>2013-12-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -557,9 +566,6 @@
     <loc>https://www.robbarry.org/tags/short-sellers/</loc>
     <lastmod>2013-08-20T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.robbarry.org/posts/</loc>
-    <lastmod>2013-08-04T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.robbarry.org/posts/2013-08-04-nonprofit-salary-calculations/</loc>
     <lastmod>2013-08-04T00:00:00+00:00</lastmod>
   </url><url>
@@ -595,6 +601,9 @@
   </url><url>
     <loc>https://www.robbarry.org/work/2013-04-24-directors-take-shelter-in-trading-plans/</loc>
     <lastmod>2013-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.robbarry.org/posts/2013-04-21-launching/</loc>
+    <lastmod>2013-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.robbarry.org/tags/cost-of-college/</loc>
     <lastmod>2013-03-23T00:00:00+00:00</lastmod>
@@ -844,7 +853,5 @@
   </url><url>
     <loc>https://www.robbarry.org/work/2008-07-20-for-license-renewals-in-florida-no-criminal-background-checks/</loc>
     <lastmod>2008-07-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.robbarry.org/categories/stories/</loc>
   </url>
 </urlset>

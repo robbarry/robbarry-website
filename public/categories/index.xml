@@ -17,31 +17,40 @@
     </item>
     
     <item>
-      <title>Top Stories</title>
-      <link>https://www.robbarry.org/categories/top/</link>
-      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.robbarry.org/categories/top/</guid>
-      <description>I&amp;rsquo;ve been working in newspapers since 2006. Here&amp;rsquo;s some of my most ambitious work.
-A more complete list of the stories I&amp;rsquo;ve worked on is available here.</description>
-    </item>
-    
-    <item>
-      <title>Videos</title>
+      <title>Documentaries</title>
       <link>https://www.robbarry.org/categories/videos/</link>
       <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.robbarry.org/categories/videos/</guid>
-      <description></description>
+      <description>I&amp;rsquo;ve had the privilege of working on a few documentary projects. While I played only a part amidst talented teams, I&amp;rsquo;m proud to have contributed to these thought-provoking pieces that shed light on pressing issues:</description>
     </item>
     
     <item>
-      <title>Audio</title>
+      <title>Documentaries &amp; Podcasts</title>
+      <link>https://www.robbarry.org/categories/docsandpods/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/categories/docsandpods/</guid>
+      <description>I&amp;rsquo;ve had the privilege of working on a few documentary and podcast projects. While I played only a part amidst talented teams, I&amp;rsquo;m proud to have contributed to these powerful projects.</description>
+    </item>
+    
+    <item>
+      <title>My Work</title>
+      <link>https://www.robbarry.org/categories/top/</link>
+      <pubDate>Fri, 09 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/categories/top/</guid>
+      <description>I fell into journalism in 2006 with a story that started as a simple assignment about a local charter school opening for The Miami Herald&amp;rsquo;s Neighbors section, and turned into something more.
+In the ensuing years, I got drafted onto the Herald&amp;rsquo;s investigative team, where I worked on three major projects: Borrower&amp;rsquo;s Betrayed, about the subprime mortgage crisis; Key&amp;rsquo;s to the Kingdom, about Allen Stanford&amp;rsquo;s Ponzi scheme; and Neglected to Death, about Florida&amp;rsquo;s failure to protect its elderly and disabled.</description>
+    </item>
+    
+    <item>
+      <title>Podcasts</title>
       <link>https://www.robbarry.org/categories/audio/</link>
       <pubDate>Wed, 29 Dec 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.robbarry.org/categories/audio/</guid>
-      <description></description>
+      <description>Who doesn&amp;rsquo;t love a good podcast? These are some of the projects I&amp;rsquo;ve gotten to play a small part in:</description>
     </item>
     
     <item>
@@ -69,16 +78,6 @@ A more complete list of the stories I&amp;rsquo;ve worked on is available here.<
       
       <guid>https://www.robbarry.org/categories/miami-herald/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Top Stories</title>
-      <link>https://www.robbarry.org/categories/stories/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.robbarry.org/categories/stories/</guid>
-      <description>I&amp;rsquo;ve been working in newspapers since 2006. Here&amp;rsquo;s some of my most ambitious work.
-A more complete list of the stories I&amp;rsquo;ve worked on is available here.</description>
     </item>
     
   </channel>

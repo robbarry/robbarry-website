@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rob Barry's CV</title>
+
+    <style>
+        :root {
+            --background-color: #fafafa;
+            --container-bg-color: #ffffff;
+            --text-shadow-color: rgba(0, 0, 0, 0.03);
+            --box-shadow-color: rgba(0, 0, 0, 0.15);
+            --divider-color: #e0e0e0;
+            --primary-text-color: #212121;
+            --name-color: #263238;
+            --link-color: #0069D9;
+            --link-hover-color: #004C91;
+            --complementary-color: #ff7300;
+            --secondary-text-color: #757575;
+            --tertiary-text-color: #9E9E9E;
+            --link-bg-color: #0069D9;
+            --primary-font-family: 'Roboto', sans-serif;
+            --secondary-font-family: 'Titillium Web', sans-serif;
+        }
+
+
+        body {
+            font-family: var(--primary-font-family);
+            padding: 20px;
+            margin: 0;
+            background-color: var(--background-color);
+            text-shadow: 0 1px 1px var(--text-shadow-color);
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            padding: 20px;
+            margin: 0 auto;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--container-bg-color);
+            box-shadow: 0 4px 10px var(--box-shadow-color);
+        }
+
+        .header-container,
+        .content-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            max-width: 1000px;
+            /* same max-width as .cv-container */
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom: 1px solid var(--divider-color);
+        }
+
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info>address {
+            margin-right: 20px;
+            font-style: normal;
+        }
+
+        .contact-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .left-section,
+        .right-section {
+            padding: 20px;
+        }
+
+        .left-section {
+            flex: 0 0 35%;
+            border-right: 1px solid #ddd;
+        }
+
+        .right-section {
+            flex: 1;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--primary-text-color);
+            margin-top: 0;
+            font-family: var(--secondary-font-family);
+        }
+
+        h1 {
+            font-size: 2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .samples a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+
+        .samples a:hover {
+            color: var(--link-hover-color);
+            text-decoration: underline;
+        }
+
+        .section ul li {
+            line-height: 1;
+        }
+
+        .samples ul li {
+            line-height: 1.25;
+        }
+
+        .skills ul {
+            list-style-type: none;
+            padding-left: 20px;
+            /* Add left padding to simulate default bullet behavior */
+            margin-left: 0;
+        }
+
+        .skills ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding: 0px;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+
+        .skills ul li::before {
+            content: "\2022";
+            color: var(--link-color);
+            font-weight: bold;
+            display: inline-block;
+            position: absolute;
+            left: -20px;
+            /* Position the bullet to the left of the text */
+            top: 0;
+        }
+
+        .role {
+            padding: 10px 0;
+            margin-bottom: 13px;
+            border-bottom: 1px solid #ddd;
+            /* Optional line separator */
+            position: relative;
+        }
+
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .role-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            width: 40%;
+        }
+
+        .role-company {
+            color: var(--secondary-text-color);
+            margin-right: 20px;
+            /* Give some space between company and dates */
+            font-size: 0.9em;
+            width: 30%;
+        }
+
+        .role-dates {
+            color: var(--tertiary-text-color);
+            text-align: right;
+            /* Right-align to help with spacing if your content grows */
+            flex: 0 0 100px;
+        }
+
+        .role-summary p {
+            margin-top: 10px;
+        }
+
+        .obfuscated {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+
+        /* Add a page break before the element */
+        .page-break-before {
+            page-break-before: always;
+        }
+
+        /* Avoid breaking inside the element */
+        .avoid-break {
+            page-break-inside: avoid;
+        }
+
+        .name a {
+            text-decoration: none;
+            color: var(--name-color);
+        }
+
+        .name a:hover {
+            color: var(--link-hover-color);
+            /* Blue on hover */
+        }
+
+        .complementary-color {
+            color: var(--complementary-color);
+            /* Goldenrod */
+        }
+
+        h2 {
+            color: var(--complementary-color);
+            /* Goldenrod */
+        }
+
+        .download-link a {
+            padding: 5px 10px;
+            background-color: var(--link-bg-color);
+            /* Blue to match links */
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .download-link a:hover {
+            background-color: var(--link-hover-color);
+            /* Darker blue on hover */
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</head>
+
+<body>
+    <div class="cv-container">
+        <header class="header-container">
+            <div class="header">
+                <nav class="contact-info">
+                    <img src="/assets/img/robbarry-profile.jpeg" alt="Rob Barry">
+                    <address>
+                        <strong><span class="name"><a href="/">Rob Barry</a></span></strong><br>
+                        <span class="obfuscated">moc.jsw@yrrab.bor</span><br>
+                        <span class="obfuscated">0924-362-929-1+</span>
+                    </address>
+                </nav>
+                <nav class="download-link">
+                    <a href="javascript:void(0);" onclick="downloadPDF();">Download Resume</a>
+                </nav>
+            </div>
+        </header>
+        <section class="content-container">
+            <section class="left-section">
+                <section class="section skills">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <ul>
+                        <li>Computer programming</li>
+                        <li>Machine learning</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Statistical analysis</li>
+                        <li>Database management</li>
+                        <li>Network analysis</li>
+                        <li>Internet forensics</li>
+                    </ul>
+                </section>
+                <section class="section skills">
+                    <h2>INVESTIGATIVE SKILLS</h2>
+                    <ul>
+                        <li>Confidential source management</li>
+                        <li>Open-source investigations</li>
+                        <li>Corporate backgrounding and analysis</li>
+                        <li>Public records</li>
+                        <li>Demographics analysis</li>
+                    </ul>
+                </section>
+                <section class="section samples">
+                    <h2>WORK SAMPLES</h2>
+                    <ul>
+                        <li><a
+                                href="https://www.wsj.com/video/series/shadow-men/shadow-men-inside-wagner-russias-secret-war-company/">Shadow
+                                Men: Inside Wagner, Russia’s Secret War Company</a></li>
+                        <li><a
+                                href="https://www.wsj.com/articles/how-tiktok-inundates-teens-with-eating-disorder-videos-11639754848">‘The
+                                Corpse Bride Diet’: How TikTok Inundates Teens With Eating-Disorder Videos</a></li>
+                        <li><a
+                                href="https://www.wsj.com/video/series/inside-tiktoks-highly-secretive-algorithm/investigation-how-tiktok-algorithm-figures-out-your-deepest-desires/6C0C2040-FF25-4827-8528-2BD6612E3796">Investigation:
+                                How TikTok’s Algorithm Figures Out Your Deepest Desires</a></li>
+                        <li><a
+                                href="https://www.wsj.com/articles/ghosts-in-the-clouds-inside-chinas-major-corporate-hack-11577729061">Ghosts
+                                in the Clouds: Inside China's Major Corporate Hack</a></li>
+                        <li><a
+                                href="https://www.wsj.com/articles/americas-electric-grid-has-a-vulnerable-back-doorand-russia-walked-through-it-11547137112">America's
+                                Electric Grid Has a Vulnerable Back Door--and Russia Walked Through
+                                It</a></li>
+                        <li><a
+                                href="https://www.wsj.com/articles/the-travels-of-mrs-murrays-toyota-unveils-terror-finance-network-1482163526">The
+                                Travels of Mrs. Murray's Toyota Unveil Terror-Finance Network</a></li>
+                        <li><a href="https://robbarry.org/categories/top/">More...</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section class="right-section">
+                <section class="section experience">
+                    <h2>EXPERIENCE</h2>
+                    <article class="role">
+                        <div class="role-header">
+                            <div class="role-title">Investigations Data Editor</div>
+                            <div class="role-company">The Wall Street Journal</div>
+                            <time class="role-dates">2014&nbsp;-&nbsp;Present</time>
+                        </div>
+                        <div class="role-summary">
+                            <p>I lead the newspaper’s investigative data team, which is a group of reporters who
+                                specialize in computer programming and data. In my role, I manage the team, including
+                                story
+                                assignments and
+                                editing.</p>
+                            <p>I also work on my own projects, from building hundreds of TikTok bots with
+                                Raspberry Pis to tracking a Chinese government hacker group inside major global
+                                corporations to exposing a covert Russian global paramilitary network.</p>
+                        </div>
+                    </article>
+                    <article class="role">
+                        <div class="role-header">
+                            <div class="role-title">Investigative Reporter</div>
+                            <div class="role-company">The Wall Street Journal</div>
+                            <time class="role-dates">2011 - 2014</time>
+                        </div>
+                        <div class="role-summary">
+                            <p>I wrote about police shootings, stockbrokers, Russian elections, airplane crashes and
+                                unusually lucky stock trades by corporate executives, each of which required innovative
+                                analytical techniques.</p>
+                        </div>
+                    </article>
+                    <article class="role avoid-break">
+                        <div class="role-header">
+                            <div class="role-title">Reporter & Data Editor</div>
+                            <div class="role-company">The Miami Herald</div>
+                            <time class="role-dates">2006 - 2011</time>
+                        </div>
+                        <div class="role-summary">
+                            <p>I covered life and local government in North Miami Beach, worked as a metro
+                                reporter focusing on breaking news, obituaries and special interest articles, and an
+                                investigative data reporter working on large projects. I also created a host of web
+                                applications for the public and the newsroom intranet.</p>
+                        </div>
+                    </article>
+                </section>
+                <section class="section education">
+                    <h2>EDUCATION</h2>
+                    <article class="role">
+                        <div class="role-header">
+                            <div class="role-title">B.S. Mathematics & English</div>
+                            <div class="role-company">The University of Miami</div>
+                            <time class="role-dates">2005</time>
+                        </div>
+                    </article>
+                </section>
+                <section class="section awards">
+                    <h2>AWARDS</h2>
+                    <article class="text">
+                        <p>I’ve won the top business reporting award, the Gerald Loeb, four times. I also contributed to
+                            a
+                            series of stories detailing Medicare overbilling and fraud which was awarded the Pulitzer
+                            Prize
+                            for Investigative Reporting in 2015.</p>
+                        <p>My work at the Miami Herald on assisted living facilities was also a finalist for the
+                            Pulitzer
+                            Prize in Public Service in 2011.</p>
+                        <p>My other work has won many other awards, including the 2021 Philip Meyer Journalism Award for
+                            computational journalism.</p>
+
+                    </article>
+                </section>
+            </section>
+        </section>
+    </div>
+</body>
+<script type="text/javascript">
+    function prepareForPrint() {
+        // first, hide the "download" button
+        document.querySelector('.download-link').style.display = 'none';
+
+        // reverse the obfuscation
+        var obfuscated = document.querySelectorAll('.obfuscated');
+        for (var i = 0; i < obfuscated.length; i++) {
+            obfuscated[i].innerHTML = obfuscated[i].innerHTML.split('').reverse().join('');
+        }
+
+        var name = document.querySelector('.name');
+        name.innerHTML = "<a href='https://www.robbarry.org/assets/html/resume.html'>Rob Barry</a>";
+
+        // reduce the size of everything on the page
+        var elements = document.querySelectorAll('body *');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.fontSize = '13.3px';
+        }
+
+        // reduce the padding on all the sections
+        var sections = document.querySelectorAll('.role');
+        for (var i = 0; i < sections.length; i++) {
+            sections[i].style.padding = '0px';
+        }
+
+    }
+
+    function restoreFromPrint() {
+        // restore the download button
+        document.querySelector('.download-link').style.display = 'block';
+
+        // obfuscate the email and phone number
+        var obfuscated = document.querySelectorAll('.obfuscated');
+        for (var i = 0; i < obfuscated.length; i++) {
+            obfuscated[i].innerHTML = obfuscated[i].innerHTML.split('').reverse().join('');
+        }
+
+        var name = document.querySelector('.name');
+        name.innerHTML = '<a href="/">Rob Barry</a>';
+
+        // restore the font size
+        var elements = document.querySelectorAll('body *');
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].style.fontSize = '';
+        }
+    }
+
+    function downloadPDF() {
+        // set a timeout to redisplay the button after 5 seconds
+        prepareForPrint();
+
+        var element = document.querySelector('.cv-container'); // or use document.body for the whole page
+        var opt = {
+            margin: 5,
+            filename: 'robbarry-resume.pdf',
+            image: { type: 'jpeg', quality: 1 },
+            html2canvas: { scale: 2 },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        };
+
+        html2pdf().from(element).set(opt).save().then(restoreFromPrint);
+        // show the "download" button again
+    }
+
+
+</script>
+
+</html>

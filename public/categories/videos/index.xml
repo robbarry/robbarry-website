@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Videos on Rob Barry</title>
+    <title>Documentaries on Rob Barry</title>
     <link>https://www.robbarry.org/categories/videos/</link>
-    <description>Recent content in Videos on Rob Barry</description>
+    <description>Recent content in Documentaries on Rob Barry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 09 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.robbarry.org/categories/videos/index.xml" rel="self" type="application/rss+xml" />
@@ -24,7 +24,7 @@ Watch the documentary here.</description>
       
       <guid>https://www.robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/</guid>
       <description>The Wall Street Journal created dozens of automated accounts that watched hundreds of thousands of videos to reveal how the social network knows you so well.
-Read the full story here.</description>
+Watch the video here.</description>
     </item>
     
   </channel>

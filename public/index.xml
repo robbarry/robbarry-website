@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Rob Barry</title>
+    <title>Who am I? on Rob Barry</title>
     <link>https://www.robbarry.org/</link>
-    <description>Recent content on Rob Barry</description>
+    <description>Recent content in Who am I? on Rob Barry</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 24 Jul 2023 07:12:01 -0400</lastBuildDate><atom:link href="https://www.robbarry.org/index.xml" rel="self" type="application/rss+xml" />
@@ -124,7 +124,7 @@ Read the full story here.</description>
       
       <guid>https://www.robbarry.org/work/2021-07-21-how-tiktok-s-algorithm-figures-out-your-deepest-desires/</guid>
       <description>The Wall Street Journal created dozens of automated accounts that watched hundreds of thousands of videos to reveal how the social network knows you so well.
-Read the full story here.</description>
+Watch the video here.</description>
     </item>
     
     <item>
@@ -857,6 +857,15 @@ Read the full story here.</description>
     </item>
     
     <item>
+      <title>Playing Chess with New York&#39;s Best Restaurants</title>
+      <link>https://www.robbarry.org/posts/2014-02-01-playing-chess-with-new-yorks-best-restaurants/</link>
+      <pubDate>Sat, 01 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/posts/2014-02-01-playing-chess-with-new-yorks-best-restaurants/</guid>
+      <description>Or how I&amp;#39;ve spent several years figuring out where I like to eat.</description>
+    </item>
+    
+    <item>
       <title>Foreign Airline Crews Had Difficulties With San Francisco Landings</title>
       <link>https://www.robbarry.org/work/2013-12-11-foreign-airline-crews-had-difficulties-with-san-francisco-landings/</link>
       <pubDate>Wed, 11 Dec 2013 00:00:00 +0000</pubDate>
@@ -1013,6 +1022,15 @@ Federal prosecutors are investigating potential misuse of 10b5-1 plans by corpor
       <guid>https://www.robbarry.org/work/2013-04-24-directors-take-shelter-in-trading-plans/</guid>
       <description>Corporate board members are increasingly using a type of opaque trading plan that was originally intended primarily for executives.
 The use of government-sanctioned 10b5-1 trading plans, designed to avoid insider trading suspicion by scheduling trades in advance, has surged by 55% among nonexecutive directors since 2008. Some directors use these plans for rapid large-scale stock sales. Critics argue that these trading plans may sometimes be abused, especially by board members who also run investment funds, potentially leading to the appearance of impropriety.</description>
+    </item>
+    
+    <item>
+      <title>Launching</title>
+      <link>https://www.robbarry.org/posts/2013-04-21-launching/</link>
+      <pubDate>Sun, 21 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.robbarry.org/posts/2013-04-21-launching/</guid>
+      <description>How I published this Jekyll-based site from my local Windows 7 PC to a Linux-based server using Git.</description>
     </item>
     
     <item>
