@@ -6,8 +6,8 @@ title: Who am I?
 > stand on the side of the egg.”_ - Haruki Murakami
 
 Hey there! I'm Rob Barry. I'm the Director of Data Journalsm at The Wall Street
-Journal, where I lead an incredibly talented team of reporters who love obsessing
-over complex data sets and turning them into groundbreaking stories.
+Journal, where I lead an incredibly talented team of reporters who specialize in 
+obsessing over complex data sets and turning them into groundbreaking stories.
 
 I love investigative reporting, programming and getting to the bottom of
 mysteries. I have expertise reverse-engineering algorithms, deep-diving into
