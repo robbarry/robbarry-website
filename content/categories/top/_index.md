@@ -26,3 +26,8 @@ In 2015, armed with a trove of billions of previously confidential billing
 records, we used statistical analyses and shoe-leather reporting to unravel
 millions of dollars in Medicare fraud. The project, _Medicare Unmasked_, won the
 2015 Pulitzer Prize for Investigative Reporting.
+
+In 2025, a Journal investigation chronicling Elon Musk's political
+transformation won the Pulitzer Prize for National Reporting. I edited
+[the data-driven piece](https://www.wsj.com/tech/elon-musk-politics-trump-social-media-267d34c8)
+that mapped his shift through 300,000 of his own words on X.

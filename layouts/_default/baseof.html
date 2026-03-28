@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}" dir="auto">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  {{ $styles := resources.Get "css/custom.css" }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+  {{- block "head" . }}{{- end }}
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <a href="{{ "/" | relURL }}">{{ site.Title }}</a>
+      </div>
+      <ul id="menu">
+        {{- range site.Menus.main }}
+        <li><a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) (and (eq .URL "/") $.IsHome) }} class="active"{{ end }}>{{ .Name }}</a></li>
+        {{- end }}
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    {{- block "main" . }}{{- end }}
+  </main>
+
+  <footer class="footer">
+    <span>&copy; {{ now.Year }} {{ site.Title }}</span>
+  </footer>
+</body>
+</html>
