@@ -3,7 +3,6 @@ title: Making Sense of College Aid
 date: '2013-03-23'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - Higher Education
 - Cost of College

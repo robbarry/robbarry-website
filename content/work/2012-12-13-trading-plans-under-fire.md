@@ -3,7 +3,6 @@ title: Trading Plans Under Fire
 date: '2012-12-13'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - WSJ
 - Insider Trading

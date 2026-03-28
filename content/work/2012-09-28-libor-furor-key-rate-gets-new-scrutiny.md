@@ -3,7 +3,6 @@ title: 'Libor Furor: Key Rate Gets New Scrutiny'
 date: '2012-09-28'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - WSJ
 - Libor

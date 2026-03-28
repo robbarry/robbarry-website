@@ -3,7 +3,6 @@ title: Insider-Trading Probe Trains Lens on Boards
 date: '2013-04-30'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - WSJ
 - Insider Trading

@@ -4,7 +4,6 @@ description: "More civilians are killing each other and claiming self-defense, a
 date: '2012-04-02'
 categories:
 - Articles
-- AI Disclosure
 - Top
 tags:
 - WSJ

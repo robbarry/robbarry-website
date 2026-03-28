@@ -3,7 +3,6 @@ title: Freaky Fridays for Options Buyers
 date: '2013-06-22'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - Data Analysis
 - Finance

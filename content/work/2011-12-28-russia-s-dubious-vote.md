@@ -4,7 +4,6 @@ description: "Analysis of nearly 100,000 voting precincts revealed potential vot
 date: '2011-12-28'
 categories:
 - Articles
-- AI Disclosure
 - Top
 tags: 
 - WSJ

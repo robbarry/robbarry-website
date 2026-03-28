@@ -3,7 +3,6 @@ title: Directors Take Shelter in Trading Plans
 date: '2013-04-24'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - Trading Plans
 - Insider Trading

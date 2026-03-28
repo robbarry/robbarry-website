@@ -4,7 +4,6 @@ description: "An investigation found many corporate executives make profitable t
 date: '2012-11-27'
 categories:
 - Articles
-- AI Disclosure
 - Top
 tags:
 - WSJ

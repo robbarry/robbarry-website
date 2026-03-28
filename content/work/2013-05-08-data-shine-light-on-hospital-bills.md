@@ -3,7 +3,6 @@ title: Data Shine Light on Hospital Bills
 date: '2013-05-08'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - Data Analysis
 - Medicare

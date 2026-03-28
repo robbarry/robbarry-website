@@ -3,7 +3,6 @@ title: Executive Sales Beat News That Hit Stock
 date: '2012-12-20'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - WSJ
 - Insider Trading

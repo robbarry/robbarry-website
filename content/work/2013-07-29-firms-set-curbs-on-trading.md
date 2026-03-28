@@ -3,7 +3,6 @@ title: Firms Set Curbs on Trading
 date: '2013-07-29'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - Finance
 - Markets

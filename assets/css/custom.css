@@ -29,6 +29,7 @@ html {
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-y: scroll;
 }
 
 body {
@@ -100,7 +101,6 @@ hr {
 #menu {
     list-style: none;
     display: flex;
-    gap: 1.25rem;
     flex-wrap: wrap;
     padding-top: 0.7rem;
     border-top: 1px solid var(--rule);
@@ -191,6 +191,18 @@ a:hover {
 .about-page li {
     margin-bottom: 0.45rem;
     line-height: 1.6;
+}
+
+/* ── Section label (list pages) ─────────────────────────── */
+
+.section-label {
+    font-family: "pt-mono", monospace;
+    font-size: 0.72rem;
+    font-weight: 400;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
 }
 
 /* ── Post entries (story lists) ────────────────────────── */
@@ -309,8 +321,10 @@ a:hover {
 }
 
 .post-content h4 {
-    font-size: 0.95rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--text-secondary);
     margin: 1.5rem 0 0.4rem;
 }
 
@@ -457,15 +471,6 @@ a:hover {
     border-color: var(--accent);
 }
 
-/* ── AI disclosure ─────────────────────────────────────── */
-
-.ai-disclosure {
-    margin-top: 1.5rem;
-    font-style: italic;
-    color: var(--text-dim);
-    font-size: 0.8rem;
-}
-
 /* ── Site footer ───────────────────────────────────────── */
 
 .footer {
@@ -475,7 +480,7 @@ a:hover {
     width: 100%;
     font-family: "pt-mono", monospace;
     font-size: 0.64rem;
-    color: #8a857f;
+    color: var(--text-dim);
     letter-spacing: 0.02em;
     border-top: 1px solid var(--rule-light);
 }

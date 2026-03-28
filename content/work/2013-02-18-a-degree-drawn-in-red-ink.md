@@ -3,7 +3,6 @@ title: A Degree Drawn in Red Ink
 date: '2013-02-18'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - Data Analysis
 - WSJ

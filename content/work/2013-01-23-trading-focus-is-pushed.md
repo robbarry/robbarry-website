@@ -3,7 +3,6 @@ title: Trading Focus is Pushed
 date: '2013-01-23'
 categories:
 - Articles
-- AI Disclosure
 tags:
 - WSJ
 - Insider Trading
