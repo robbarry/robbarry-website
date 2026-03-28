@@ -1,5 +1,6 @@
 ---
 title: 'The TikTok Spiral, Part 3: Escape the Algorithm'
+description: The final installment of a WSJ podcast series examining how difficult it is for TikTok users to disengage from harmful content, and what responsibility parents, governments, and TikTok itself bear in keeping the platform safe.
 date: '2021-12-29'
 categories:
 - DocsAndPods

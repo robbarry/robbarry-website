@@ -1,6 +1,7 @@
 ---
 title: '''The Corpse Bride Diet'': How TikTok Inundates Teens With Eating-Disorder
     Videos'
+description: "TikTok's algorithm can send users down rabbit holes of narrow interest, surfacing emaciated images, purging techniques, hazardous diets and body shaming."
 date: '2021-12-17'
 categories:
 - Articles

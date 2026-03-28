@@ -8,6 +8,7 @@ permalinks:
   tags: "tag/:slug/"
 paginate: 999999
 relativeURLs: true
+summaryLength: 20
 
 menu:
   main:

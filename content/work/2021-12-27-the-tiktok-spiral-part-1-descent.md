@@ -1,5 +1,6 @@
 ---
 title: 'The TikTok Spiral, Part 1: Descent'
+description: A WSJ podcast investigating how TikTok's algorithm can funnel users into streams of potentially harmful content about starvation diets, self-harm, and suicide, even when they didn't seek it out.
 date: '2021-12-27'
 categories:
 - DocsAndPods

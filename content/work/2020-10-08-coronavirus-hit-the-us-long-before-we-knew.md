@@ -1,5 +1,6 @@
 ---
 title: Coronavirus Hit the U.S. Long Before We Knew
+description: "Months before travel bans and lockdowns, Americans were transmitting the coronavirus across the country."
 date: 2020-10-08
 categories:
 - Articles

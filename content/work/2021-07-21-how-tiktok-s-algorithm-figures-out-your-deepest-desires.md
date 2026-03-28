@@ -1,5 +1,6 @@
 ---
 title: How TikTok's Algorithm Figures Out Your Deepest Desires
+description: The Wall Street Journal created dozens of automated accounts that watched hundreds of thousands of TikTok videos to reveal how the platform's algorithm learns users' interests.
 date: '2021-07-21'
 categories:
 - DocsAndPods

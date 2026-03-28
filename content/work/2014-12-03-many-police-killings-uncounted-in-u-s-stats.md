@@ -1,5 +1,6 @@
 ---
 title: Many Police Killings Uncounted in U.S. Stats
+description: "More than 550 police killings between 2007 and 2012 were missing from the FBI's records."
 date: '2014-12-03'
 categories:
 - Articles

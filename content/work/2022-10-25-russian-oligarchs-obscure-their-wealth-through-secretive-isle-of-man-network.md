@@ -1,5 +1,6 @@
 ---
 title: Russian Oligarchs Obscure Their Wealth Through Secretive Isle of Man Network
+description: "A web of shell companies and middlemen managed by services firm Bridgewaters makes it hard for authorities to track assets and enforce sanctions against blacklisted oligarchs."
 date: '2022-10-25'
 categories:
 - Articles

@@ -1,5 +1,6 @@
 ---
 title: The Travels of Mrs. Murray's Toyota Unveil Terror-Finance Network
+description: "A 2009 Land Cruiser followed the same overseas car caravan that U.S. officials alleged raised millions of dollars for Hezbollah."
 date: '2016-12-19'
 categories:
 - Articles

@@ -1,5 +1,6 @@
 ---
 title: 'The TikTok Spiral, Part 2: Stuck. Together.'
+description: A WSJ podcast exploring how TikTok's algorithm struggles to distinguish helpful from harmful mental health content, and how recovery videos can inadvertently send other users into spirals.
 date: '2021-12-28'
 categories:
 - DocsAndPods

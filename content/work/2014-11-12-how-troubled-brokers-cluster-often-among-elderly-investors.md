@@ -1,5 +1,6 @@
 ---
 title: How Troubled Brokers Cluster, Often Among Elderly Investors
+description: "Stockbrokers who've been in trouble with regulators tend to cluster where the affluent and elderly are easily accessible."
 date: '2014-11-12'
 categories:
 - Articles

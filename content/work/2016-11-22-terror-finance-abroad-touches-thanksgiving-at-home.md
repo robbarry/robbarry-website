@@ -1,5 +1,6 @@
 ---
 title: Terror Finance Abroad Touches Thanksgiving at Home
+description: "The firm that touts the Butterball turkey is being investigated over alleged ties to designated terrorist entities."
 date: '2016-11-22'
 categories:
 - Articles

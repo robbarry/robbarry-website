@@ -1,5 +1,6 @@
 ---
 title: Russia's Dubious Vote
+description: "Analysis of nearly 100,000 voting precincts revealed potential vote-rigging with up to 14 million votes in question."
 date: '2011-12-28'
 categories:
 - Articles

@@ -20,10 +20,6 @@
   <div class="entry-content">
     <p>{{ .Description }}</p>
   </div>
-  {{- else if (ne (.Param "hideSummary") true) }}
-  <div class="entry-content">
-    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
-  </div>
   {{- end }}
   <footer class="entry-footer">
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>

@@ -1,5 +1,6 @@
 ---
 title: How TikTok Serves Up Sex and Drug Videos to Minors
+description: "The popular app can quickly drive young users into endless spools of adult content, including videos touting drug use and promoting pornography sites."
 date: '2021-09-08'
 categories:
 - Articles

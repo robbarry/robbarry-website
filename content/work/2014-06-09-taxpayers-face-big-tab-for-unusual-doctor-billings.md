@@ -1,5 +1,6 @@
 ---
 title: Taxpayers Face Big Tab for Unusual Doctor Billings
+description: "More than 2,300 providers earned $500,000 or more from Medicare in 2012 from a single procedure or service."
 date: '2014-06-09'
 categories:
 - Articles

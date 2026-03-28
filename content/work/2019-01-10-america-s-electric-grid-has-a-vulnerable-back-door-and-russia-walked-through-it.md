@@ -1,6 +1,7 @@
 ---
 title: America's Electric Grid Has a Vulnerable Back Door--and Russia Walked Through
     It
+description: "A reconstruction of the worst known hack into the nation's power system reveals attacks on hundreds of small contractors."
 date: '2019-01-10'
 categories:
 - Articles

@@ -1,5 +1,6 @@
 ---
 title: Russian Trolls Tweeted Disinformation Long Before U.S. Election
+description: "An analysis of 221,641 tweets shows Russian trolls tried to incite chaos, fear and outrage about fake events before their election activity."
 date: '2018-02-20'
 categories:
 - Articles

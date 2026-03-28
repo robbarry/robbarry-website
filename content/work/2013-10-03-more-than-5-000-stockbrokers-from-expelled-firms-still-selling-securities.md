@@ -1,5 +1,6 @@
 ---
 title: More Than 5,000 Stockbrokers From Expelled Firms Still Selling Securities
+description: "More than 5,000 brokers were still licensed to sell securities after working for firms that regulators expelled."
 date: '2013-10-03'
 categories:
 - Articles

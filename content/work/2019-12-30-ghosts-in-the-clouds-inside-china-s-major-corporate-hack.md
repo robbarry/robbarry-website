@@ -1,5 +1,6 @@
 ---
 title: 'Ghosts in the Clouds: Inside China''s Major Corporate Hack'
+description: "The Cloud Hopper attack was much bigger than previously known."
 date: '2019-12-30'
 categories:
 - Articles

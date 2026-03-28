@@ -1,5 +1,6 @@
 ---
 title: More Killings Called Self-Defense
+description: "More civilians are killing each other and claiming self-defense, a trend most pronounced in states with stand-your-ground laws."
 date: '2012-04-02'
 categories:
 - Articles

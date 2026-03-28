@@ -1,5 +1,6 @@
 ---
 title: Executives' Good Luck in Trading Own Stock
+description: "An investigation found many corporate executives make profitable trades prior to news announcements."
 date: '2012-11-27'
 categories:
 - Articles
