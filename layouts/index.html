@@ -1,4 +1,11 @@
 {{ define "main" }}
+
+{{- with .Params.tagline }}
+<div class="hero">
+  <h1 class="hero-title">{{ . | safeHTML }}</h1>
+</div>
+{{- end }}
+
 <article class="about-page">
   {{ .Content }}
 </article>

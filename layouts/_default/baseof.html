@@ -6,21 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} — {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,700;1,7..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   {{ $styles := resources.Get "css/custom.css" }}
   <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
   {{- block "head" . }}{{- end }}
 </head>
 <body>
+<div class="page">
   <header class="header">
+    <a href="{{ "/" | relURL }}" class="logo">{{ site.Title }}</a>
     <nav class="nav">
-      <div class="logo">
-        <a href="{{ "/" | relURL }}">{{ site.Title }}</a>
-      </div>
-      <ul id="menu">
-        {{- range site.Menus.main }}
-        <li><a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) (and (eq .URL "/") $.IsHome) }} class="active"{{ end }}>{{ .Name }}</a></li>
-        {{- end }}
-      </ul>
+      {{- range site.Menus.main }}
+      <a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) (and (ne .URL "/") (hasPrefix $.RelPermalink .URL)) (and (eq .URL "/") $.IsHome) }} class="active"{{ end }}>{{ .Name }}</a>
+      {{- end }}
     </nav>
   </header>
 
@@ -30,6 +30,8 @@
 
   <footer class="footer">
     <span>&copy; {{ now.Year }} Rob Barry and whatever AI model he was using that week</span>
+    <span>New York</span>
   </footer>
+</div>
 </body>
 </html>

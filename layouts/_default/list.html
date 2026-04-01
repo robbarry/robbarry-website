@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 {{- if .Content }}
-<div class="post-content">
+<div class="section-intro">
   {{ .Content }}
 </div>
 {{- end }}
@@ -12,18 +12,16 @@
 {{- end }}
 
 {{- range $pages }}
-<article class="post-entry">
-  <header class="entry-header">
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-  </header>
-  {{- if .Description }}
-  <div class="entry-content">
-    <p>{{ .Description }}</p>
+<article class="entry">
+  <div class="entry-date">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
   </div>
-  {{- end }}
-  <footer class="entry-footer">
-    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
-  </footer>
+  <div class="entry-body">
+    <h2 class="entry-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{- if .Description }}
+    <p class="entry-desc">{{ .Description }}</p>
+    {{- end }}
+  </div>
 </article>
 {{- end }}
 

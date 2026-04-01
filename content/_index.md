@@ -1,5 +1,6 @@
 ---
 title: Who am I?
+tagline: 'Data at <em>The Wall Street Journal.</em>'
 ---
 
 Rob Barry runs the data journalism team at The Wall Street Journal — a legendary group of reporters who dig important stories out of hidden datasets and occasionally introduce powerful people to consequences.
