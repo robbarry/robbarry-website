@@ -9,15 +9,15 @@
 /* ── Variables ─────────────────────────────────────────── */
 
 :root {
-    --bg: #1a1918;
-    --paper: #f2efe8;
-    --ink: #1a1918;
-    --gray: #8a8680;
-    --gray-light: #b8b4ac;
-    --rule: #d4d0c8;
-    --rule-light: #e4e0d8;
-    --red: #b83228;
-    --red-hover: #9a2a22;
+    --bg: #171b22;
+    --paper: #eef1f5;
+    --ink: #0f1620;
+    --gray: #6e7682;
+    --gray-light: #9aa1ad;
+    --rule: #c8cdd6;
+    --rule-light: #dde1e8;
+    --accent: #1f5fa8;
+    --accent-hover: #1d4ed8;
     --max-width: 860px;
 }
 
@@ -51,7 +51,7 @@ hr {
 }
 
 ::selection {
-    background: var(--red);
+    background: var(--accent);
     color: #fff;
 }
 
@@ -81,7 +81,7 @@ hr {
 /* ── Focus ─────────────────────────────────────────────── */
 
 :focus-visible {
-    outline: 2px solid var(--red);
+    outline: 2px solid var(--accent);
     outline-offset: 2px;
 }
 
@@ -106,7 +106,7 @@ hr {
 }
 
 .logo:hover {
-    color: var(--red);
+    color: var(--accent);
 }
 
 .nav {
@@ -126,7 +126,7 @@ hr {
 }
 
 .nav a:hover {
-    color: var(--red);
+    color: var(--accent);
 }
 
 .nav a.active {
@@ -155,27 +155,27 @@ hr {
 /* ── Links ─────────────────────────────────────────────── */
 
 a {
-    color: var(--red);
+    color: var(--accent);
     text-decoration: none;
     transition: color 0.2s;
 }
 
 a:hover {
-    color: var(--red-hover);
+    color: var(--accent-hover);
 }
 
 .about-page a,
 .post-content a,
 .section-intro a {
     text-decoration: none;
-    border-bottom: 1px solid rgba(184, 50, 40, 0.25);
+    border-bottom: 1px solid rgba(31, 95, 168, 0.3);
     transition: color 0.2s, border-color 0.2s;
 }
 
 .about-page a:hover,
 .post-content a:hover,
 .section-intro a:hover {
-    border-bottom-color: var(--red);
+    border-bottom-color: var(--accent);
 }
 
 /* ── Hero (homepage) ──────────────────────────────────── */
@@ -195,7 +195,7 @@ a:hover {
 
 .hero-title em {
     font-style: normal;
-    color: var(--red);
+    color: var(--accent);
 }
 
 /* ── About page (homepage) ─────────────────────────────── */
@@ -237,8 +237,8 @@ a:hover {
 }
 
 .about-page li a:hover {
-    color: var(--red);
-    border-bottom-color: var(--red);
+    color: var(--accent);
+    border-bottom-color: var(--accent);
 }
 
 /* ── Section intro (list pages) ────────────────────────── */
@@ -305,7 +305,7 @@ a:hover {
 }
 
 .entry-title a:hover {
-    color: var(--red);
+    color: var(--accent);
 }
 
 .entry-desc {
@@ -362,7 +362,7 @@ a:hover {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
     font-weight: 500;
-    color: var(--red);
+    color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 0.09em;
     margin: 3rem 0 0.85rem;
@@ -396,7 +396,7 @@ a:hover {
 .post-content blockquote {
     margin: 1.75rem 0;
     padding: 0 0 0 1.25rem;
-    border-left: 3px solid var(--red);
+    border-left: 3px solid var(--accent);
     color: var(--gray);
     font-style: italic;
 }
@@ -457,7 +457,7 @@ a:hover {
     text-align: left;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    color: var(--red);
+    color: var(--accent);
     padding: 0.5rem 0.75rem 0.5rem 0;
     border-bottom: 2px solid var(--rule);
 }
@@ -526,8 +526,8 @@ a:hover {
 
 .post-tags a:hover,
 .post-tags a:focus-visible {
-    color: var(--red);
-    border-color: var(--red);
+    color: var(--accent);
+    border-color: var(--accent);
 }
 
 /* ── AI disclosure ────────────────────────────────────── */
@@ -562,7 +562,7 @@ a:hover {
     font-family: 'JetBrains Mono', monospace;
     font-size: 0.6rem;
     text-transform: uppercase;
-    color: var(--red);
+    color: var(--accent);
 }
 
 /* ── Responsive ────────────────────────────────────────── */
