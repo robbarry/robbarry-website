@@ -4,6 +4,8 @@ date: 2026-05-09
 description: "Privacy policy for Toaster SMS text messages."
 ---
 
+> **Note:** These SMS policy pages exist so Rob Barry’s personal AI bot, named Alvin the Toaster, can send occasional text messages through Twilio. Alvin the Toaster is a personal, low-volume experiment, not a marketing service.
+
 This privacy policy explains how Toaster SMS collects, uses and shares information related to its text-message program.
 
 ## Information we collect
