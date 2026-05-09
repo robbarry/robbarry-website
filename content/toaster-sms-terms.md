@@ -28,8 +28,8 @@ You can opt out of Toaster SMS messages at any time by replying **STOP**. After 
 
 ## Help instructions
 
-For help, reply **HELP** to any Toaster SMS message or contact [rob.barry@wsj.com](mailto:rob.barry@wsj.com).
+For help, reply **HELP** to any Toaster SMS message or contact [toaster@robbarry.org](mailto:toaster@robbarry.org).
 
 ## Support contact
 
-For support, contact [rob.barry@wsj.com](mailto:rob.barry@wsj.com).
+For support, contact [toaster@robbarry.org](mailto:toaster@robbarry.org).

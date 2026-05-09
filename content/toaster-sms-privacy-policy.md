@@ -40,4 +40,4 @@ We keep information only as long as needed to operate Toaster SMS, meet complian
 
 ## Contact
 
-Questions about this policy can be sent to [rob.barry@wsj.com](mailto:rob.barry@wsj.com).
+Questions about this policy can be sent to [toaster@robbarry.org](mailto:toaster@robbarry.org).
