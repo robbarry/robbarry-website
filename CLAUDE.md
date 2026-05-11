@@ -16,6 +16,8 @@ hugo serve --port 1314  # alternate port
 
 Deployment is just `git push` to main. GitHub Actions builds with Hugo 0.157.0 extended, minifies, and deploys to Pages.
 
+Do not commit `public/`. It is generated output, ignored locally and rebuilt by GitHub Actions for deployment. If local Hugo runs dirty `public/`, treat it as disposable build output, not source.
+
 ## Architecture
 
 **No theme.** Three theme submodules exist (PaperMod, ananke, hugo-book) but `theme` is commented out in `config.yml`. All rendering comes from custom layouts in `layouts/`.
